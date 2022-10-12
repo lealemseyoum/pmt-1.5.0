@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2000/10/XMLSchema"
+            xmlns="http://www.kodak.com/pmt/MetadataDefinition"
+            targetNamespace="http://www.kodak.com/pmt/MetadataDefinition"
+		elementFormDefault="qualified">
+	<!-- 8-bit based number types -->
+	<xsd:simpleType name="pmt_vint8">
+		<xsd:list itemType="xsd:byte"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vuint8">
+		<xsd:list itemType="xsd:unsignedByte"/>
+	</xsd:simpleType>
+	<!-- 16-bit based number types -->
+	<xsd:simpleType name="pmt_vint16">
+		<xsd:list itemType="xsd:short"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vuint16">
+		<xsd:list itemType="xsd:unsignedShort"/>
+	</xsd:simpleType>
+	<!-- 32-bit based number types -->
+	<xsd:simpleType name="pmt_vint32">
+		<xsd:list itemType="xsd:int"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vuint32">
+		<xsd:list itemType="xsd:unsignedInt"/>
+	</xsd:simpleType>
+	<!-- boolean types -->
+	<xsd:simpleType name="pmt_vboolean">
+		<xsd:list itemType="xsd:boolean"/>
+	</xsd:simpleType>
+	<!-- floating point types -->
+	<xsd:simpleType name="pmt_vfloat">
+		<xsd:list itemType="xsd:float"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vdouble">
+		<xsd:list itemType="xsd:double"/>
+	</xsd:simpleType>
+	<!-- string types -->
+	<xsd:simpleType name="pmt_vstring">
+		<xsd:list itemType="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vwstring">
+		<xsd:list itemType="xsd:string"/>
+	</xsd:simpleType>
+	<!-- What about Unicode? -->
+	<xsd:complexType name="PmtRootElementType">
+		<xsd:sequence>
+			<xsd:element name="CaptureConditions">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Aperture" type="xsd:float"/>
+						<xsd:element name="BatteryLevel" type="xsd:float"/>
+						<xsd:element name="Brightness" type="xsd:float"/>
+						<xsd:element name="ExposureBias" type="xsd:float"/>
+						<xsd:element name="ExposureIndex" type="xsd:float"/>
+						<xsd:element name="ExposureProgram" type="xsd:unsignedByte"/>
+						<xsd:element name="ExposureTime" type="xsd:float"/>
+						<xsd:element name="Flash">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Flash" type="xsd:unsignedByte"/>
+									<xsd:element name="Fired" type="xsd:boolean"/>
+									<xsd:element name="Return" type="xsd:unsignedByte"/>
+									<xsd:element name="Energy" type="xsd:float"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="Fnumber" type="xsd:float"/>
+						<xsd:element name="FocalLength" type="xsd:float"/>
+						<xsd:element name="ImageNumber" type="xsd:unsignedInt"/>
+						<xsd:element name="LightSource" type="xsd:unsignedByte"/>
+						<xsd:element name="Magnification" type="xsd:float"/>
+						<xsd:element name="MaxAperture" type="xsd:float"/>
+						<xsd:element name="MeteringMode" type="xsd:unsignedByte"/>
+						<xsd:element name="PAR" type="xsd:unsignedByte"/>
+						<xsd:element name="PrintQuantity" type="xsd:unsignedShort"/>
+						<xsd:element name="SecurityClassification" type="xsd:string"/>
+						<xsd:element name="SelfTimerMode" type="xsd:unsignedShort"/>
+						<xsd:element name="ShutterSpeed" type="xsd:float"/>
+						<xsd:element name="SubjectDistance" type="xsd:float"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="CaptureDevice">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="CFAPattern" type="pmt_vuint8"/>
+						<xsd:element name="CFARepeatPatternDim" type="pmt_vuint16"/>
+						<xsd:element name="CameraOwner">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="CameraOwner" type="xsd:string"/>
+									<xsd:element name="EK" type="pmt_vuint8"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="FID" type="xsd:string"/>
+						<xsd:element name="FilmCategory" type="xsd:unsignedByte"/>
+						<xsd:element name="FilmGencode" type="xsd:string"/>
+						<xsd:element name="FilmProductCode" type="xsd:string"/>
+						<xsd:element name="FilmSize" type="xsd:unsignedByte"/>
+						<xsd:element name="FocalPlaneResolutionUnit" type="xsd:unsignedByte"/>
+						<xsd:element name="FocalPlaneXResolution" type="xsd:float"/>
+						<xsd:element name="FocalPlaneYResolution" type="xsd:float"/>
+						<xsd:element name="HostComputer" type="xsd:string"/>
+						<xsd:element name="ISOSpeedRating" type="xsd:unsignedShort"/>
+						<xsd:element name="Interlace" type="xsd:unsignedShort"/>
+						<xsd:element name="Make" type="xsd:string"/>
+						<xsd:element name="MakerNotes" type="pmt_vuint8"/>
+						<xsd:element name="Model" type="xsd:string"/>
+						<xsd:element name="Noise" type="pmt_vuint8"/>
+						<xsd:element name="OECF" type="pmt_vuint8"/>
+						<xsd:element name="Scanner">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="ModelAndVersion" type="xsd:string"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="SensingMethod" type="xsd:unsignedByte"/>
+						<xsd:element name="SerialNumber">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Camera" type="pmt_vuint8"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="Software" type="xsd:string"/>
+						<xsd:element name="SpatialFrequencyResponse" type="pmt_vuint8"/>
+						<xsd:element name="SpectralSensitivity" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DigitalProcess">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="CellLength" type="xsd:unsignedShort"/>
+						<xsd:element name="CellWidth" type="xsd:unsignedShort"/>
+						<xsd:element name="ICCProfile" type="pmt_vuint8"/>
+						<xsd:element name="ImageFileChangeDateTime" type="xsd:string"/>
+						<xsd:element name="ImageFileCreationDateTime" type="xsd:string"/>
+						<xsd:element name="ImageRotationStatus" type="xsd:unsignedByte"/>
+						<xsd:element name="ImageSource" type="xsd:unsignedByte"/>
+						<xsd:element name="ImageSource.EK" type="pmt_vuint8"/>
+						<xsd:element name="Jpeg">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="AlphaQTable" type="pmt_vuint8"/>
+									<xsd:element name="Chroma1QTable" type="pmt_vuint8"/>
+									<xsd:element name="Chroma2QTable" type="pmt_vuint8"/>
+									<xsd:element name="LuminQTable" type="pmt_vuint8"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="RollGuid" type="pmt_vuint8"/>
+						<xsd:element name="ScanFrameSequenceNumber" type="xsd:unsignedShort"/>
+						<xsd:element name="Thresholding" type="xsd:unsignedShort"/>
+						<xsd:element name="History">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="EditTagArray" type="pmt_vuint16"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ImageContainer">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ActualImageHeight" type="xsd:unsignedInt"/>
+						<xsd:element name="ActualImageWidth" type="xsd:unsignedInt"/>
+						<xsd:element name="BitsPerSample" type="xsd:unsignedByte"/>
+						<xsd:element name="ColorSpaceInformation" type="xsd:unsignedByte"/>
+						<xsd:element name="ComponentsConfiguration" type="pmt_vuint8"/>
+						<xsd:element name="CompressedBitsPerPixel" type="xsd:float"/>
+						<xsd:element name="Compression" type="xsd:unsignedByte"/>
+						<xsd:element name="DisplayResolutionUnit" type="xsd:unsignedByte"/>
+						<xsd:element name="DisplayXResolution" type="xsd:float"/>
+						<xsd:element name="DisplayYResolution" type="xsd:float"/>
+						<xsd:element name="ExifVersion" type="pmt_vuint8"/>
+						<xsd:element name="FlashpixVersion" type="pmt_vuint8"/>
+						<xsd:element name="Height" type="xsd:unsignedInt"/>
+						<xsd:element name="IPTC_NAA" type="xsd:string"/>
+						<xsd:element name="Interoperability" type="xsd:string"/>
+						<xsd:element name="MetadataNumber" type="pmt_vuint8"/>
+						<xsd:element name="Orientation" type="xsd:unsignedByte"/>
+						<xsd:element name="PhotometricInterpretation" type="xsd:unsignedByte"/>
+						<xsd:element name="PlanarConfiguration" type="xsd:unsignedByte"/>
+						<xsd:element name="PrimaryChromaticities" type="pmt_vfloat"/>
+						<xsd:element name="ReferenceBlackWhite" type="pmt_vuint8"/>
+						<xsd:element name="RowsPerStrip" type="xsd:unsignedInt"/>
+						<xsd:element name="SamplesPerPixel" type="xsd:unsignedShort"/>
+						<xsd:element name="SoundType" type="xsd:byte"/>
+						<xsd:element name="SourceImageDirectory" type="pmt_vuint8"/>
+						<xsd:element name="SourceImageFileName" type="pmt_vuint8"/>
+						<xsd:element name="SourceImageVolumeName" type="pmt_vuint8"/>
+						<xsd:element name="StripByteCounts" type="xsd:unsignedInt"/>
+						<xsd:element name="StripOffsets" type="xsd:unsignedInt"/>
+						<xsd:element name="SubIfdPointers" type="pmt_vuint32"/>
+						<xsd:element name="Thumbnail">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="BitsPerSample" type="xsd:unsignedByte"/>
+									<xsd:element name="BytesOfJPEGData" type="xsd:unsignedInt"/>
+									<xsd:element name="Compression" type="xsd:unsignedByte"/>
+									<xsd:element name="DisplayResolutionUnit" type="xsd:unsignedByte"/>
+									<xsd:element name="DisplayXResolution" type="xsd:float"/>
+									<xsd:element name="DisplayYResolution" type="xsd:float"/>
+									<xsd:element name="Height" type="xsd:unsignedInt"/>
+									<xsd:element name="OffsetToJPEGSOI" type="xsd:unsignedInt"/>
+									<xsd:element name="Orientation" type="xsd:unsignedByte"/>
+									<xsd:element name="PhotometricInterpretation" type="xsd:unsignedByte"/>
+									<xsd:element name="PlanarConfiguration" type="xsd:unsignedByte"/>
+									<xsd:element name="RowsPerStrip" type="xsd:unsignedShort"/>
+									<xsd:element name="SamplesPerPixel" type="xsd:unsignedShort"/>
+									<xsd:element name="StripByteCounts" type="xsd:unsignedInt"/>
+									<xsd:element name="StripOffsets" type="xsd:unsignedInt"/>
+									<xsd:element name="Width" type="xsd:unsignedInt"/>
+									<xsd:element name="YCbCrCoefficients" type="pmt_vfloat"/>
+									<xsd:element name="YCbCrPositioning" type="xsd:unsignedByte"/>
+									<xsd:element name="YCbCrSubSampling" type="pmt_vuint16"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="TiffepVersion" type="pmt_vuint8"/>
+						<xsd:element name="TransferFunction" type="pmt_vuint16"/>
+						<xsd:element name="TransferRange" type="pmt_vuint16"/>
+						<xsd:element name="WhitePoint" type="xsd:float"/>
+						<xsd:element name="Width" type="xsd:unsignedInt"/>
+						<xsd:element name="YCbCrCoefficients" type="pmt_vfloat"/>
+						<xsd:element name="YCbCrPositioning" type="xsd:unsignedByte"/>
+						<xsd:element name="YCbCrSubSampling" type="pmt_vuint16"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="IntellectualProperty">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="EditorCopyright" type="xsd:string"/>
+						<xsd:element name="ImageCreator" type="xsd:string"/>
+						<xsd:element name="Photographer" type="xsd:string"/>
+						<xsd:element name="PhotographerCopyright" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OutputOrder">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Information">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="DealerIDNumber" type="pmt_vuint8"/>
+									<xsd:element name="EnvelopeNumber" type="pmt_vuint8"/>
+									<xsd:element name="VendorOrderNumber" type="pmt_vuint8"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="SimpleRenderInst">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="FrameNumber" type="xsd:unsignedShort"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SceneContent">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Audio" type="pmt_vuint8"/>
+						<xsd:element name="GPS">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Altitude" type="xsd:float"/>
+									<xsd:element name="AltitudeRef" type="xsd:unsignedByte"/>
+									<xsd:element name="DOP" type="xsd:float"/>
+									<xsd:element name="DestBearing" type="xsd:float"/>
+									<xsd:element name="DestBearingRef" type="xsd:string"/>
+									<xsd:element name="DestDistance" type="xsd:float"/>
+									<xsd:element name="DestDistanceRef" type="xsd:string"/>
+									<xsd:element name="DestLatitude" type="pmt_vfloat"/>
+									<xsd:element name="DestLatitudeRef" type="xsd:string"/>
+									<xsd:element name="DestLongitude" type="pmt_vfloat"/>
+									<xsd:element name="DestLongitudeRef" type="xsd:string"/>
+									<xsd:element name="ImgDirection" type="xsd:float"/>
+									<xsd:element name="ImgDirectionRef" type="xsd:string"/>
+									<xsd:element name="Latitude" type="pmt_vfloat"/>
+									<xsd:element name="LatitudeRef" type="xsd:string"/>
+									<xsd:element name="Longitude" type="pmt_vfloat"/>
+									<xsd:element name="LongitudeRef" type="xsd:string"/>
+									<xsd:element name="MapDatum" type="xsd:string"/>
+									<xsd:element name="MeasureMode" type="xsd:string"/>
+									<xsd:element name="Satellites" type="xsd:string"/>
+									<xsd:element name="Speed" type="xsd:float"/>
+									<xsd:element name="SpeedRef" type="xsd:string"/>
+									<xsd:element name="Status" type="xsd:string"/>
+									<xsd:element name="TimeStamp" type="pmt_vfloat"/>
+									<xsd:element name="Track" type="xsd:float"/>
+									<xsd:element name="TrackRef" type="xsd:string"/>
+									<xsd:element name="VersionID" type="pmt_vuint8"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="GroupCaption">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="GroupCaption" type="xsd:string"/>
+									<xsd:element name="UserInputGroupTitle" type="xsd:string"/>
+									<xsd:element name="UserSelectGroupTitle" type="xsd:string"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="ImageCaptureDateTime">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="ImageCaptureDateTime" type="xsd:string"/>
+									<xsd:element name="TimeZoneOffset" type="pmt_vint16"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="ImageDescription" type="xsd:string"/>
+						<xsd:element name="RelatedSoundFile" type="xsd:string"/>
+						<xsd:element name="SceneType" type="xsd:unsignedByte"/>
+						<xsd:element name="SoundCaptureDateTime" type="xsd:string"/>
+						<xsd:element name="SubjectLocation" type="pmt_vuint32"/>
+						<xsd:element name="UserComment">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="UserComment" type="pmt_vuint8"/>
+									<xsd:element name="UserInputFrameTitle" type="xsd:string"/>
+									<xsd:element name="UserSelectFrameTitle" type="xsd:string"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="PmtRootElement" type="PmtRootElementType"/>
+</xsd:schema>

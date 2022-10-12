@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2000/10/XMLSchema" 
+	xmlns:ptt="http://www.kodak.com/pmt/test"
+	targetNamespace="http://www.kodak.com/pmt/test"
+	elementFormDefault="qualified">
+	<!-- 8-bit based number types -->
+	<simpleType name="pmt_vint8">
+		<list itemType="byte"/>
+	</simpleType>
+	<simpleType name="pmt_vuint8">
+		<list itemType="unsignedByte"/>
+	</simpleType>
+	<!-- 16-bit based number types -->
+	<simpleType name="pmt_vint16">
+		<list itemType="short"/>
+	</simpleType>
+	<simpleType name="pmt_vuint16">
+		<list itemType="unsignedShort"/>
+	</simpleType>
+	<!-- 32-bit based number types -->
+	<simpleType name="pmt_vint32">
+		<list itemType="int"/>
+	</simpleType>
+	<simpleType name="pmt_vuint32">
+		<list itemType="unsignedInt"/>
+	</simpleType>
+	<!-- boolean types -->
+	<simpleType name="pmt_vboolean">
+		<list itemType="boolean"/>
+	</simpleType>
+	<!-- floating point types -->
+	<simpleType name="pmt_vfloat">
+		<list itemType="float"/>
+	</simpleType>
+	<simpleType name="pmt_vdouble">
+		<list itemType="double"/>
+	</simpleType>
+	<!-- string types -->
+	<simpleType name="pmt_vstring">
+		<list itemType="string"/>
+	</simpleType>
+	<simpleType name="pmt_vwstring">
+		<list itemType="string"/>
+	</simpleType>
+	<simpleType name="uint32_10">
+		<restriction base="unsignedInt">
+			<minInclusive value="10"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="uint32_20-100">
+		<restriction base="ptt:uint32_10">
+			<minInclusive value="20"/>
+			<maxInclusive value="100"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="color_rgbc">
+		<restriction base="string">
+			<enumeration value="Red"/>
+			<enumeration value="Green"/>
+			<enumeration value="Blue"/>
+			<enumeration value="Cyan"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="color_rgb">
+		<annotation>
+			<documentation xml:lang="en">color_rgb definition</documentation>
+		</annotation>
+		<restriction base="ptt:color_rgbc">
+			<enumeration value="Red"/>
+			<enumeration value="Green"/>
+			<enumeration value="Blue"/>
+		</restriction>
+	</simpleType>
+	<attribute name="Ref_Attr" default="Cyan" type="ptt:color_rgbc"/>
+	<element name="Ref_Element">
+		<complexType>
+			<sequence>
+				<element name="Ref_XYZ1" type="int"/>
+				<element name="Ref_XYZ2" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="ComplexType1">
+		<sequence>
+			<element name="XYZ3" type="string"/>
+			<element name="XYZ4" type="ptt:pmt_vint32"/>
+		</sequence>
+		<attribute name="Attr4" type="ptt:uint32_20-100"/>
+		<attribute name="Attr5" type="unsignedShort"/>
+	</complexType>
+	<element name="TestRoot">
+		<complexType>
+			<sequence>
+				<element name="ABC1" type="ptt:uint32_20-100"/>
+				<element name="ABC2">
+					<complexType>
+						<sequence>
+							<element name="XYZ1" type="ptt:color_rgb"/>
+							<element name="XYZ2" type="ptt:pmt_vfloat"/>
+						</sequence>
+						<attribute name="Attr1" type="ptt:uint32_10"/>
+						<attribute name="Attr2" default="168">
+							<simpleType>
+								<annotation>
+									<documentation xml:lang="en">anonymous attribute type definition</documentation>
+								</annotation>
+								<restriction base="int">
+									<maxInclusive value="1000" fixed="true"/>
+								</restriction>
+							</simpleType>
+						</attribute>
+						<attribute ref="ptt:Ref_Attr"/>
+						<attribute name="Attr3" type="string"/>
+					</complexType>
+				</element>
+				<element name="ABC3">
+					<simpleType>
+						<restriction base="short">
+							<enumeration value="2"/>
+							<enumeration value="4"/>
+							<enumeration value="6"/>
+							<enumeration value="8"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element ref="ptt:Ref_Element"/>
+				<element name="ABC4" type="ptt:ComplexType1"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

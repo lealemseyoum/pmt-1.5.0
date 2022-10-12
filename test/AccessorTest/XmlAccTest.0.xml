@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<PmtRootElement>
+	<CaptureConditions>
+		<Fnumber>4.66</Fnumber>
+		<MeteringMode>2</MeteringMode>
+	</CaptureConditions>
+	<CaptureDevice>
+		<Make>EKC</Make>
+		<Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</Model>
+	</CaptureDevice>
+	<ImageContainer>
+		<ComponentsConfiguration>1 2 3 0</ComponentsConfiguration>
+		<Orientation>1</Orientation>
+	</ImageContainer>
+	<SceneContent>
+		<ImageCaptureDateTime>
+			<ImageCaptureDateTime>1998:01:08 08:28:54</ImageCaptureDateTime>
+		</ImageCaptureDateTime>
+	</SceneContent>
+</PmtRootElement><?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<PmtRootElement>
+	<CaptureConditions>
+		<Fnumber>4.66</Fnumber>
+		<MeteringMode>2</MeteringMode>
+	</CaptureConditions>
+	<CaptureDevice>
+		<Make>EKC</Make>
+		<Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</Model>
+	</CaptureDevice>
+	<ImageContainer>
+		<ComponentsConfiguration>1 2 3 0</ComponentsConfiguration>
+		<Orientation>1</Orientation>
+	</ImageContainer>
+	<SceneContent>
+		<ImageCaptureDateTime>
+			<ImageCaptureDateTime>1998:01:08 08:28:54</ImageCaptureDateTime>
+		</ImageCaptureDateTime>
+	</SceneContent>
+</PmtRootElement>

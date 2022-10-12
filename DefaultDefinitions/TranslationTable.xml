@@ -1,0 +1,1151 @@
+<?xml version="1.0"?>
+<!DOCTYPE TRANSLATION []>
+<TRANSLATION CreatedTime="Fri Nov  3 16:10:58 2000">
+<ENTRY Key="SceneContent.Audio" URI="http://ns.kodak.com/pmt/1.0/SceneContentAudio">
+ <EXIF Tag="70005" Type="audio" Location="APP1_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="70005" Type="audio" Location="IFD_SOUND" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Width" URI="http://ns.adobe.com/tiff/1.0/ImageWidth">
+ <EXIF Tag="256" Type="ulong" Location="APP1_IFD0" Translator="builtin2ulong"/>
+ <TIFF Tag="256" Type="ulong" Location="IFD_MAIN" Translator="builtin2ulong"/>
+ <PNG  Tag="Width" Type="ulong" Location="IHDR" Translator="builtin2ulong"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/ImageWidth" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.Height" URI="http://ns.adobe.com/tiff/1.0/ImageLength">
+ <EXIF Tag="257" Type="ulong" Location="APP1_IFD0" Translator="builtin2ulong"/>
+ <TIFF Tag="257" Type="ulong" Location="IFD_MAIN" Translator="builtin2ulong"/>
+ <PNG  Tag="Height" Type="ulong" Location="IHDR" Translator="builtin2ulong"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/ImageLength" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.BitsPerSample" URI="http://ns.adobe.com/tiff/1.0/BitsPerSample">
+ <EXIF Tag="258" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="258" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+ <PNG  Tag="BitDepth" Type="ushort" Location="IHDR" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/BitsPerSample" Type="SeqInteger" Location="XMP" Translator="builtin2SeqInteger" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.Compression" URI="http://ns.adobe.com/tiff/1.0/Compression">
+ <EXIF Tag="259" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="259" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+ <PNG  Tag="CompressionMethod" Type="ushort" Location="IHDR" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/Compression" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.PhotometricInterpretation" URI="http://ns.adobe.com/tiff/1.0/PhotometricInterpretation">
+ <EXIF Tag="262" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="262" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/PhotometricInterpretation" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.ImageDescription" URI="http://ns.adobe.com/tiff/1.0/ImageDescription">
+ <EXIF Tag="270" Type="ascii" Location="APP1_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="270" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+ <PNG  Tag="Description" Type="ascii" Location="tEXt" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/ImageDescription" Type="LangAlt" Location="XMP" Translator="builtin2LangAlt" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.Make" URI="http://ns.adobe.com/tiff/1.0/Make">
+ <EXIF Tag="271" Type="ascii" Location="APP1_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="271" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/Make" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.Model" URI="http://ns.adobe.com/tiff/1.0/Model">
+ <EXIF Tag="272" Type="ascii" Location="APP1_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="272" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+ <QT Tag="@inf" Type="ascii" Location="moov.udta.@inf" Translator="builtin2ascii"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/Model" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.StripOffsets" URI="http://ns.kodak.com/pmt/1.0/ImageContainerStripOffsets">
+ <EXIF Tag="273" Type="ulong" Location="APP1_IFD0" Translator="builtin2ulong"/>
+ <TIFF Tag="273" Type="ulong" Location="IFD_MAIN" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Orientation" URI="http://ns.adobe.com/tiff/1.0/Orientation">
+ <EXIF Tag="274" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="274" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/Orientation" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.SamplesPerPixel" URI="http://ns.adobe.com/tiff/1.0/SamplesPerPixel">
+ <EXIF Tag="277" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="277" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+ <PNG  Tag="ColorType" Type="ushort" Location="IHDR" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/SamplesPerPixel" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.RowsPerStrip" URI="http://ns.kodak.com/pmt/1.0/ImageContainerRowsPerStrip">
+ <EXIF Tag="278" Type="ulong" Location="APP1_IFD0" Translator="builtin2ulong"/>
+ <TIFF Tag="278" Type="ulong" Location="IFD_MAIN" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.StripByteCounts" URI="http://ns.kodak.com/pmt/1.0/ImageContainerStripByteCounts">
+ <EXIF Tag="279" Type="ulong" Location="APP1_IFD0" Translator="builtin2ulong"/>
+ <TIFF Tag="279" Type="ulong" Location="IFD_MAIN" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.DisplayXResolution" URI="http://ns.adobe.com/tiff/1.0/XResolution">
+ <EXIF Tag="282" Type="urational" Location="APP1_IFD0" Translator="builtin2float"/>
+ <TIFF Tag="282" Type="urational" Location="IFD_MAIN" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/XResolution" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.DisplayYResolution" URI="http://ns.adobe.com/tiff/1.0/YResolution">
+ <EXIF Tag="283" Type="urational" Location="APP1_IFD0" Translator="builtin2float"/>
+ <TIFF Tag="283" Type="urational" Location="IFD_MAIN" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/YResolution" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.PlanarConfiguration" URI="http://ns.kodak.com/pmt/1.0/ImageContainerPlanarConfiguration">
+ <EXIF Tag="284" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="284" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.DisplayResolutionUnit" URI="http://ns.adobe.com/tiff/1.0/ResolutionUnit">
+ <EXIF Tag="296" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="296" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/ResolutionUnit" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.TransferFunction" URI="http://ns.adobe.com/tiff/1.0/TransferFunction">
+ <EXIF Tag="301" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="301" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/TransferFunction" Type="SeqInteger" Location="XMP" Translator="builtin2SeqInteger" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.Software" URI="http://ns.adobe.com/tiff/1.0/Software">
+ <EXIF Tag="305" Type="ascii" Location="APP1_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="305" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+ <PNG  Tag="Software" Type="ascii" Location="tEXt" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/Software" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="DigitalProcess.ImageFileChangeDateTime" URI="http://ns.adobe.com/tiff/1.0/DateTime">
+ <EXIF Tag="306" Type="ascii" Location="APP1_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="306" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+ <PNG  Tag="LastModified" Type="ascii" Location="tIME" Translator="builtin2string"/>
+ <QT   Tag="ModificationTime" Type="time" Location="moov.mvhd" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/DateTime" Type="Date" Location="XMP" Translator="builtin2Date" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.CameraOwner.CameraOwner" URI="http://ns.adobe.com/tiff/1.0/Artist">
+ <EXIF Tag="315" Type="ascii" Location="APP1_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="315" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/Artist" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="IntellectualProperty.ImageCreator" URI="http://ns.adobe.com/tiff/1.0/Artist">
+ <EXIF Tag="315" Type="ascii" Location="APP1_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="315" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+ <PNG  Tag="Author" Type="ascii" Location="tEXt" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/Artist" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="IntellectualProperty.Photographer" URI="http://ns.adobe.com/tiff/1.0/Artist">
+ <EXIF Tag="315" Type="ascii" Location="APP1_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="315" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+ <PNG  Tag="Author" Type="ascii" Location="tEXt" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/Artist" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.WhitePoint" URI="http://ns.adobe.com/tiff/1.0/WhitePoint">
+ <EXIF Tag="318" Type="urational" Location="APP1_IFD0" Translator="builtin2float"/>
+ <TIFF Tag="318" Type="urational" Location="IFD_MAIN" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/WhitePoint" Type="SeqRational" Location="XMP" Translator="builtin2SeqRational" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.PrimaryChromaticities" URI="http://ns.adobe.com/tiff/1.0/PrimaryChromaticities">
+ <EXIF Tag="319" Type="urational" Location="APP1_IFD0" Translator="builtin2float"/>
+ <TIFF Tag="319" Type="urational" Location="IFD_MAIN" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/PrimaryChromaticities" Type="SeqRational" Location="XMP" Translator="builtin2SeqRational" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.SubIfdPointers" URI="http://ns.kodak.com/pmt/1.0/ImageContainerSubIfdPointers">
+ <TIFF Tag="330" Type="ulong" Location="IFD_MAIN" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.YCbCrCoefficients" URI="http://ns.adobe.com/tiff/1.0/YCbCrCoefficients">
+ <EXIF Tag="529" Type="urational" Location="APP1_IFD0" Translator="builtin2float"/>
+ <TIFF Tag="529" Type="urational" Location="IFD_MAIN" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/YCbCrCoefficients" Type="SeqRational" Location="XMP" Translator="builtin2SeqRational" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.YCbCrSubSampling" URI="http://ns.adobe.com/tiff/1.0/YCbCrSubSampling">
+ <EXIF Tag="530" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="530" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/YCbCrSubSampling" Type="SeqInteger" Location="XMP" Translator="builtin2SeqInteger" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.YCbCrPositioning" URI="http://ns.adobe.com/tiff/1.0/YCbCrPositioning">
+ <EXIF Tag="531" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="531" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/YCbCrPositioning" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.ReferenceBlackWhite" URI="http://ns.adobe.com/tiff/1.0/ReferenceBlackWhite">
+ <EXIF Tag="532" Type="urational" Location="APP1_IFD0" Translator="builtin2float"/>
+ <TIFF Tag="532" Type="urational" Location="IFD_MAIN" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/ReferenceBlackWhite" Type="SeqRational" Location="XMP" Translator="builtin2SeqRational" /> 
+</ENTRY>
+<ENTRY Key="IntellectualProperty.Copyright" URI="http://ns.adobe.com/tiff/1.0/Copyright">
+ <EXIF Tag="33432" Type="ascii" Location="APP1_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="33432" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+ <PNG  Tag="Copyright" Type="ascii" Location="tEXt" Translator="builtin2string"/>
+ <QT Tag="@cpy" Type="ascii" Location="moov.udta.@cpy" Translator="builtin2ascii"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/Copyright" Type="LangAlt" Location="XMP" Translator="builtin2LangAlt" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.IPTC_NAA" URI="http://ns.kodak.com/pmt/1.0/ImageContainerIPTC_NAA">
+ <EXIF Tag="33723" Type="undefined" Location="APP1_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="33723" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="CaptureConditions.ExposureTime" URI="http://ns.adobe.com/exif/1.0/ExposureTime">
+ <EXIF Tag="33434" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="33434" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="33434" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <DIG35 Tag="IMAGE_CREATION.CAMERA_CAPTURE.CAMERA_SETTINGS.EXP_TIME"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ExposureTime" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.Fnumber" URI="http://ns.adobe.com/exif/1.0/Fnumber">
+ <EXIF Tag="33437" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="33437" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="33437" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <DIG35 Tag="IMAGE_CREATION.CAMERA_CAPTURE.CAMERA_SETTINGS.F_NUMBER"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/FNumber" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.ExposureProgram" URI="http://ns.adobe.com/exif/1.0/ExposureProgram">
+ <EXIF Tag="34850" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="34850" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+  <TIFF Tag="34850" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ExposureProgram" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.SpectralSensitivity" URI="http://ns.adobe.com/exif/1.0/SpectralSensitivity">
+ <EXIF Tag="34852" Type="ascii" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="34852" Type="ascii" Location="IFD_MAIN" Translator="builtin2string">
+  <TIFF Tag="34852" Type="ascii" Location="IFD_EXIF" Translator="builtin2string"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/SpectralSensitivity" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.ISOSpeedRating" URI="http://ns.adobe.com/exif/1.0/ISOSpeedRatings">
+ <EXIF Tag="34855" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="34855" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+  <TIFF Tag="34855" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ISOSpeedRatings" Type="SeqInteger" Location="XMP" Translator="builtin2SeqInteger" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.OECF" URI="http://ns.adobe.com/exif/1.0/OECF">
+ <EXIF Tag="34856" Type="undefined" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2undefined"/>
+ <TIFF Tag="34856" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+  <TIFF Tag="34856" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/OECF" Type="OECF" Location="XMP" Translator="builtin2OECF" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.ExifVersion" URI="http://ns.adobe.com/exif/1.0/ExifVersion">
+ <EXIF Tag="36864" Type="undefined" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2undefined"/>
+ <TIFF Tag="36864" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ExifVersion" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.ImageCaptureDateTime.ImageCaptureDateTime" URI="http://ns.adobe.com/exif/1.0/DateTimeOriginal">
+ <EXIF Tag="36867" Type="ascii" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="36867" Type="ascii" Location="IFD_MAIN" Translator="builtin2string">
+  <TIFF Tag="36867" Type="ascii" Location="IFD_EXIF" Translator="builtin2string"/>
+ </TIFF>
+ <DIG35 Tag="IMAGE_CREATION.GENERAL_CREATION_INFO.CREATION_TIME"/>
+ <PNG  Tag="CreationTime" Type="ascii" Location="tEXt" Translator="builtin2string"/>
+ <QT   Tag="CreationTime" Type="time" Location="moov.mvhd" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/DateTimeOriginal" Type="Date" Location="XMP" Translator="builtin2Date" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.ImageCaptureDateTime.ImageCaptureSubSecondTime" URI="http://ns.kodak.com/pmt/1.0/SceneContentImageCaptureDateTimeImageCaptureSubSecondTime">
+  <EXIF Tag="37521" Type="ascii" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ascii"/>
+  <TIFF Tag="37521" Type="ascii" Location="IFD_EXIF" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.ImageFileCreationDateTime" URI="http://ns.adobe.com/exif/1.0/DateTimeDigitized">
+ <EXIF Tag="36868" Type="ascii" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="36868" Type="ascii" Location="IFD_EXIF" Translator="builtin2string"/>
+ <PNG  Tag="CreationTime" Type="ascii" Location="tEXt" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/DateTimeDigitized" Type="Date" Location="XMP" Translator="builtin2Date" /> 
+</ENTRY>
+<ENTRY Key="DigitalProcess.ImageFileCreationSubSecond" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessImageFileCreationSubSecond">
+  <EXIF Tag="37522" Type="ascii" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ascii"/>
+  <TIFF Tag="37522" Type="ascii" Location="IFD_EXIF" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.ComponentsConfiguration" URI="http://ns.adobe.com/exif/1.0/ComponentsConfiguration">
+ <EXIF Tag="37121" Type="undefined" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2undefined"/>
+ <TIFF Tag="37121" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ComponentsConfiguration" Type="SeqInteger" Location="XMP" Translator="builtin2SeqInteger" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.CompressedBitsPerPixel" URI="http://ns.adobe.com/exif/1.0/CompressedBitsPerPixel">
+ <EXIF Tag="37122" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37122" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="37122" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/CompressedBitsPerPixel" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.ShutterSpeed" URI="http://ns.adobe.com/exif/1.0/ShutterSpeedValue">
+ <EXIF Tag="37377" Type="rational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37377" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="37377" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ShutterSpeedValue" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.Aperture" URI="http://ns.adobe.com/exif/1.0/ApertureValue">
+ <EXIF Tag="37378" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37378" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="37378" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ApertureValue" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.Brightness" URI="http://ns.adobe.com/exif/1.0/BrightnessValue">
+ <EXIF Tag="37379" Type="rational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37379" Type="rational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="37379" Type="rational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <DIG35 Tag="IMAGE_CREATION.CAMERA_CAPTURE.CAMERA_SETTINGS.BRIGHTNESS"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/BrightnessValue" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.ExposureBias" URI="http://ns.adobe.com/exif/1.0/ExposureBiasValue">
+ <EXIF Tag="37380" Type="rational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37380" Type="rational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="37380" Type="rational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <DIG35 Tag="IMAGE_CREATION.CAMERA_CAPTURE.CAMERA_SETTINGS.EXPOSURE_BIAS"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ExposureBiasValue" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.MaxAperture" URI="http://ns.adobe.com/exif/1.0/MaxApertureValue">
+ <EXIF Tag="37381" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37381" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="37381" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/MaxApertureValue" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.SubjectDistance" URI="http://ns.adobe.com/exif/1.0/SubjectDistance">
+ <EXIF Tag="37382" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37382" Type="rational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="37382" Type="rational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/SubjectDistance" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.MeteringMode" URI="http://ns.adobe.com/exif/1.0/MeteringMode">
+ <EXIF Tag="37383" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="37383" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+  <TIFF Tag="37383" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/MeteringMode" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.LightSource" URI="http://ns.adobe.com/exif/1.0/LightSource">
+ <EXIF Tag="37384" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="37384" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+  <TIFF Tag="37384" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/LightSource" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.Flash.Flash" URI="http://ns.adobe.com/exif/1.0/Flash">
+ <EXIF Tag="37385" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="37385" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+  <TIFF Tag="37385" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/Flash" Type="Flash" Location="XMP" Translator="builtin2Flash" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.FocalLength" URI="http://ns.adobe.com/exif/1.0/FocalLength">
+ <EXIF Tag="37386" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37386" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="37386" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <DIG35 Tag="IMAGE_CREATION.CAMERA_CAPTURE.CAMERA_SETTINGS.FOCAL_LENGTH"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/FocalLength" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.SubjectArea" URI="http://ns.adobe.com/exif/1.0/SubjectArea">
+ <EXIF Tag="37396" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="37396" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/SubjectArea" Type="SeqInteger" Location="XMP" Translator="builtin2SeqInteger" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.MakerNotes" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceMakerNotes">
+ <EXIF Tag="37500" Type="undefined" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2undefined"/>
+ <TIFF Tag="37500" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="SceneContent.UserComment.UserComment" URI="http://ns.kodak.com/pmt/1.0/SceneContentUserCommentUserComment">
+ <EXIF Tag="37510" Type="undefined" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2undefined"/>
+ <TIFF Tag="37510" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ <PNG  Tag="Comment" Type="ascii" Location="tEXt" Translator="builtin2ascii"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.FlashpixVersion" URI="http://ns.adobe.com/exif/1.0/FlashpixVersion">
+ <EXIF Tag="40960" Type="undefined" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2undefined"/>
+ <TIFF Tag="40960" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/FlashpixVersion" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.ColorSpaceInformation" URI="http://ns.adobe.com/exif/1.0/ColorSpace">
+ <EXIF Tag="40961" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="40961" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ColorSpace" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.Width" URI="http://ns.adobe.com/tiff/1.0/ImageWidth">
+ <EXIF Tag="40962" Type="ulong" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ulong"/>
+ <TIFF Tag="40962" Type="ulong" Location="IFD_EXIF" Translator="builtin2ulong"/>
+ <QT   Tag="TrackWidth" Type="ulong" Location="moov.trak.tkhd" Translator="builtin2ulong"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/ImageWidth" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.ActualImageWidth" URI="http://ns.kodak.com/tiff/1.0/ActualImageWidth">
+ <EXIF Tag="40962" Type="ulong" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ulong"/>
+ <TIFF Tag="40962" Type="ulong" Location="IFD_EXIF" Translator="builtin2ulong"/>
+ <QT   Tag="TrackWidth" Type="ulong" Location="moov.trak.tkhd" Translator="builtin2ulong"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/ImageWidth" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.Height" URI="http://ns.adobe.com/tiff/1.0/ImageLength">
+ <EXIF Tag="40963" Type="ulong" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ulong"/>
+ <TIFF Tag="40963" Type="ulong" Location="IFD_EXIF" Translator="builtin2ulong"/>
+ <QT   Tag="TrackHeight" Type="ulong" Location="moov.trak.tkhd" Translator="builtin2ulong"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/ImageHeight" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.ActualImageHeight" URI="http://ns.kodak.com/tiff/1.0/ActualImageLength">
+ <EXIF Tag="40963" Type="ulong" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ulong"/>
+ <TIFF Tag="40963" Type="ulong" Location="IFD_EXIF" Translator="builtin2ulong"/>
+ <QT   Tag="TrackHeight" Type="ulong" Location="moov.trak.tkhd" Translator="builtin2ulong"/>
+ <XMP Tag="http://ns.adobe.com/tiff/1.0/ImageHeight" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.RelatedSoundFile" URI="http://ns.adobe.com/exif/1.0/RelatedSoundFile">
+ <EXIF Tag="40964" Type="ascii" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="256" Type="ascii" Location="IFD_SOUND" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/RelatedSoundFile" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.Flash.Energy" URI="http://ns.adobe.com/exif/1.0/FlashEnergy">
+ <EXIF Tag="41483" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37387" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+ <TIFF Tag="41483" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <DIG35 Tag="IMAGE_CREATION.CAMERA_CAPTURE.CAMERA_SETTINGS.FLASH_ENERGY"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/FlashEnergy" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.SpatialFrequencyResponse" URI="http://ns.adobe.com/exif/1.0/SpatialFrequencyResponse">
+ <EXIF Tag="41484" Type="undefined" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2undefined"/>
+ <TIFF Tag="37388" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+  <TIFF Tag="41484" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/SpatialFrequencyResponse" Type="OECF" Location="XMP" Translator="builtin2OECF" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.FocalPlaneXResolution" URI="http://ns.adobe.com/exif/1.0/FocalPlaneXResolution">
+ <EXIF Tag="41486" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37390" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="41486" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/FocalPlaneXResolution" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.FocalPlaneYResolution" URI="http://ns.adobe.com/exif/1.0/FocalPlaneYResolution">
+ <EXIF Tag="41487" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37391" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="41487" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/FocalPlaneYResolution" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.FocalPlaneResolutionUnit" URI="http://ns.adobe.com/exif/1.0/FocalPlaneResolutionUnit">
+ <EXIF Tag="41488" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="37392" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+  <TIFF Tag="41488" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/FocalPlaneResolutionUnit" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.SubjectLocation" URI="http://ns.adobe.com/exif/1.0/SubjectLocation">
+ <EXIF Tag="41492" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="37396" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/SubjectLocation" Type="SeqInteger" Location="XMP" Translator="builtin2SeqInteger" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.ExposureIndex" URI="http://ns.adobe.com/exif/1.0/ExposureIndex">
+ <EXIF Tag="41493" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="37397" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+  <TIFF Tag="41493" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+ <DIG35 Tag="IMAGE_CREATION.CAMERA_CAPTURE.CAMERA_SETTINGS.EXPOSURE_INDEX"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ExposureIndex" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.SensingMethod" URI="http://ns.adobe.com/exif/1.0/SensingMethod">
+ <EXIF Tag="41495" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="37399" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+  <TIFF Tag="41495" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/SensingMethod" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="DigitalProcess.ImageSource" URI="http://ns.adobe.com/exif/1.0/FileSource">
+ <EXIF Tag="41728" Type="undefined" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2undefined"/>
+ <TIFF Tag="41728" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ <PNG  Tag="Source" Type="ascii" Location="tEXt" Translator="builtin2ascii"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/FileSource" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.SceneType" URI="http://ns.adobe.com/exif/1.0/SceneType">
+ <EXIF Tag="41729" Type="undefined" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2undefined"/>
+ <TIFF Tag="41729" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/SceneType" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureDevice.CFAPattern" URI="http://ns.adobe.com/exif/1.0/CFAPattern">
+ <EXIF Tag="41730" Type="undefined" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2undefined"/>
+ <TIFF Tag="33422" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+  <TIFF Tag="41730" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/CFAPattern" Type="CFAPattern" Location="XMP" Translator="builtin2CFAPattern" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.CustomRendered" URI="http://ns.adobe.com/exif/1.0/CustomRendered">
+ <EXIF Tag="41985" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="41985" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/CustomRendered" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.ExposureMode" URI="http://ns.adobe.com/exif/1.0/ExposureMode">
+ <EXIF Tag="41986" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="41986" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ExposureMode" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.WhiteBalance" URI="http://ns.adobe.com/exif/1.0/WhiteBalance">
+ <EXIF Tag="41987" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="41987" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/WhiteBalance" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.DigitalZoomRatio" URI="http://ns.adobe.com/exif/1.0/DigitalZoomRatio">
+ <EXIF Tag="41988" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="41988" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/DigitalZoomRatio" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.FocalLengthIn35mmFilm" URI="http://ns.adobe.com/exif/1.0/FocalLengthIn35mmFilm">
+ <EXIF Tag="41989" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="41989" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/FocalLengthIn35mmFilm" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.SceneCaptureType" URI="http://ns.adobe.com/exif/1.0/SceneCaptureType">
+ <EXIF Tag="41990" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="41990" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/SceneCaptureType" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.GainControl" URI="http://ns.adobe.com/exif/1.0/GainControl">
+ <EXIF Tag="41991" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="41991" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GainControl" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.Contrast" URI="http://ns.adobe.com/exif/1.0/Contrast">
+ <EXIF Tag="41992" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="41992" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/Contrast" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.Saturation" URI="http://ns.adobe.com/exif/1.0/Saturation">
+ <EXIF Tag="41993" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="41993" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/Saturation" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.Sharpness" URI="http://ns.adobe.com/exif/1.0/Sharpness">
+ <EXIF Tag="41994" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="41994" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/Sharpness" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.DeviceSettingDescription" URI="http://ns.adobe.com/exif/1.0/DeviceSettingDescription">
+ <EXIF Tag="41995" Type="undefined" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2undefined"/>
+ <TIFF Tag="41995" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/DeviceSettingDescription" Type="DeviceSetting" Location="XMP" Translator="builtin2DeviceSetting" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.SubjectDistanceRange" URI="http://ns.adobe.com/exif/1.0/SubjectDistanceRange">
+ <EXIF Tag="41996" Type="ushort" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ushort"/>
+ <TIFF Tag="41996" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ <DIG35 Tag="IMAGE_CREATION.CAMERA_CAPTURE.CAMERA_SETTINGS.SUBJECT_DISTANCE"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/SubjectDistanceRange" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.ImageUniqueID" URI="http://ns.adobe.com/exif/1.0/ImageUniqueID">
+ <EXIF Tag="42016" Type="ascii" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="42016" Type="ascii" Location="IFD_EXIF" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/ImageUniqueID" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.Gamma" URI="http://ns.kodak.com/pmt/1.0/ImageContainerGamma">
+ <EXIF Tag="42240" Type="urational" Location="APP1_IFD0.EXIF_IFD" Translator="builtin2float"/>
+ <TIFF Tag="42240" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Interoperability.Index" URI="http://ns.kodak.com/pmt/1.0/ImageContainerInteroperabilityIndex">
+ <EXIF Tag="1" Type="ascii" Location="APP1_IFD0.EXIF_IFD.INTEROP_IFD" Translator="builtin2ascii"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Interoperability.Version" URI="http://ns.kodak.com/pmt/1.0/ImageContainerInteroperabilityVersion">
+ <EXIF Tag="2" Type="undefined" Location="APP1_IFD0.EXIF_IFD.INTEROP_IFD" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.VersionID" URI="http://ns.adobe.com/exif/1.0/GPSVersionID">
+ <EXIF Tag="0" Type="ubyte" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2uchar"/>
+ <TIFF Tag="0" Type="ubyte" Location="IFD_GPS" Translator="builtin2uchar"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSVersionID" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.LatitudeRef" URI="http://ns.kodak.com/pmt/1.0/SceneContentGPSLatitudeRef">
+ <EXIF Tag="1" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="1" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.Latitude" URI="http://ns.adobe.com/exif/1.0/GPSLatitude">
+<EXIF Tag="2" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="2" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSLatitude" Type="GPSCoordinate" Location="XMP" Translator="builtin2GPSCoordinate" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.LongitudeRef" URI="http://ns.kodak.com/pmt/1.0/SceneContentGPSLongitudeRef">
+ <EXIF Tag="3" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="3" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.Longitude" URI="http://ns.adobe.com/exif/1.0/GPSLongitude">
+ <EXIF Tag="4" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="4" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSLongitude" Type="GPSCoordinate" Location="XMP" Translator="builtin2GPSCoordinate" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.AltitudeRef" URI="http://ns.adobe.com/exif/1.0/GPSAltitudeRef">
+ <EXIF Tag="5" Type="ubyte" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2uchar"/>
+ <TIFF Tag="5" Type="ubyte" Location="IFD_GPS" Translator="builtin2uchar"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSAltitudeRef" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.Altitude" URI="http://ns.adobe.com/exif/1.0/GPSAltitude">
+ <EXIF Tag="6" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="6" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSAltitude" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.TimeStamp" URI="http://ns.adobe.com/exif/1.0/GPSTimeStamp">
+ <EXIF Tag="7" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="7" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSTimeStamp" Type="Date" Location="XMP" Translator="builtin2Date" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.Satellites" URI="http://ns.adobe.com/exif/1.0/GPSSatellites">
+ <EXIF Tag="8" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="8" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSSatellites" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.Status" URI="http://ns.adobe.com/exif/1.0/GPSStatus">
+ <EXIF Tag="9" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="9" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSStatus" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.MeasureMode" URI="http://ns.adobe.com/exif/1.0/GPSMeasureMode">
+ <EXIF Tag="10" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="10" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSMeasureMode" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.DOP" URI="http://ns.adobe.com/exif/1.0/GPSDOP">
+ <EXIF Tag="11" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="11" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSDOP" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.SpeedRef" URI="http://ns.adobe.com/exif/1.0/GPSSpeedRef">
+ <EXIF Tag="12" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="12" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSSpeedRef" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.Speed" URI="http://ns.adobe.com/exif/1.0/GPSSpeed">
+ <EXIF Tag="13" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="13" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSSpeed" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.TrackRef" URI="http://ns.adobe.com/exif/1.0/GPSTrackRef">
+ <EXIF Tag="14" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="14" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSTrackRef" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.Track" URI="http://ns.adobe.com/exif/1.0/GPSTrack">
+ <EXIF Tag="15" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="15" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSTrack" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.ImgDirectionRef" URI="http://ns.adobe.com/exif/1.0/GPSImgDirectionRef">
+ <EXIF Tag="16" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="16" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSImgDirectionRef" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.ImgDirection" URI="http://ns.adobe.com/exif/1.0/GPSImgDirection">
+ <EXIF Tag="17" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="17" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSImgDirection" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.MapDatum" URI="http://ns.adobe.com/exif/1.0/GPSMapDatum">
+<EXIF Tag="18" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="18" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSMapDatum" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.DestLatitudeRef" URI="http://ns.kodak.com/pmt/1.0/SceneContentGPSDestLatitudeRef">
+ <EXIF Tag="19" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="19" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.DestLatitude" URI="http://ns.adobe.com/exif/1.0/GPSDestLatitude">
+ <EXIF Tag="20" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="20" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSDestLatitude" Type="GPSCoordinate" Location="XMP" Translator="builtin2GPSCoordinate" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.DestLongitudeRef" URI="http://ns.kodak.com/pmt/1.0/SceneContentGPSDestLongitudeRef">
+ <EXIF Tag="21" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="21" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.DestLongitude" URI="http://ns.adobe.com/exif/1.0/GPSDestLongitude">
+ <EXIF Tag="22" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="22" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSDestLongitude" Type="GPSCoordinate" Location="XMP" Translator="builtin2GPSCoordinate" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.DestBearingRef" URI="http://ns.adobe.com/exif/1.0/GPSDestBearingRef">
+ <EXIF Tag="23" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="23" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSDestBearingRef" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.DestBearing" URI="http://ns.adobe.com/exif/1.0/GPSDestBearing">
+ <EXIF Tag="24" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="24" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSDestBearing" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.DestDistanceRef" URI="http://ns.adobe.com/exif/1.0/GPSDestDistanceRef">
+ <EXIF Tag="25" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+ <TIFF Tag="25" Type="ascii" Location="IFD_GPS" Translator="builtin2string"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSDestDistanceRef" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.DestDistance" URI="http://ns.adobe.com/exif/1.0/GPSDestDistance">
+ <EXIF Tag="26" Type="urational" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2float"/>
+ <TIFF Tag="26" Type="urational" Location="IFD_GPS" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSDestDistance" Type="Rational" Location="XMP" Translator="builtin2Rational" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.ProcessingMethod" URI="http://ns.adobe.com/exif/1.0/GPSProcessingMethod">
+ <EXIF Tag="27" Type="undefined" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2undefined"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSProcessingMethod" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.AreaInformation" URI="http://ns.adobe.com/exif/1.0/GPSAreaInformation">
+ <EXIF Tag="28" Type="undefined" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2undefined"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSAreaInformation" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.DateStamp" URI="http://ns.kodak.com/pmt/1.0/SceneContentGPSDateStamp">
+ <EXIF Tag="29" Type="ascii" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ascii"/>
+</ENTRY>
+<ENTRY Key="SceneContent.GPS.Differential" URI="http://ns.adobe.com/exif/1.0/GPSDifferential">
+ <EXIF Tag="30" Type="ushort" Location="APP1_IFD0.GPSINFO_IFD" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/GPSDifferential" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.Width" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailWidth">
+ <EXIF Tag="256" Type="ulong" Location="APP1_IFD1" Translator="builtin2ulong"/>
+ <TIFF Tag="256" Type="ulong" Location="IFD_SUB" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.Height" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailHeight">
+ <EXIF Tag="257" Type="ulong" Location="APP1_IFD1" Translator="builtin2ulong"/>
+ <TIFF Tag="257" Type="ulong" Location="IFD_SUB" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.BitsPerSample" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailBitsPerSample">
+ <EXIF Tag="258" Type="ushort" Location="APP1_IFD1" Translator="builtin2ushort"/>
+ <TIFF Tag="258" Type="ushort" Location="IFD_SUB" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.Compression" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailCompression">
+ <EXIF Tag="259" Type="ushort" Location="APP1_IFD1" Translator="builtin2ushort"/>
+ <TIFF Tag="259" Type="ushort" Location="IFD_SUB" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.PhotometricInterpretation" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailPhotometricInterpretation">
+ <EXIF Tag="262" Type="ushort" Location="APP1_IFD1" Translator="builtin2ushort"/>
+ <TIFF Tag="262" Type="ushort" Location="IFD_SUB" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.StripOffsets" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailStripOffsets">
+ <EXIF Tag="273" Type="ulong" Location="APP1_IFD1" Translator="builtin2ulong"/>
+ <TIFF Tag="273" Type="ulong" Location="IFD_SUB" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.Orientation" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailOrientation">
+ <EXIF Tag="274" Type="ushort" Location="APP1_IFD1" Translator="builtin2ushort"/>
+ <TIFF Tag="274" Type="ushort" Location="IFD_SUB" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.SamplesPerPixel" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailSamplesPerPixel">
+ <EXIF Tag="277" Type="ushort" Location="APP1_IFD1" Translator="builtin2ushort"/>
+ <TIFF Tag="277" Type="ushort" Location="IFD_SUB" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.RowsPerStrip" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailRowsPerStrip">
+ <EXIF Tag="278" Type="ulong" Location="APP1_IFD1" Translator="builtin2ulong"/>
+ <TIFF Tag="278" Type="ulong" Location="IFD_SUB" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.StripByteCounts" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailStripByteCounts">
+ <EXIF Tag="279" Type="ulong" Location="APP1_IFD1" Translator="builtin2ulong"/>
+ <TIFF Tag="279" Type="ulong" Location="IFD_SUB" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.DisplayXResolution" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailDisplayXResolution">
+ <EXIF Tag="282" Type="urational" Location="APP1_IFD1" Translator="builtin2float"/>
+ <TIFF Tag="282" Type="urational" Location="IFD_SUB" Translator="builtin2float"/>
+ <PNG  Tag="XPixelsPerUnit" Type="ulong" Location="pHYs" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.DisplayYResolution" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailDisplayYResolution">
+ <EXIF Tag="283" Type="urational" Location="APP1_IFD1" Translator="builtin2float"/>
+ <TIFF Tag="283" Type="urational" Location="IFD_SUB" Translator="builtin2float"/>
+ <PNG  Tag="YPixelsPerUnit" Type="ulong" Location="pHYs" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.PlanarConfiguration" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailPlanarConfiguration">
+ <EXIF Tag="284" Type="ushort" Location="APP1_IFD1" Translator="builtin2ushort"/>
+ <TIFF Tag="284" Type="ushort" Location="IFD_SUB" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.DisplayResolutionUnit" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailDisplayResolutionUnit">
+ <EXIF Tag="296" Type="ushort" Location="APP1_IFD1" Translator="builtin2ushort"/>
+ <TIFF Tag="296" Type="ushort" Location="IFD_SUB" Translator="builtin2ushort"/>
+ <PNG  Tag="UnitSpecifier" Type="ubyte" Location="pHYs" Translator="builtin2uchar"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.OffsetToJPEGSOI" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailOffsetToJPEGSOI">
+ <EXIF Tag="513" Type="ulong" Location="APP1_IFD1" Translator="builtin2ulong"/>
+ <TIFF Tag="513" Type="ulong" Location="IFD_MAIN" Translator="builtin2ulong">
+  <TIFF Tag="513" Type="ulong" Location="IFD_SUB" Translator="builtin2ulong"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.BytesOfJPEGData" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailBytesOfJPEGData">
+ <EXIF Tag="514" Type="ulong" Location="APP1_IFD1" Translator="builtin2ulong"/>
+ <TIFF Tag="514" Type="ulong" Location="IFD_MAIN" Translator="builtin2ulong">
+  <TIFF Tag="514" Type="ulong" Location="IFD_SUB" Translator="builtin2ulong"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.YCbCrCoefficients" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailYCbCrCoefficients">
+ <EXIF Tag="529" Type="urational" Location="APP1_IFD1" Translator="builtin2float"/>
+ <TIFF Tag="529" Type="urational" Location="IFD_SUB" Translator="builtin2float"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.YCbCrSubSampling" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailYCbCrSubSampling">
+ <EXIF Tag="530" Type="ushort" Location="APP1_IFD1" Translator="builtin2ushort"/>
+ <TIFF Tag="530" Type="ushort" Location="IFD_SUB" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Thumbnail.YCbCrPositioning" URI="http://ns.kodak.com/pmt/1.0/ImageContainerThumbnailYCbCrPositioning">
+ <EXIF Tag="531" Type="ushort" Location="APP1_IFD1" Translator="builtin2ushort"/>
+ <TIFF Tag="531" Type="ushort" Location="IFD_SUB" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="CaptureDevice.FilmProductCode" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceFilmProductCode">
+ <EXIF Tag="50000" Type="ascii" Location="APP3_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="50000" Type="ascii" Location="IFD_MAIN" Translator="builtin2string">
+   <TIFF Tag="50000" Type="ascii" Location="IFD_EXIF" Translator="builtin2string"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="DigitalProcess.ImageSourceEK" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessImageSourceEK">
+ <EXIF Tag="50001" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50001" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+   <TIFF Tag="50001" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="CaptureConditions.PAR" URI="http://ns.kodak.com/pmt/1.0/CaptureConditionsPAR">
+ <EXIF Tag="50002" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50002" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+   <TIFF Tag="50002" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="CaptureDevice.CameraOwner.EK" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceCameraOwnerEK">
+ <EXIF Tag="50003" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50003" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+   <TIFF Tag="50003" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="CaptureDevice.SerialNumber.Camera" URI="http://ns.microsoft.com/photo/1.0/CameraSerialNumber">
+ <EXIF Tag="50004" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50004" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+   <TIFF Tag="50004" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+ <XMP Tag="http://ns.microsoft.com/photo/1.0/CameraSerialNumber" Type="String" Location="XMP" Translator="builtin2ascii" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.GroupCaption.UserSelectGroupTitle" URI="http://ns.kodak.com/pmt/1.0/SceneContentGroupCaptionUserSelectGroupTitle">
+ <EXIF Tag="50005" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50005" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="OutputOrder.Information.DealerIDNumber" URI="http://ns.kodak.com/pmt/1.0/OutputOrderInformationDealerIDNumber">
+ <EXIF Tag="50006" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50006" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+   <TIFF Tag="50006" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="CaptureDevice.FID" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceFID">
+ <EXIF Tag="50007" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50007" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="OutputOrder.Information.VendorOrderNumber" URI="http://ns.kodak.com/pmt/1.0/OutputOrderInformationVendorOrderNumber">
+ <EXIF Tag="50007" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50007" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+   <TIFF Tag="50007" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="OutputOrder.Information.EnvelopeNumber" URI="http://ns.kodak.com/pmt/1.0/OutputOrderInformationEnvelopeNumber">
+ <EXIF Tag="50008" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50008" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+   <TIFF Tag="50008" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="OutputOrder.SimpleRenderInst.FrameNumber" URI="http://ns.kodak.com/pmt/1.0/OutputOrderSimpleRenderInstFrameNumber">
+ <EXIF Tag="50009" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50009" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.ScanFrameSequenceNumber" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessScanFrameSequenceNumber">
+ <EXIF Tag="50009" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50009" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+  <TIFF Tag="50009" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="CaptureDevice.FilmCategory" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceFilmCategory">
+ <EXIF Tag="50010" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50010" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+   <TIFF Tag="50010" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="CaptureDevice.FilmGencode" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceFilmGencode">
+ <EXIF Tag="50011" Type="ascii" Location="APP3_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="50011" Type="ascii" Location="IFD_MAIN" Translator="builtin2string">
+   <TIFF Tag="50011" Type="ascii" Location="IFD_EXIF" Translator="builtin2string"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="CaptureDevice.Scanner.ModelAndVersion" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceScannerModelAndVersion">
+ <EXIF Tag="50012" Type="ascii" Location="APP3_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="50012" Type="ascii" Location="IFD_MAIN" Translator="builtin2string">
+   <TIFF Tag="50012" Type="ascii" Location="IFD_EXIF" Translator="builtin2string"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="CaptureDevice.FilmSize" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceFilmSize">
+ <EXIF Tag="50013" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50013" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+   <TIFF Tag="50013" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="DigitalProcess.History.SBARGBShifts" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessHistorySBARGBShifts">
+ <EXIF Tag="50014" Type="long" Location="APP3_IFD0" Translator="builtin2long"/>
+ <TIFF Tag="50014" Type="long" Location="IFD_MAIN" Translator="builtin2long">
+   <TIFF Tag="50014" Type="long" Location="IFD_EXIF" Translator="builtin2long"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="DigitalProcess.History.SBAInputImageColorspace" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessHistorySBAInputImageColorspace">
+ <EXIF Tag="50015" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50015" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+   <TIFF Tag="50015" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="DigitalProcess.History.SBAInputImageBitDepth" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessHistorySBAInputImageBitDepth">
+ <EXIF Tag="50016" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50016" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+   <TIFF Tag="50016" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="DigitalProcess.History.SBAExposureRecord" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessHistorySBAExposureRecord">
+ <EXIF Tag="50017" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50017" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+   <TIFF Tag="50017" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="DigitalProcess.History.UserAdjSBARGBShifts" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessHistoryUserAdjSBARGBShifts">
+ <EXIF Tag="50018" Type="long" Location="APP3_IFD0" Translator="builtin2long"/>
+ <TIFF Tag="50018" Type="long" Location="IFD_MAIN" Translator="builtin2long">
+   <TIFF Tag="50018" Type="long" Location="IFD_EXIF" Translator="builtin2long"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="DigitalProcess.ImageRotationStatus" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessImageRotationStatus">
+ <EXIF Tag="50019" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50019" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+   <TIFF Tag="50019" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="DigitalProcess.RollGuid" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessRollGuid">
+ <EXIF Tag="50020" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50020" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+   <TIFF Tag="50020" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="ImageContainer.MetadataNumber" URI="http://ns.kodak.com/pmt/1.0/ImageContainerMetadataNumber">
+ <EXIF Tag="50021" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50021" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+   <TIFF Tag="50021" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="DigitalProcess.History.EditTagArray" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessHistoryEditTagArray">
+ <EXIF Tag="50022" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50022" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+   <TIFF Tag="50022" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="CaptureConditions.Magnification" URI="http://ns.kodak.com/pmt/1.0/CaptureConditionsMagnification">
+ <EXIF Tag="50023" Type="urational" Location="APP3_IFD0" Translator="builtin2float"/>
+ <TIFF Tag="50023" Type="urational" Location="IFD_MAIN" Translator="builtin2float"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.EnhancementPathVersionNumber" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessEnhancementPathVersionNumber">
+ <EXIF Tag="50027" Type="ascii" Location="APP3_IFD0" Translator="builtin2ascii"/>
+ <TIFF Tag="50027" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="CaptureDevice.NativePhysicalXResolution" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceNativePhysicalXResolution">
+ <EXIF Tag="50028" Type="urational" Location="APP3_IFD0" Translator="builtin2float"/>
+ <TIFF Tag="50028" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+   <TIFF Tag="50028" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="CaptureDevice.NativePhysicalYResolution" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceNativePhysicalYResolution">
+ <EXIF Tag="50029" Type="urational" Location="APP3_IFD0" Translator="builtin2float"/>
+ <TIFF Tag="50029" Type="urational" Location="IFD_MAIN" Translator="builtin2float">
+   <TIFF Tag="50029" Type="urational" Location="IFD_EXIF" Translator="builtin2float"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="CaptureDevice.NativePhysicalResolutionUnit" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceNativePhysicalResolutionUnit">
+ <EXIF Tag="50042" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50042" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+   <TIFF Tag="50042" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="ImageContainer.SourceImageDirectory" URI="http://ns.kodak.com/pmt/1.0/ImageContainerSourceImageDirectory">
+ <EXIF Tag="50200" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50200" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.SourceImageFileName" URI="http://ns.kodak.com/pmt/1.0/ImageContainerSourceImageFileName">
+ <EXIF Tag="50201" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50201" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.SourceImageVolumeName" URI="http://ns.kodak.com/pmt/1.0/ImageContainerSourceImageVolumeName">
+ <EXIF Tag="50202" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50202" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="CaptureConditions.PrintQuantity" URI="http://ns.kodak.com/pmt/1.0/CaptureConditionsPrintQuantity">
+ <EXIF Tag="50284" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50284" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort">
+   <TIFF Tag="50284" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="DigitalProcess.ImagePrintStatus" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessImagePrintStatus">
+ <EXIF Tag="50286" Type="undefined" Location="APP3_IFD0" Translator="builtin2undefined"/>
+ <TIFF Tag="50286" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined">
+   <TIFF Tag="50286" Type="undefined" Location="IFD_EXIF" Translator="builtin2undefined"/>
+ </TIFF>
+</ENTRY>
+<ENTRY Key="DigitalProcess.EnhancementPathUtilized" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessEnhancementPathUtilized">
+ <EXIF Tag="50287" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50287" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.ImageState" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessImageState">
+ <EXIF Tag="50840" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+ <TIFF Tag="50840" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.CompletedImageProcessing" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessCompletedImageProcessing">
+ <EXIF Tag="50841" Type="ulong" Location="APP3_IFD0" Translator="builtin2ulong"/>
+ <TIFF Tag="50841" Type="ulong" Location="IFD_MAIN" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="CaptureConditions.BatteryLevel" URI="http://ns.kodak.com/pmt/1.0/CaptureConditionsBatteryLevel">
+ <TIFF Tag="33423" Type="urational" Location="IFD_MAIN" Translator="builtin2float"/>
+</ENTRY>
+<ENTRY Key="CaptureConditions.Flash.Fired" URI="http://ns.adobe.com/exif/1.0/Flash">
+ <DIG35 Tag="IMAGE_CREATION.CAMERA_CAPTURE.CAMERA_SETTINGS.FLASH"/>
+ <XMP Tag="http://ns.adobe.com/exif/1.0/Fired" Type="Boolean" Location="XMP" Translator="builtin2Boolean" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.Flash.Return" URI="http://ns.kodak.com/pmt/1.0/CaptureConditionsFlashReturn">
+ <XMP Tag="http://ns.adobe.com/exif/1.0/Return" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="CaptureConditions.ImageNumber" URI="http://ns.kodak.com/pmt/1.0/CaptureConditionsImageNumber">
+ <TIFF Tag="37393" Type="ulong" Location="IFD_MAIN" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="CaptureConditions.SecurityClassification" URI="http://ns.kodak.com/pmt/1.0/CaptureConditionsSecurityClassification">
+ <TIFF Tag="37394" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="CaptureConditions.SelfTimerMode" URI="http://ns.kodak.com/pmt/1.0/CaptureConditionsSelfTimerMode">
+ <TIFF Tag="34859" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="CaptureDevice.CFARepeatPatternDim" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceCFARepeatPatternDim">
+ <TIFF Tag="33421" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="CaptureDevice.HostComputer" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceHostComputer">
+ <TIFF Tag="316" Type="ascii" Location="IFD_MAIN" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="CaptureDevice.Interlace" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceInterlace">
+ <TIFF Tag="34857" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="CaptureDevice.Noise" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceNoise">
+ <TIFF Tag="37389" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.CellLength" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessCellLength">
+ <TIFF Tag="265" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.CellWidth" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessCellWidth">
+ <TIFF Tag="264" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.HalftoneHints" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessHalftoneHints">
+ <TIFF Tag="321" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.ICCProfile" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessICCProfile">
+ <TIFF Tag="34675" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Jpeg.AlphaQTable" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessJpegAlphaQTable">
+ <EXIF Tag="70001" Type="vuchar" Location="UNDEFINED_LOCATION" Translator="builtin2uchar"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Jpeg.Chroma1QTable" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessJpegChroma1QTable">
+ <EXIF Tag="70002" Type="ubyte" Location="UNDEFINED_LOCATION" Translator="builtin2uchar"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Jpeg.Chroma2QTable" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessJpegChroma2QTable">
+ <EXIF Tag="70003" Type="ubyte" Location="UNDEFINED_LOCATION" Translator="builtin2uchar"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Jpeg.LuminQTable" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessJpegLuminQTable">
+ <EXIF Tag="70004" Type="ubyte" Location="UNDEFINED_LOCATION" Translator="builtin2uchar"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Jpeg.SOF.ChrominanceSampling" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessJpegSOFChrominanceSampling">
+ <EXIF Tag="70006" Type="ascii" Location="UNDEFINED_LOCATION" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Jpeg.SOF.Components" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessJpegSOFComponents">
+ <EXIF Tag="70007" Type="ushort" Location="UNDEFINED_LOCATION" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Jpeg.SOF.HorizontalSampling" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessJpegSOFHorizontalSampling">
+ <EXIF Tag="70008" Type="ubyte" Location="UNDEFINED_LOCATION" Translator="builtin2uchar"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Jpeg.SOF.VerticalSampling" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessJpegSOFVerticalSampling">
+ <EXIF Tag="70009" Type="ubyte" Location="UNDEFINED_LOCATION" Translator="builtin2uchar"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Jpeg.SOF.Height" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessJpegSOFHeight">
+ <EXIF Tag="70010" Type="ulong" Location="UNDEFINED_LOCATION" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Jpeg.SOF.Precision" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessJpegSOFPrecision">
+ <EXIF Tag="70011" Type="ushort" Location="UNDEFINED_LOCATION" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Jpeg.SOF.Width" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessJpegSOFWidth">
+ <EXIF Tag="70012" Type="ulong" Location="UNDEFINED_LOCATION" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.Thresholding" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessThresholding">
+ <TIFF Tag="263" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="DigitalProcess.PrinterDock.ImageLinkVersion" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessPrinterDockImageLinkVersion">
+ <EXIF Tag="1" Type="undefined" Location="APP3_IFD0.PRINTERDOCK_IFD" Translator="builtin2undefined" />
+</ENTRY>
+<ENTRY Key="DigitalProcess.PrinterDock.UseOfImageLinkPartnerColorPreferenceData" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessPrinterDockUseOfImageLinkPartnerColorPreferenceData">
+ <EXIF Tag="2" Type="undefined" Location="APP3_IFD0.PRINTERDOCK_IFD" Translator="builtin2undefined" />
+</ENTRY>
+<ENTRY Key="DigitalProcess.PrinterDock.ImageLinkPartnerColorPreferenceDataType" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessPrinterDockImageLinkPartnerColorPreferenceDataType">
+ <EXIF Tag="3" Type="ushort" Location="APP3_IFD0.PRINTERDOCK_IFD" Translator="builtin2ushort" />
+</ENTRY>
+<ENTRY Key="DigitalProcess.PrinterDock.ImageLinkPartnerColorPreferenceData" URI="http://ns.kodak.com/pmt/1.0/DigitalProcessPrinterDockImageLinkPartnerColorPreferenceData">
+ <EXIF Tag="4" Type="undefined" Location="APP3_IFD0.PRINTERDOCK_IFD" Translator="builtin2undefined" />
+</ENTRY>
+<ENTRY Key="ImageContainer.SoundType" URI="http://ns.kodak.com/pmt/1.0/ImageContainerSoundType">
+ <TIFF Tag="258" Type="ushort" Location="IFD_SOUND" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.TiffepVersion" URI="http://ns.kodak.com/pmt/1.0/ImageContainerTiffepVersion">
+ <TIFF Tag="37398" Type="undefined" Location="IFD_MAIN" Translator="builtin2undefined"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.TransferRange" URI="http://ns.kodak.com/pmt/1.0/ImageContainerTransferRange">
+ <TIFF Tag="342" Type="ushort" Location="IFD_MAIN" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="SceneContent.ImageCaptureDateTime.TimeZoneOffset" URI="http://ns.kodak.com/pmt/1.0/SceneContentImageCaptureDateTimeTimeZoneOffset">
+ <TIFF Tag="34858" Type="short" Location="IFD_MAIN" Translator="builtin2short"/>
+</ENTRY>
+<ENTRY Key="SceneContent.SoundCaptureDateTime" URI="http://ns.kodak.com/pmt/1.0/SceneContentSoundCaptureDateTime">
+ <TIFF Tag="257" Type="ascii" Location="IFD_SOUND" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="SceneContent.UserComment.UserInputFrameTitle" URI="http://ns.kodak.com/pmt/1.0/SceneContentUserCommentUserInputFrameTitle">
+ <PNG Tag="Title" Type="ascii" Location="tEXt" Translator="builtin2string"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Movie.Duration" URI="http://ns.adobe.com/xmp/1.0/DynamicMedia/duration">
+  <QT Tag="Duration" Type="ulong" Location="moov.mvhd" Translator="builtin2ulong"/>
+ <XMP Tag="http://ns.adobe.com/xmp/1.0/DynamicMedia/duration" Type="Time" Location="XMP" Translator="builtin2Time" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.Movie.FrameRate" URI="http://ns.adobe.com/xmp/1.0/DynamicMedia/videoFrameRate">
+  <QT Tag="FrameRate" Type="float" Location="moov.trak.mdia.minf" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/xmp/1.0/DynamicMedia/videoFrameRate" Type="String" Location="XMP" Translator="builtin2String" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.Movie.FrameCount" URI="http://ns.kodak.com/pmt/1.0/ImageContainerMovieFrameCount">
+  <QT Tag="FrameCount" Type="ulong" Location="moov.trak.mdia.minf" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Movie.SoundSampleRate" URI="http://ns.adobe.com/xmp/1.0/DynamicMedia/audioSampleRate">
+  <QT Tag="SoundSampleRate" Type="float" Location="moov.trak.mdia.minf" Translator="builtin2float"/>
+ <XMP Tag="http://ns.adobe.com/xmp/1.0/DynamicMedia/audioSampleRate" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="ImageContainer.Movie.TimeScale" URI="http://ns.kodak.com/pmt/1.0/ImageContainerMovieTimeScale">
+  <QT Tag="TimeScale" Type="ulong" Location="moov.mvhd" Translator="builtin2ulong"/>
+</ENTRY>
+<ENTRY Key="ImageContainer.Movie.SpecialHardwareAndSoftwareRequirements" URI="http://ns.kodak.com/pmt/1.0/ImageContainerMovieSpecialHardwareAndSoftwareRequirements">
+  <QT Tag="@req" Type="ascii" Location="moov.udta.@req" Translator="builtin2ascii"/>
+</ENTRY>
+<ENTRY Key="CaptureDevice.Type" URI="http://ns.kodak.com/pmt/1.0/CaptureDeviceType">
+  <QT Tag="@fmt" Type="ascii" Location="moov.udta.@fmt" Translator="builtin2ascii"/>
+</ENTRY>
+<ENTRY Key="SceneContent.UserComment.MS.Rating" URI="http://ns.microsoft.com/photo/1.0/Rating">
+ <EXIF Tag="18246" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+ <QT Tag="Rate" Type="ushort" Location="moov.udta.DcMD.DcME.Rate" Translator="builtin2ushort"/>
+ <XMP Tag="http://ns.microsoft.com/photo/1.0/Rating" Type="Integer" Location="XMP" Translator="builtin2Integer" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.UserComment.MS.PhotoRating" URI="http://ns.kodak.com/pmt/1.0/SceneContentUserCommentMSPhotoRating">
+ <EXIF Tag="18249" Type="ushort" Location="APP1_IFD0" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="SceneContent.UserComment.MS.Title" URI="http://purl.org/dc/elements/1.1/title">
+ <EXIF Tag="40091" Type="ubyte" Location="APP1_IFD0" Translator="builtin2uchar"/>
+ <QT Tag="Titl" Type="ubyte" Location="moov.udta.DcMD.DcME.Titl" Translator="builtin2uchar"/>
+ <XMP Tag="http://purl.org/dc/elements/1.1/title" Type="LangAlt" Location="XMP" Translator="builtin2LangAlt" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.UserComment.MS.Comments" URI="http://ns.kodak.com/pmt/1.0/SceneContentUserCommentMSComments">
+ <EXIF Tag="40092" Type="ubyte" Location="APP1_IFD0" Translator="builtin2uchar"/>
+ <QT Tag="Comm" Type="ubyte" Location="moov.udta.DcMD.DcME.Comm" Translator="builtin2uchar"/>
+</ENTRY>
+<ENTRY Key="SceneContent.UserComment.MS.Author" URI="http://purl.org/dc/elements/1.1/creator">
+ <EXIF Tag="40093" Type="ubyte" Location="APP1_IFD0" Translator="builtin2uchar"/>
+ <XMP Tag="http://purl.org/dc/elements/1.1/creator" Type="SeqString" Location="XMP" Translator="builtin2SeqString" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.UserComment.MS.Keywords" URI="http://purl.org/dc/elements/1.1/subject">
+ <EXIF Tag="40094" Type="ubyte" Location="APP1_IFD0" Translator="builtin2uchar"/>
+ <QT Tag="Keyw" Type="ubyte" Location="moov.udta.DcMD.DcME.Keyw" Translator="builtin2uchar"/>
+ <XMP Tag="http://purl.org/dc/elements/1.1/subject" Type="BagString" Location="XMP" Translator="builtin2BagString" /> 
+</ENTRY>
+<ENTRY Key="SceneContent.UserComment.MS.Subject" URI="http://purl.org/dc/elements/1.1/subject">
+ <EXIF Tag="40095" Type="ubyte" Location="APP1_IFD0" Translator="builtin2uchar"/>
+ <XMP Tag="http://purl.org/dc/elements/1.1/description" Type="LangAlt" Location="XMP" Translator="builtin2LangAlt" /> 
+</ENTRY>
+<ENTRY Key="XMP.Document" URI="http://ns.kodak.com/pmt/1.0/XMPDocument">
+ <EXIF Tag="75000" Type="ascii" Location="XMP" Translator="builtin2ascii"/>
+ <QT Tag="XMP_" Type="ascii" Location="moov.udta.XMP_" Translator="builtin2ascii"/>
+</ENTRY>
+<ENTRY Key="SceneContent.Faces.DetectionAlgorithmID" URI="http://ns.kodak.com/pmt/1.0/SceneContentFacesDetectionAlgorithmID">
+ <EXIF Tag="1" Type="ascii" Location="APP3_IFD0.FACES_IFD" Translator="builtin2ascii"/>
+</ENTRY>
+<ENTRY Key="SceneContent.Faces.RecognitionAlgorithmID" URI="http://ns.kodak.com/pmt/1.0/SceneContentFacesRecognitionAlgorithmID">
+ <EXIF Tag="2" Type="ascii" Location="APP3_IFD0.FACES_IFD" Translator="builtin2ascii"/>
+</ENTRY>
+<ENTRY Key="SceneContent.Faces.CartesianZeroPoint" URI="http://ns.kodak.com/pmt/1.0/SceneContentFacesCartesianZeroPoint">
+ <EXIF Tag="3" Type="ushort" Location="APP3_IFD0.FACES_IFD" Translator="builtin2ushort"/>
+</ENTRY>
+<ENTRY Key="SceneContent.Faces" URI="http://ns.kodak.com/pmt/1.0/SceneContentFaces">
+ <EXIF Tag="5" Type="face" Location="APP3_IFD0.FACES_IFD" Translator="builtin2face"/>
+</ENTRY>
+</TRANSLATION>

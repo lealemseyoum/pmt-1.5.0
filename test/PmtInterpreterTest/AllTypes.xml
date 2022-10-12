@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance" xsi:noNamespaceSchemaLocation="AllTypes.xsd">
+	<test_int8>-128</test_int8>
+	<test_vint8>123 124 125</test_vint8>
+	<test_uint8>255</test_uint8>
+	<test_vuint8>0 1 2 3 4 5</test_vuint8>
+	<test_int16>-32768</test_int16>
+	<test_vint16>-32768 -257 -256 -255 0 255 265 257 32767</test_vint16>
+	<test_uint16>65535</test_uint16>
+	<test_vuint16>0 255 256 257 65535</test_vuint16>
+	<test_int32>-2147483648</test_int32>
+	<test_vint32>-2147483648 -257 -256 -255 0 255 256 257 2147483647</test_vint32>
+	<test_uint32>4294967295</test_uint32>
+	<test_vuint32>0 255 256 257 4294967295</test_vuint32>
+	<test_boolean>true</test_boolean>
+	<test_vboolean>true false true false</test_vboolean>
+	<test_float>3.4E-38</test_float>
+	<test_vfloat>0.00222 .00333</test_vfloat>
+	<test_double>123.4</test_double>
+	<test_vdouble>0 .00222 .00333</test_vdouble>
+	<test_string>This is a test string.</test_string>
+	<test_vstring>Test string vector.</test_vstring>
+</PmtRootElement>

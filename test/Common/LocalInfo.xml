@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetadataDefinitionBindings>
+	<MetadataDefinitionBinding>
+		<MetadataDefnFileURI>../Common/LocalDefs.xsd</MetadataDefnFileURI>
+		<RootElementName>PmtRootElement</RootElementName>
+		<AssociatedTranslationTableURI>../Common/LocalTable.xml</AssociatedTranslationTableURI>
+	</MetadataDefinitionBinding>
+</MetadataDefinitionBindings>

@@ -1,0 +1,131 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "AccessorTesti"=.\AccessorTesti.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Eki
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name EkTiffi
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtAccessori
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtCorei
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Eki"=.\Eki.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PmtAccessori"=.\PmtAccessori.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PmtCorei
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PmtCorei"=.\PmtCorei.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Eki
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PmtInterpreterTesti"=.\PmtInterpreterTesti.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Eki
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtCorei
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "_BuildAllDynamic"=.\BuildAllDynamic\_BuildAllDynamic.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name AccessorTesti
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Eki
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name EkTiffi
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtAccessori
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtCorei
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtInterpreterTesti
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

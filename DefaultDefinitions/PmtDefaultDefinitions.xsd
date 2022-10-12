@@ -1,0 +1,2920 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema targetNamespace="http://www.kodak.com/2001/Pmt/v1" xmlns="http://www.kodak.com/2001/Pmt/v1"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.kodak.com/metadata/doc/v1"
+	xmlns:ch="http://www.kodak.com/metadata/changehistory/v1" version="1.0">
+  <xsd:annotation>
+    <xsd:documentation>
+      <doc:brief> A brief description of the metadata vocabulary. </doc:brief>
+      <doc:detail> A detailed desctiption of the metadata vocabulary. Can include xhtml markup within the documentation field.</doc:detail>
+    </xsd:documentation>
+    <xsd:documentation>
+      <ch:ChangeLog>
+        <!-- There will be a ChangeElement corresponding to each time there is a change to the schema -->
+        <ch:ChangeElement>
+          <ch:Version>v1.0</ch:Version>
+          <ch:Date> 09/30/2003 </ch:Date>
+          <ch:Description> This is the initial release. </ch:Description>
+          <ch:Person>
+            <ch:First>Robert</ch:First>
+            <ch:Last>Reisch</ch:Last>
+          </ch:Person>
+          <ch:Email> robert.reisch@kodak.com </ch:Email>
+        </ch:ChangeElement>
+        <ch:ChangeElement>
+          <ch:Version>v1.0</ch:Version>
+          <ch:Date> 01/23/2004 </ch:Date>
+          <ch:Description>
+            New tag addition from Exif 2.2.1: ImageContainer.Gamma
+            Updates to following tags: ImageSource, InteroperabilityIndex, Flash
+          </ch:Description>
+          <ch:Person>
+            <ch:First>Kathy</ch:First>
+            <ch:Last>Miller-Mullins</ch:Last>
+          </ch:Person>
+          <ch:Email>katherine.miller-mullins@kodak.com </ch:Email>
+        </ch:ChangeElement>
+        <ch:ChangeElement>
+          <ch:Version>v1.0</ch:Version>
+          <ch:Date> 02/04/2004 </ch:Date>
+          <ch:Description>
+            New tags EnhancementPathVersionNumber and EnhancementPathUtilized
+          </ch:Description>
+          <ch:Person>
+            <ch:First>Sam</ch:First>
+            <ch:Last>Fryer</ch:Last>
+          </ch:Person>
+          <ch:Email>samuel.fryer@kodak.com</ch:Email>
+        </ch:ChangeElement>
+        <ch:ChangeElement>
+          <ch:Version>v1.0</ch:Version>
+          <ch:Date> 03/30/2005 </ch:Date>
+          <ch:Description>
+            New tags ImageState, CompletedImageProcessing,  and new values for EnhancementPathUtilized
+          </ch:Description>
+          <ch:Person>
+            <ch:First>Rob</ch:First>
+            <ch:Last>Reisch</ch:Last>
+          </ch:Person>
+          <ch:Email>robert.reisch@kodak.com</ch:Email>
+        </ch:ChangeElement>
+        <ch:ChangeElement>
+          <ch:Version>v1.0</ch:Version>
+          <ch:Date> 10/19/2005 </ch:Date>
+          <ch:Description>
+            Two new tags to support Sub-second metadata; ImageFileCreationSubSecond and ImageCaptureSubSecondTime. Changed CompletedImageProcessing bit definitions and changed the metadata object and Exi/TIFF tag from a 16 bit SHORT to a 32 bit LONG
+          </ch:Description>
+          <ch:Person>
+            <ch:First>Rob</ch:First>
+            <ch:Last>Reisch</ch:Last>
+          </ch:Person>
+          <ch:Email>robert.reisch@kodak.com</ch:Email>
+        </ch:ChangeElement>
+        <ch:ChangeElement>
+          <ch:Version>v1.0</ch:Version>
+          <ch:Date> 2/3/2006</ch:Date>
+          <ch:Description>
+            Added ImageLink metadata support ImageLink partners color preference data
+          </ch:Description>
+          <ch:Person>
+            <ch:First>Amy</ch:First>
+            <ch:Last>Knowles</ch:Last>
+          </ch:Person>
+          <ch:Email>amy.knowles@kodak.com</ch:Email>
+        </ch:ChangeElement>
+        <ch:ChangeElement>
+          <ch:Version>v1.0</ch:Version>
+          <ch:Date> 2/6/2007</ch:Date>
+          <ch:Description>
+            Added movie data
+          </ch:Description>
+          <ch:Person>
+            <ch:First>Sam</ch:First>
+            <ch:Last>Fryer</ch:Last>
+          </ch:Person>
+          <ch:Email>samuel.fryer@kodak.com</ch:Email>
+        </ch:ChangeElement>
+        <ch:ChangeElement>
+          <ch:Version>v1.0</ch:Version>
+          <ch:Date> 12/6/2007</ch:Date>
+          <ch:Description>
+            Added SceneObject data
+          </ch:Description>
+          <ch:Person>
+            <ch:First>Sam</ch:First>
+            <ch:Last>Fryer</ch:Last>
+          </ch:Person>
+          <ch:Email>samuel.fryer@kodak.com</ch:Email>
+        </ch:ChangeElement>
+      </ch:ChangeLog>
+    </xsd:documentation>
+  </xsd:annotation>
+  <!-- 8-bit based number types -->
+  <xsd:simpleType name="vint8">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>Type vint8 is a vector of integer 8-bit values.</doc:brief>
+        <doc:detail>Type vint8 is a vector of integer 8-bit values. This maps to a C++ data type of vector &lt; int &gt;.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="xsd:byte" />
+  </xsd:simpleType>
+  <xsd:simpleType name="vuint8">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>Type vuint8 is a vector of unsigned integer 8-bit values.</doc:brief>
+        <doc:detail>Type vuint8 is a vector of unsigned integer 8-bit values. This maps to a C++ data type of vector &lt; unsigned char &gt;.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="xsd:unsignedByte" />
+  </xsd:simpleType>
+  <!-- 16-bit based number types -->
+  <xsd:simpleType name="vint16">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>Type vint16 is a vector of integer 16-bit values.</doc:brief>
+        <doc:detail>Type vint16 is a vector of integer 16-bit values. This maps to a C++ data type of vector &lt; short &gt;.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="xsd:short" />
+  </xsd:simpleType>
+  <xsd:simpleType name="vuint16">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>Type vuint16 is a vector of unsigned integer 16-bit values.</doc:brief>
+        <doc:detail>Type vuint16 is a vector of unsigned integer 16-bit values. This maps to a C++ data type of vector &lt; unsigned short &gt;.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="xsd:unsignedShort" />
+  </xsd:simpleType>
+  <!-- 32-bit based number types -->
+  <xsd:simpleType name="vint32">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>Type vint32 is a vector of integer 32-bit values.</doc:brief>
+        <doc:detail>Type vint32 is a vector of integer 32-bit values. This maps to a C++ data type of vector &lt; long &gt;.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="xsd:int" />
+  </xsd:simpleType>
+  <xsd:simpleType name="vuint32">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>Type vuint32 is a vector of unsigned integer 32-bit values.</doc:brief>
+        <doc:detail>Type vuint32 is a vector of unsigned integer 32-bit values. This maps to a C++ data type of vector &lt; unsigned long &gt;.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="xsd:unsignedInt" />
+  </xsd:simpleType>
+  <!-- boolean types -->
+  <xsd:simpleType name="vboolean">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>Type vboolean is a vector of boolean values.</doc:brief>
+        <doc:detail>Type vboolean is a vector of boolean values. This maps to a C++ data type of vector &lt; bool &gt;.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="xsd:boolean" />
+  </xsd:simpleType>
+  <!-- floating point types -->
+  <xsd:simpleType name="vfloat">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>Type vfloat is a vector of float values.</doc:brief>
+        <doc:detail>Type vfloat is a vector of float values. This maps to a C++ data type of vector &lt; float &gt;.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="xsd:float" />
+  </xsd:simpleType>
+  <xsd:simpleType name="vdouble">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>Type vdouble is a vector of double precision 64-bit floating point values.</doc:brief>
+        <doc:detail>Type vdouble is a vector of double precision 64-bit floating point values. This maps to a C++ data type of vector &lt; double &gt;.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="xsd:double" />
+  </xsd:simpleType>
+  <!-- string types -->
+  <xsd:simpleType name="vstring">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>Type vstring is a vector of string values.</doc:brief>
+        <doc:detail>Type vstring is a vector of string values. This maps to a C++ data type of vector &lt; string &gt;.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="vwstring">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>Type vwstring is a vector of wide string characters.</doc:brief>
+        <doc:detail>Type vwstring is a vector of wide string characters. This maps to a C++ data type of vector &lt; wstring &gt;.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="xsd:string" />
+  </xsd:simpleType>
+  <!-- Points -->
+  <xsd:complexType name="point">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>A 4D point definition</doc:brief>
+        <doc:detail>A 4D point definition including the 3D spatial coordinates along with a time reference</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="x" type="xsd:float" />
+      <xsd:element name="y" type="xsd:float" />
+      <xsd:element name="z" type="xsd:float" />
+      <xsd:element name="T" type="xsd:float" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="vpoints">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>A vector of points.</doc:brief>
+        <doc:detail>A vector of points.</doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="point" type="point" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- What about Unicode? -->
+  <xsd:complexType name="FlashT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>FlashT defines the different elements that describe the status of the flash system. The FlashT type is comprised of the following elements: Flash, Fired, Return, and Energy.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Flash" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This tag indicates the status of flash when the image was shot.</doc:brief>
+            <doc:detail>
+              This tag indicates the status of flash when the image was shot. Bit 0 indicates the flash firing status, bits 1 and 2 indicate the flash return status, bits 3 and 4 indicate the flash mode, bit 5 indicates whether the flash function is present, and bit 6 indicates "red eye" mode. (The other descriptions about Flash Tag definition which were mentioned in Exif Version 2.2 are invalid.)
+              <ol>
+                <li>Values for bit 0 indicating whether the flash fired.</li>
+                <li>0b = Flash did not fire.</li>
+                <li>1b = Flash fired.</li>
+                <li>Values for bits 1 and 2 indicating the status of returned light.</li>
+                <li>00b = No strobe return detection function</li>
+                <li>01b = reserved</li>
+                <li>10b = Strobe return light not detected.</li>
+                <li>11b = Strobe return light detected.</li>
+                <li>Values for bits 3 and 4 indicating the camera's flash mode.</li>
+                <li>00b = unknown</li>
+                <li>01b = Compulsory flash firing</li>
+                <li>10b = Compulsory flash suppression</li>
+                <li>11b = Auto mode</li>
+                <li>Values for bit 5 indicating the presence of a flash function.</li>
+                <li>0b = Flash function present</li>
+                <li>1b = No flash function</li>
+                <li>Values for bit 6 indicating the camera's red-eye mode.</li>
+                <li>0b = No red-eye reduction mode or unknown</li>
+                <li>1b = Red-eye reduction supported</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Fired" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates that the camera activated the flash system.</doc:brief>
+            <doc:detail>Indicates that the camera activated the flash system.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Return" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates that the camera detected reflected light from the flash.</doc:brief>
+            <doc:detail>Indicates that the camera detected reflected light from the flash.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Energy" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates the strobe energy at the time the image is captured.</doc:brief>
+            <doc:detail>Indicates the strobe energy at the time the image is captured, as measured in Beam Candle Power Seconds (BCPS).</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CaptureConditionsT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>CaptureConditionsT defines the different elements related to picture-taking conditions at the time of image capture.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Aperture" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The unit of lens aperture is the APEX  value.</doc:brief>
+            <doc:detail>The unit of lens aperture is the APEX (Additive System of Photographic Exposure) value.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="BatteryLevel" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Encodes the camera’s battery level.</doc:brief>
+            <doc:detail>This metadata object preferably encodes the camera’s battery level as a ratio of fullness at the time of image capture. For example, a full battery level is indicated by 1/1, half-full battery by 1/2, etc. Alternately, an ASCII string describing the battery level is allowed.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Brightness" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The unit of brightness is the APEX value. </doc:brief>
+            <doc:detail>The unit of brightness is the APEX value. Ordinarily it is given in the range of -99.99 to99.99.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Contrast" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the direction of contrast processing applied by the camera when the image was shot.</doc:brief>
+            <doc:detail>
+              This metadata object indicates the direction of contrast processing applied by the camera when the image was shot. The metadata object has the following enumerations:
+              <ol>
+                <li>0 = Normal</li>
+                <li>1 = Soft</li>
+                <li>2 = Hard</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CustomRendered" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the use of special processing on image data, such as rendering geared to output.</doc:brief>
+            <doc:detail>
+              This metadata object indicates the use of special processing on image data, such as rendering geared to output. When special processing is performed, the reader is expected to disable or minimize any further processing. The metadata object has the following enumerations:
+              <ol>
+                <li>0 = Normal process</li>
+                <li>1 = Custom process</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DeviceSettingDescription" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates information on the picture-taking conditions of a particular camera model.</doc:brief>
+            <doc:detail>This metadata object indicates information on the picture-taking conditions of a particular camera model. The tag is used only to indicate the picture-taking conditions in the reader. The information is recorded in the format shown in Figure 17. The data is recorded in Unicode using SHORT type for the number of display rows and columns and UNDEFINED type for the camera settings. The Unicode (UCS-2) string including Signature is NULL terminated. The specifics of the Unicode string are as given in ISO/IEC 10646-1.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DigitalZoomRatio" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the digital zoom ratio when the image was shot.</doc:brief>
+            <doc:detail>This metadata object indicates the digital zoom ratio when the image was shot. If the numerator of the recorded value is 0, this indicates that digital zoom was not used.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ExposureBias" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The unit of exposure Bias is the APEX value.</doc:brief>
+            <doc:detail>The unit of exposure Bias is the APEX value. Ordinarily it is given in the range of -99.99 to 99.99.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ExposureIndex" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The exposure index selected on the camera or input device at the time the image is captured.</doc:brief>
+            <doc:detail>The exposure index selected on the camera or input device at the time the image is captured.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ExposureMode" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the exposure mode set when the image was shot.</doc:brief>
+            <doc:detail>This metadata object indicates the exposure mode set when the image was shot. In auto-bracketing mode, the camera shoots a series of frames of the same scene at different exposure settings.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ExposureProgram" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Defines the class of the program used by the camera to set exposure when the picture is taken.</doc:brief>
+            <doc:detail>
+              Defines the class of the program used by the camera to set exposure when the picture is taken. The values are defined as follows:
+              <ol>
+                <li>0 = Not defined</li>
+                <li>1 = Manual</li>
+                <li>2 = Normal program</li>
+                <li>3 = Aperture priority</li>
+                <li>4 = Shutter priority</li>
+                <li>5 = Creative program (biased toward depth of field)</li>
+                <li>6 = Action program (biased toward fast shutter speed)</li>
+                <li>7 = Portrait mode (for closeup photos with the background out of focus)</li>
+                <li>8 = Landscape mode (for landscape photos with the background in focus)</li>
+                <li>9 to 255 = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ExposureTime" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Exposure time, given in seconds.</doc:brief>
+            <doc:detail>Exposure time, given in seconds.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Flash" type="FlashT" minOccurs="0" />
+      <xsd:element name="Fnumber" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The F number. </doc:brief>
+            <doc:detail>The F number. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FocalLength" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The actual focal length of the lens, in mm. </doc:brief>
+            <doc:detail>The actual focal length of the lens, in mm. Conversion is not made to the focal length of a 35 mm film camera.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FocalLengthIn35mmFilm" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the equivalent focal length assuming a 35mm film camera, in mm.</doc:brief>
+            <doc:detail>This metadata object indicates the equivalent focal length assuming a 35mm film camera, in mm. A value of 0 means the focal length is unknown. Note that this tag differs from the FocalLength tag.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="GainControl" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the degree of overall image gain adjustment.</doc:brief>
+            <doc:detail>
+              This metadata object indicates the degree of overall image gain adjustment. The metadata object has the following enumerations:
+              <ol>
+                <li>0 = None</li>
+                <li>1 = Low gain up</li>
+                <li>2 = High gain up</li>
+                <li>3 = Low gain down</li>
+                <li>4 = High gain down</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageNumber" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object encodes the number assigned to an image.</doc:brief>
+            <doc:detail>This metadata object encodes the number assigned to an image. This tag is useful when storing a burst of images which are "chained" together within the same TIFF/EP file.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="LightSource" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The light source</doc:brief>
+            <doc:detail>
+              The light source, defined as follows:
+              <ol>
+                <li>0 = unknown</li>
+                <li>1 = Daylight</li>
+                <li>2 = Fluorescent</li>
+                <li>3 = Tungsten (incandescent light)</li>
+                <li>4 = Flash</li>
+                <li>9 = Fine weather</li>
+                <li>10 = Cloudy weather</li>
+                <li>11 = Shade</li>
+                <li>12 = Daylight fluorescent (D 5700 – 7100K)</li>
+                <li>13 = Day white fluorescent (N 4600 – 5400K)</li>
+                <li>14 = Cool white fluorescent (W 3900 – 4500K)</li>
+                <li>15 = White fluorescent (WW 3200 – 3700K)</li>
+                <li>17 = Standard light A</li>
+                <li>18 = Standard light B</li>
+                <li>19 = Standard light C</li>
+                <li>20 = D55</li>
+                <li>21 = D65</li>
+                <li>22 = D75</li>
+                <li>23 = D50</li>
+                <li>24 = ISO studio tungsten</li>
+                <li>255 = other light source</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Magnification" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Magnification is the ratio of the focal length divided by the subject distance</doc:brief>
+            <doc:detail>Magnification is the ratio of the focal length divided by the subject distance</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MaxAperture" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The smallest F number of the lens is the APEX value.</doc:brief>
+            <doc:detail>The smallest F number of the lens is the APEX value.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MeteringMode" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The metering mode</doc:brief>
+            <doc:detail>
+              The metering mode, defined as follows:
+              <ol>
+                <li>0 = unknown</li>
+                <li>1 = Average</li>
+                <li>2 = CenterWeightedAverage</li>
+                <li>3 = Spot</li>
+                <li>4 = MultiSpot</li>
+                <li>5 = Pattern</li>
+                <li>6 = Partial</li>
+                <li>7 to 254 = reserved</li>
+                <li>255 = other</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PAR" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>PAR, PrintAspectRatio, defines the desired print format of the current image.</doc:brief>
+            <doc:detail>
+              PAR, PrintAspectRatio, defines the desired print format of the current image. The PAR Flag has the following enumeration:
+              <ol>
+                <li>0 = the complete image area is displayed</li>
+                <li>1 = APS Print, H print (~16:9)</li>
+                <li>2 = APS Print, P print (~3:1)</li>
+                <li>3 = APS Print, C print (~3:2)</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PrintQuantity" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field stores the number of prints requested for this image.</doc:brief>
+            <doc:detail>This field stores the number of prints requested for this image.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Saturation" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the direction of saturation processing applied by the camera when the image was shot. </doc:brief>
+            <doc:detail>
+              This metadata object indicates the direction of saturation processing applied by the camera when the image was shot. The metadata object has the following enumerations:
+              <ol>
+                <li>0 = Normal</li>
+                <li>1 = Low saturation</li>
+                <li>2 = High saturation</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SceneCaptureType" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the type of scene that was shot.</doc:brief>
+            <doc:detail>
+              This metadata object indicates the type of scene that was shot. It can also be used to record the mode in which the image was shot. Note that this differs from the scene type (SceneType) tag.  The metadata object has the following enumerations:
+              <ol>
+                <li>0 = Standard</li>
+                <li>1 = Landscape</li>
+                <li>2 = Portrait</li>
+                <li>3 = Night scene</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SecurityClassification" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object encodes the level of security classification assigned to the image.</doc:brief>
+            <doc:detail>This metadata object encodes the level of security classification assigned to the image. The tag value can either be a single ASCII character or an ASCII string.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SelfTimerMode" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Encodes the number of seconds image capture was delayed from the time the “take picture button” was pressed by the camera operator.</doc:brief>
+            <doc:detail>This metadata object encodes the number of seconds image capture was delayed from the time the “take picture button” was pressed by the camera operator. If the value is zero, this implies that the self-timer is off.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Sharpness" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the direction of sharpness processing applied by the camera when the image was shot.</doc:brief>
+            <doc:detail>
+              This metadata object indicates the direction of sharpness processing applied by the camera when the image was shot. The metadata object has the following enumerations:
+              <ol>
+                <li>0 = Normal</li>
+                <li>1 = Soft</li>
+                <li>2 = Hard</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ShutterSpeed" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The unit of shutter speed.</doc:brief>
+            <doc:detail>The unit of shutter speed  is the APEX (Additive System of Photographic Exposure) setting.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SubjectArea" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the location and area of the main subject in the overall scene.</doc:brief>
+            <doc:detail>This metadata object indicates the location and area of the main subject in the overall scene.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SubjectDistance" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The distance to the subject in meters.</doc:brief>
+            <doc:detail>The distance to the subject in meters.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SubjectDistanceRange" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the distance to the subject. </doc:brief>
+            <doc:detail>
+              This metadata object indicates the distance to the subject. The metadata object has the following enumerations:
+              <ol>
+                <li>0 = unknown</li>
+                <li>1 = Macro</li>
+                <li>2 = Close view</li>
+                <li>3 = Distant view</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="WhiteBalance" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the white balance mode set when the image was shot.</doc:brief>
+            <doc:detail>
+              This metadata object indicates the white balance mode set when the image was shot. The metadata object has the following enumerations:
+              <ol>
+                <li>0 = Auto white balance</li>
+                <li>1 = Manual white balance</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CameraOwnerT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>CameraOwnerT defines the different elements that identify the name of the camera owner. </doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="CameraOwner" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A character string that identifies the name of the camera owner. </doc:brief>
+            <doc:detail>A character string that identifies the name of the camera owner. Photographer or image creator.  </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="EK" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A character string that identifies the name of the camera owner. </doc:brief>
+            <doc:detail>A character string that identifies the name of the camera owner. Photographer or image creator.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ScannerT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>ScannerT defines those elements associated with the scanner firmware.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ModelAndVersion" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A character string that identifies the name and version of the scanner firmware.</doc:brief>
+            <doc:detail>A character string that identifies the name and version of the scanner firmware that created the digital image file or raw sensor image data.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SerialNumberT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>SerialNumberT defines the element that identifies the serial number of the camera.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Camera" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A character string that identifies the serial number of the camera.</doc:brief>
+            <doc:detail>A character string that identifies the serial number of the camera.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CaptureDeviceT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>CaptureDeviceT contains different elements that define the device that generated the image, such as a camera, scanner, video digitizer or other equipment. </doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="CFAPattern" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>CFAPattern indicates the color filter array (CFA) geometric pattern of the image sensor when a one-chip color area sensor is used. </doc:brief>
+            <doc:detail>CFAPattern indicates the color filter array (CFA) geometric pattern of the image sensor when a one-chip color area sensor is used. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CFARepeatPatternDim" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object encodes the number of pixels horizontally and vertically that are needed to uniquely define the repeat pattern of the color filter array (CFA) pattern used in the color image sensor.</doc:brief>
+            <doc:detail>This metadata object encodes the number of pixels horizontally and vertically that are needed to uniquely define the repeat pattern of the color filter array (CFA) pattern used in the color image sensor. It is mandatory when PhotometricInterpretation = 32803, and there are no defaults allowed. It is optional when PhotometricInterpretation = 2 or 6 and SensingMethod = 2, where it can be used to indicate the original sensor sampling positions.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CameraOwner" type="CameraOwnerT" minOccurs="0" />
+      <xsd:element name="FID" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field contains a string which records information from the photo finisher that is used to identify an order.</doc:brief>
+            <doc:detail>This field contains a string which records information from the photo finisher that is used to identify an order. In the case of Advanced Photo System film, the FID will be written; for other film, the lab will use its own discretion.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FilmCategory" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>FilmCategory defines the category of the film used.</doc:brief>
+            <doc:detail>
+              FilmCategory defines the category of the film used. FilmCategory vales are defined as follows:
+              <ol>
+                <li>0 = Unidentified</li>
+                <li>1 = Negative BandW</li>
+                <li>2 = Negative Color</li>
+                <li>3 = Negative BandW</li>
+                <li>4 = Reversal Color</li>
+                <li>5 - 255 = Reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FilmGencode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>FilmGencode defines the film gencode.</doc:brief>
+            <doc:detail>FilmGencode defines the film gencode.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FilmProductCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>FilmProductCode defines the film product code.</doc:brief>
+            <doc:detail>FilmProductCode defines the film product code.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FilmSize" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>FilmSize defines the size of the film.</doc:brief>
+            <doc:detail>
+              FilmSize defines the size of the film. Valid values:
+              <ol>
+                <li>0 = 135 (35mm)</li>
+                <li>1 = 124(APS)</li>
+                <li>2 - 254 = Reserved</li>
+                <li>255 = Unidentified</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FocalPlaneResolutionUnit" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates the unit for measuring FocalPlaneXResolution and FocalPlaneYResolution.</doc:brief>
+            <doc:detail>
+              Indicates the unit for measuring FocalPlaneXResolution and FocalPlaneYResolution. This value is the same as the ResolutionUnit. The values are defined as follows:
+              <ol>
+                <li>2 = inches</li>
+                <li>3 = centimeters</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FocalPlaneXResolution" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates the number of pixels in the image width (X) direction per FocalPlaneResolutionUnit on the image device focal plane.</doc:brief>
+            <doc:detail>Indicates the number of pixels in the image width (X) direction per FocalPlaneResolutionUnit on the image device focal plane.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FocalPlaneYResolution" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates the number of pixels in the image height (Y) direction per FocalPlaneResolutionUnit on the image device focal plane.</doc:brief>
+            <doc:detail>Indicates the number of pixels in the image height (Y) direction per FocalPlaneResolutionUnit on the image device focal plane.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="HostComputer" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The computer and/or operating system in use at the time of image creation.</doc:brief>
+            <doc:detail>The computer and/or operating system in use at the time of image creation.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ISOSpeedRating" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232xiii.</doc:brief>
+            <doc:detail>Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232xiii.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Interlace" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the field number of multi-field images. </doc:brief>
+            <doc:detail>This metadata object indicates the field number of multi-field images. The tag allows for both simple vertical interlace of between 2 and 255 interlace fields per frame, and for 2-dimensional interlace of up to 127 vertical x 127 horizontal spatial offset locations per frame. Another application of this interlace mechanism is to store images for progressive transmission. For 2:1 vertical interlace, as employed in many video systems, the first field (lines 1, 3, 5 from the frame image) is indicated with a tag value = 1, and the second field is indicated with a tag value = 2. For 2- dimensional interlace, the 7 least significant bits of the value indicate the vertical field number, and the next 7 bits indicate the horizontal field number. To store multiple interlace fields in one TIFF/EP file, the different fields shall use the IFD chaining mechanism.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Make" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The manufacturer of the recording equipment.</doc:brief>
+            <doc:detail>The manufacturer of the recording equipment. This is the manufacturer of the DSC, scanner, video digitizer or other equipment that generated the image. When the field is left blank, it is treated as unknown.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MakerNotes" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A character string that identifies from a manufacturers perspective, any desired information about the image writer or capture device.</doc:brief>
+            <doc:detail>A character string that identifies from a manufacturers perspective, any desired information about the image writer or capture device.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Model" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The model name or model number of the equipment.</doc:brief>
+            <doc:detail>The model name or model number of the equipment. This is the model name of number of the DSC, scanner, video digitizer or other equipment that generated the image. When the field is left blank, it is treated as unknown.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="NativePhysicalResolutionUnit" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the unit for measuring NativePhysicalXResolution and NativePhysicalYResolution.</doc:brief>
+            <doc:detail>This metadata object indicates the unit for measuring NativePhysicalXResolution and NativePhysicalYResolution.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="NativePhysicalXResolution" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the number of pixel sensors in the X direction per the NativePhysicalResolutionUnit on the image sensor focal plane.</doc:brief>
+            <doc:detail>This metadata object indicates the number of pixel sensors in the X direction per the NativePhysicalResolutionUnit on the image sensor focal plane.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="NativePhysicalYResolution" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the number of pixel sensors in the Y direction per the NativePhysicalResolutionUnit on the image sensor focal plane.</doc:brief>
+            <doc:detail>This metadata object indicates the number of pixel sensors in the Y direction per the NativePhysicalResolutionUnit on the image sensor focal plane.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Noise" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object encodes camera noise measurement values.</doc:brief>
+            <doc:detail>This metadata object encodes camera noise measurement values.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="OECF" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>OECF the "Opto-Electronic Conversion Function" is the relationship between the optical input and the image file code value output of an electronic camera.</doc:brief>
+            <doc:detail>OECF the "Opto-Electronic Conversion Function" is the relationship between the optical input and the image file code value output of an electronic camera.  It is expressed as a vector of floats.  The first element m and subsequent elements m+4 is the Log Exposure (where m is equal to or greater then1).  The second element n and subsequent elements n+4 is the RED output level (where n is equal to or greater than 2).  The third element o and subsequent elements 0+4 is the GREEN output level (where o is equal to or greater than 3).  The fourth element is p and subsequent elements p+4 is the BLUE output level (where p is equal to or greater than 4).</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Scanner" type="ScannerT" minOccurs="0" />
+      <xsd:element name="SensingMethod" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The image sensor type on the camera or input image device.</doc:brief>
+            <doc:detail>
+              The image sensor type on the camera or input image device. The defined values are as follows:
+              <ol>
+                <li>1 = Not defined</li>
+                <li>2 = One-chip color area sensor</li>
+                <li>3 = Two-chip color area sensor</li>
+                <li>4 = Three-chip color area sensor</li>
+                <li>5 = Color sequential area sensor</li>
+                <li>7 = Trilinear sensor</li>
+                <li>8 = Color sequential linear sensor</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SerialNumber" type="SerialNumberT" minOccurs="0" />
+      <xsd:element name="Software" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object records the name and version of the software or firmware of the camera or image input device used to generate the image. </doc:brief>
+            <doc:detail>This metadata object records the name and version of the software or firmware of the camera or image input device used to generate the image. The detailed format is not specified, but it is recommended that the example shown below be followed. When the field is left blank, it is treated as unknown. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SpatialFrequencyResponse" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The spatial frequency response (SFR) of a camera or image capture device.</doc:brief>
+            <doc:detail>The spatial frequency response (SFR) of a camera or image capture device as defined in ISO/TC42/WG18 work item [188] Working Draft 6.0, "Photography -Electronic Still Picture Cameras - Resolution Measurement" is represented as a vector of floats. The first element m and subsequent elements m+3 is the Spatial Frequency of the line widths per picture height(where m is greater than or equal to 1). The second element n and subsequent elements n+3 is the Horizontal SFR(where n is equal to or greater then 2).  The third element o and subsequent elements o+3 is the Vertical SFR(where o is equal to or greater then 3).  A non value entry will be identified by a -1.0.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SpectralSensitivity" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates the spectral sensitivity of each channel of the camera used.</doc:brief>
+            <doc:detail>Indicates the spectral sensitivity of each channel of the camera used. The tag value is an ASCII string compatible with the standard developed by the ASTM Technical committee.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Type" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates the type of capture device used.</doc:brief>
+            <doc:detail>Indicates the type of capture device used.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="JpegT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>JpegT defines the various elements that describe the different components of the compressed image, such as AlphaQTable, Chroma1QTable, Chroma2QTable, and LuminQTable.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="AlphaQTable" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>JPEG compression quantization table applied to the alpha channel of the image.</doc:brief>
+            <doc:detail>JPEG compression quantization table applied to the alpha channel of the image.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Chroma1QTable" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>JPEG compression quantization table applied to the first chromanance channel of the image.</doc:brief>
+            <doc:detail>JPEG compression quantization table applied to the first chromanance channel of the image.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Chroma2QTable" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>JPEG compression quantization table applied to the second chromanance channel of the image.</doc:brief>
+            <doc:detail>JPEG compression quantization table applied to the second chromanance channel of the image.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="LuminQTable" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>JPEG compression quantization table applied to the luminance channel of the image.</doc:brief>
+            <doc:detail>JPEG compression quantization table applied to the luminance channel of the image.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SOF" type="SOFT">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>SOF defines the different elements associated with the JPEF SOF marker</doc:brief>
+            <doc:detail>SOF defines the different elements associated with the JPEF SOF marker</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HistoryT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>HistoryT defines the various elements pertaining to the history of image edits. They include SBA operations and the EditTagArray.  EditTagArray contains a summary of the edit operations applied to the image</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="EditTagArray" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>EditTagArray contains a summary of the edit operations and therefore only one occurrence of each defined edit functions will be stored in the array. </doc:brief>
+            <doc:detail>
+              From the Picture CD Appendix C specification: The Edit Tags are designed to help manage the maintenance issues associated with metadata as different operations that modify or edit an image are applied. The array contains a summary of the edit operations and therefore only one occurrence of each defined edit functions will be stored in the array. The values of the array are enumerated in the following manner:
+              <ol>
+                <li>1. Digital image created</li>
+                <li>2. Image cropped</li>
+                <li>3. Image rotated</li>
+                <li>4. Global tone/ color adjustment applied. e. g., color balance, contrast adjust, density adjust, etc.</li>
+                <li>5. Global spatial adjustment applied e. g., sharpening, extreme compression , substantial subsampling, blur, noise suppression, etc.</li>
+                <li>6. Image retouched e. g., redeye, scratch removal</li>
+                <li>7. Pixels edited extensively, significantly changing the captured scene content. e. g., object removal, image warping or morphing operations</li>
+                <li>8. Image composited with another image or background, or graphics and/ or text added</li>
+                <li>9. Regional tone/ color adjustment applied. e. g., digital "dodge and burn" operation, selective color adjustment, etc.</li>
+                <li>10 - 65535 Reserved for future edit functional definitions.</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SBAExposureRecord" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>SBAExposureRecord field contains the complete exposure record from the SBA algorithm.</doc:brief>
+            <doc:detail>SBAExposureRecord field contains the complete exposure record from the SBA algorithm.  The purpose of this field is for use by the creation system in diagnostics mode.  The count is the number of bytes in the data stream.If this information is available to the creation system this field shall be written, otherwise this field shall be omitted. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SBAInputImageBitDepth" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>SBAInputImageBitDepth field indicates the bit depth of each channel of the RGB input image to the SBA algorithm.</doc:brief>
+            <doc:detail>SBAInputImageBitDepth field indicates the bit depth of each channel of the RGB input image to the SBA algorithm. The first value is the bit depth of the red channel, the second value is the bit depth of the green channel, and the third value is the bit depth of the blue channel.  If the creation system applied SBA adjustments to the primary image this field shall be written, otherwise this field shall be omitted. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SBAInputImageColorspace" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>SBAInputImageColorspace defines the colorspace used as an input to the SBA.</doc:brief>
+            <doc:detail>
+              SBAInputImageColorspace defines the colorspace used as an input to the SBA.  Defined vales are:
+              <ol>
+                <li>0 = Uncalibrated</li>
+                <li>1 = RIM</li>
+                <li>2 = ROM</li>
+                <li>3 = RPD</li>
+                <li>4 = RLSE</li>
+                <li>Others = reserved.</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SBARGBShifts" type="vint32">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>SBARGBShifts contains the scene balance shifts that were calculated by the SBA algorithm.</doc:brief>
+            <doc:detail>SBARGBShifts contains the scene balance shifts that were calculated by the SBA algorithm. The actual definition of the recorded shifts is dependent upon the color space of the input image to the SBA algorithm.  It is assumed that the input image to the SBA is three channel and it's composition is an RGB representation.  The first value of this field is the SBA shift for the Red channel, the second value is the SBA shift for the Green channel, and the third value if for the Green channel.  If the input image color space is reference printing densities (RPD), then the SBA _RGB_Shifts field is defined as reference printing densities * 1000.  </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UserAdjSBARGBShifts" type="vint32">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>UserAdjSBARGBShifts field contains the SBA shifts that were determined via user feedback while viewing (i.e. operator at the scan service) the image.</doc:brief>
+            <doc:detail>UserAdjSBARGBShifts field contains the SBA shifts that were determined via user feedback while viewing (i.e. operator at the scan service) the image. It will be assumed that the image was viewed in a "SRGB" colorspace. The shifts are represented in pixel code values. The first value in the field is the shift for the red channel, the second value is the shift for the green channel, and the third value is the shift for the blue channel.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PrinterDockT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>color preference metadata</doc:brief>
+        <doc:detail>
+          ImageLink metadata supports storing color preference metadata that ImageLink camera
+          partners will stoinre in ther digital camera image files. The printer dock will
+          interoperatewith this data and apply the color preference stored in the metadata
+        </doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ImageLinkVersion" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>ImageLinkVersion indicates the version of the metadata stored within the PrinterDock IFD</doc:brief>
+            <doc:detail>
+              ImageLinkVersion indicates the version of the metadata stored within the PrinterDock IFD.
+              Version 1.0 is indicated as '0100' or in hexadecimal as 0x30, 0x31, 0x30, 0x30.
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UseOfImageLinkPartnerColorPreferenceData" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>UseOfImageLinkPartnerColorPreferenceData indicates if the ImageLink Partner Color Preference Data should be used.</doc:brief>
+            <doc:detail>
+              UseOfImageLinkPartnerColorPreferenceData indicates if the ImageLink Partner Color Preference Data should be used.
+              If the tag value is set to 0xFF then the data shall be used. If the camera has performed special color enhancements
+              and therefore does not what to use the ImageLink Partner Color Preference Data then the tag value is set to 0x00. The
+              default value is 0xFF.
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageLinkPartnerColorPreferenceDataType" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>ImageLinkPartnerColorPreferenceDataType indicates the data composition of the ImageLink Partner Color Preference Data.</doc:brief>
+            <doc:detail>
+              ImageLinkPartnerColorPreferenceDataType indicates the data composition of the ImageLink Partner Color Preference Data.
+              The values of this tag has the following enumerated values:
+              <ol>
+                <li>1 = 1D LUT for 3 color channels comprised of 3x256=768 bytes of data</li>
+                <li>
+                  2 = encrypted 1D LUT for 3 color channels using the printer public key. This key
+                  will be provided to camera partner manufacturers during camera development.
+                </li>
+                <li>
+                  3 = a 3D LUT comprised of 17-cubed elements for each color channel that represents
+                  17-cubed x 3 = 14739 bytes of data
+                </li>
+                <li>
+                  4 - encrypted 3D LUT comprised of 17-cubed elements for each color channel using the
+                  printer public key. This key will be provided to camera partner manufacturers
+                  during camera development.
+                </li>
+                <li>
+                  5 - a 3D LUT comprised of 33-cubed elements for each color channel that represents
+                  33-cubed x 3 = 107811 bytes of data
+                </li>
+                <li>
+                  6 - encrypted 3D LUT comprised of 33-cubed elements for each color channel using the
+                  printer public key. This key will be provided to camera partner manufacturers
+                  during camera development.
+                </li>
+                <li>0,7-65535 are reserved for future definitions</li>
+              </ol>
+              <p>
+                NOTE 1: If values 5 or 6 are used, the 3D LUT data will be stored in uniquely labeled APP4s that
+                will leverage the method used in Kodak Professional digital camersa to store compressed extended
+                range image data into multiple Application Segments. This method extends Exif in a non-destructive
+                manner while providing the means to store more than 64 Kbytes of data.
+              </p>
+              <p>NOTE 2:the actual encryption mechanism is TBD.</p>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageLinkPartnerColorPreferenceData" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>
+              ImageLinkColorPreferenceData is the color preference data the camera systems
+              wishes the printer dock system to use.
+            </doc:brief>
+            <doc:detail>
+              mageLinkColorPreferenceData is the color preference data the camera systems
+              wishes the printer dock system to use. The format of the data is described in
+              ImageLinkColorPreferenceDataType
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DigitalProcessT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>DigitalProcessT defines the elements that describe the digital processing applied to the image</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="CellLength" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The length of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file.</doc:brief>
+            <doc:detail>The length of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CellWidth" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The width of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file.</doc:brief>
+            <doc:detail>The width of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file. Tag = 264 (108.H)</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="EnhancementPathUtilized" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The enhancement path taken.</doc:brief>
+            <doc:detail>
+              The enhancement path taken.
+              <ol>
+                <li>0 = No processing was applied</li>
+                <li>1 = Ansel Locked Beam for Digital and Color Negative Paths</li>
+                <li>2 = Ansel Enhanced for Digital and Color Negative Paths</li>
+                <li>3 = Ansel Balance Digital Path and Optical Color Negative Path</li>
+                <li>4 = Ansel Premium for Digital and Color Negative Paths</li>
+                <li>Others = reserved.</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CompletedImageProcessing" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This</doc:brief>
+            <doc:detail>This field</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="EnhancementPathVersionNumber" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The version of enhancement used.</doc:brief>
+            <doc:detail>The version of enhancement used.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="HalftoneHints" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The purpose of the HalftoneHints field is to convey to the halftone function the range of gray levels within a colorimetrically-specified image that should retain tonal detail. </doc:brief>
+            <doc:detail>The purpose of the HalftoneHints field is to convey to the halftone function the range of gray levels within a colorimetrically-specified image that should retain tonal detail. The field contains two values of sixteen bits each and, therefore, is contained wholly within the field itself; no offset is required. The first word specifies the highlight gray level which should be halftoned at the lightest printable tint of the final output device. The second word specifies the shadow gray level which should be halftoned at the darkest printable tint of the final output device. Portions of the image which are whiter than the highlight gray level will quickly, if not immediately, fade to specular highlights. There is no default value specified, since the highlight and shadow gray levels are a function of the subject matter of a particular image. Appropriate values may be derived algorithmically or may be specified by the user, either directly or indirectly. The HalftoneHints field, as defined here, defines an achromatic function. It can be used just as effectively with color images as with monochrome images. When used with opponent color spaces such as CIE L*a*b* or YCbCr, it refers to the achromatic component only; L* in the case of CIELab, and Y in the case of YCbCr. When used with tri-stimulus spaces such as RGB, it suggests to retain tonal detail for all colors with an NTSC gray component within the bounds of the R=G=B=Highlight to R=G=B=Shadow range.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="History" type="HistoryT" minOccurs="0" />
+      <xsd:element name="ICCProfile" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object encodes an embedded InterColor device profile relating to the camera color characterization.</doc:brief>
+            <doc:detail>This metadata object encodes an embedded InterColor device profile relating to the camera color characterization.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageFileChangeDateTime" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The date and time of the last change that has been made to the image file. </doc:brief>
+            <doc:detail>The date and time of the last change that has been made to the image file. The format is "YYYY:MM:DD HH:MM:SS.TH" with time shown in 24-hour format including fractions of a second, and the date and time separated by one blank character [20.H]. When the date and time are unknown, all the character spaces except colons (":") may be filled with blank characters, or else the entire field may be filled with blank characters. The character string length is 20 bytes including NULL for termination. When the field is left blank, it is treated as unknown. Note, at file creation this value is identical to ImageFileCreationDateTime. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageFileCreationDateTime" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The date and time when the image was stored as a digital file.</doc:brief>
+            <doc:detail>The date and time when the image was stored as a digital file. The format is "YYYY:MM:DD HH:MM:SS.TH" with time shown in 24-hour format including fractions of a second, and the date and time separated by one blank character [20.H]. When the date and time are unknown, all the character spaces except colons (":") may be filled with blank characters, or else the entire field may be filled with blank characters. The character string length is 20 bytes including NULL for termination. When the field is left blank, it is treated as unknown. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageFileCreationSubSecond" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The recorded fractions of seconds for the date and time when the image was stored as a digital file.</doc:brief>
+            <doc:detail>The recorded fractions of seconds for the date and time when the image was stored as a digital file.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImagePrintStatus" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>ImagePrintStatus field indicates the print status of the image as detected by the system that created the image.</doc:brief>
+            <doc:detail>
+              ImageRotationStatus field indicates the print status of the image as detected by the system that created the image. Defined values:
+              <ol>
+                <li>0 = Image may be printed, no detected problems</li>
+                <li>1 = Image not suitable for printing, REASON</li>
+                <li>2 = Image not suitable for printing, REASON</li>
+                <li>3 = Image not suitable for printing, REASON</li>
+                <li>4 = Image not suitable for printing, REASON</li>
+                <li>5 - 255 =  Reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageRotationStatus" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>ImageRotationStatus field indicates what triggered the system to rotate the image from the orientation of the original scan.</doc:brief>
+            <doc:detail>
+              ImageRotationStatus field indicates what triggered the system to rotate the image from the orientation of the original scan. Defined values:
+              <ol>
+                <li>0 = image not rotated</li>
+                <li>1 = rotated based off of  user input (i. e. Scan operator)</li>
+                <li>2 = rotated based off of customer direction</li>
+                <li>3 =  rotated based off of algorithm input</li>
+                <li>4 - 254 =  Reserved</li>
+                <li>255 = Unknown reason</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageSource" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The image source indicating the source of the image.</doc:brief>
+            <doc:detail>
+              The image source indicating the source of the image. If a DSC recorded the image, this tag value will always be set to 3, indicating that the image was recorded on a DSC.
+              <ol>
+                <li>0 = others</li>
+                <li>1 = scanner of transparent type</li>
+                <li>2 = scanner of reflex type</li>
+                <li>3 = DSC</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageSourceEK" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The image source indicating the device source of the image.</doc:brief>
+            <doc:detail>
+              The image source indicating the device source of the image. The values defined are as follows:
+              <ol>
+                <li>0 = unidentified</li>
+                <li>1 = film scanner</li>
+                <li>2 = reflection print scanner</li>
+                <li>3 = digital still camera</li>
+                <li>4 = still from video</li>
+                <li>5 = computer graphics</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageState" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field indicates the state of image processing that has been conducted on the image data.</doc:brief>
+            <doc:detail>
+              This field indicates the state of image processing that has been conducted on the image data.The values defined as follows:
+              <ol>
+                <li>0 = R0, is the initial state designated as image data enters the Rendered Digital Input Path </li>
+                <li>1 = R1, is the state assigned when image data has completed all the Rendered Input Normalization operations</li>
+                <li>2 = R2, is the state assigned when image data has completed all the Rendered Image Correction / Enhancement operations.</li>
+                <li>3 = R3, is the state assigned when the image data has completed all the Rendered Product Creation operations.</li>
+                <li>4 = R4, is the state assigned when the image data has completed all the Normal Output Conversion operations.</li>
+                <li>5 = R5, is the state assigned when the image data has completed all the Unit Specific Output Conversion operations.</li>
+                <li>Other = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Jpeg" type="JpegT" minOccurs="0" />
+      <xsd:element name="PrinterDock" type="PrinterDockT" minOccurs="0" />
+      <xsd:element name="RollGuid" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>RollGuid is a unique identifier for a roll of film that was assigned during the digitization process.</doc:brief>
+            <doc:detail>RollGuid is a unique identifier for a roll of film that was assigned during the digitization process. Further definition is TBD</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ScanFrameSequenceNumber" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field contains the sequence number of the frame as it was scanned.</doc:brief>
+            <doc:detail>This field contains the sequence number of the frame as it was scanned. For APS scans, this field will contain the frame number that is decoded from the latent image barcode.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Thresholding" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>For black and white TIFF files that represent shades of gray, the technique used to convert from gray to black and white pixels.</doc:brief>
+            <doc:detail>
+              For black and white TIFF files that represent shades of gray, the technique used to convert from gray to black and white pixels.
+              <ol>
+                <li>1 = No dithering or halftoning has been applied to the image data.</li>
+                <li>2 = An ordered dither or halftone technique has been applied to the image data.</li>
+                <li>3 = A randomized process such as error diffusion has been applied to the image data.</li>
+                <li>Default is Threshholding = 1. See also CellWidth, CellLength.</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ThumbnailT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>ThumbnailT defines the different elements that describe JPEG compressed thumbnail data.</doc:brief>
+        <doc:brief />
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="BitsPerSample" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of bits per image component (pixel).</doc:brief>
+            <doc:detail>The number of bits per image component (pixel).</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="BytesOfJPEGData" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field contains the number of bytes of JPEG compressed thumbnail data.</doc:brief>
+            <doc:detail>This field contains the number of bytes of JPEG compressed thumbnail data.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Compression" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The compression scheme used for the image data.</doc:brief>
+            <doc:detail>The compression scheme used for the image data.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DisplayResolutionUnit" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The unit for measuring Xresolution and Yresolution.</doc:brief>
+            <doc:detail>
+              The unit for measuring Xresolution and Yresolution. The values are defined as follows:
+              <ol>
+                <li>2 = inches</li>
+                <li>3 = centimeters</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DisplayXResolution" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of pixels per ResolutionUnit in the Width direction.</doc:brief>
+            <doc:detail>The number of pixels per ResolutionUnit in the Width direction.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DisplayYResolution" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of pixels per ResolutionUnit in the Height direction. </doc:brief>
+            <doc:detail>The number of pixels per ResolutionUnit in the Height direction. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Height" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of rows of image data.</doc:brief>
+            <doc:detail>The number of rows of image data.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="OffsetToJPEGSOI" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field contains the offset to the start byte (SOI) of JPEG compressed thumbnail data.</doc:brief>
+            <doc:detail>This field contains the offset to the start byte (SOI) of JPEG compressed thumbnail data.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Orientation" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The image orientation viewed in terms of rows and columns.</doc:brief>
+            <doc:detail>The image orientation viewed in terms of rows and columns.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PhotometricInterpretation" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The pixel composition.(SRGB, YcbCr, etc.)</doc:brief>
+            <doc:detail>The pixel composition.(SRGB, YcbCr, etc.)</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PlanarConfiguration" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates whether pixel components are recorded in chunky or planar format.</doc:brief>
+            <doc:detail>Indicates whether pixel components are recorded in chunky or planar format.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RowsPerStrip" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of rows per strip when an image is divided into strips.</doc:brief>
+            <doc:detail>The number of rows per strip when an image is divided into strips.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SamplesPerPixel" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of components per pixel.</doc:brief>
+            <doc:detail>The number of components per pixel.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="StripByteCounts" type="vuint32">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The total number of bytes in each strip.</doc:brief>
+            <doc:detail>The total number of bytes in each strip.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="StripOffsets" type="vuint32">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>For each strip, the byte offset of that strip.</doc:brief>
+            <doc:detail>For each strip, the byte offset of that strip.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Width" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of columns of image data, equal to the number of pixels per row. </doc:brief>
+            <doc:detail>The number of columns of image data, equal to the number of pixels per row. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="YCbCrCoefficients" type="vfloat">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The matrix coefficients for transformation from RGB to YCbCr image data.</doc:brief>
+            <doc:detail>The matrix coefficients for transformation from RGB to YCbCr image data.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="YCbCrPositioning" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The position of chrominance components in relation to the luminance component.</doc:brief>
+            <doc:detail>The position of chrominance components in relation to the luminance component.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="YCbCrSubSampling" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The sampling ratio of chrominance components in relation to the luminance component.</doc:brief>
+            <doc:detail>The sampling ratio of chrominance components in relation to the luminance component.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InteroperabilityT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>InteroperabilityT defines the different elements regarding interoperability.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Index" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates the identification of the Interoperability rule.</doc:brief>
+            <doc:detail>Indicates the identification of the Interoperability rule. The following rules are defined. Four bytes used including the termination code (NULL). "R98" = Indicates a file conforming to R98 file specification of Recommended Exif Interoperability Rules (ExifR98) or to DCF basic file stipulated by Design Rule for Camera File System. "THM" = Indicates a file conforming to DCF thumbnail file stipulated by Design rule for Camera File System. "R03" = Indicates a file conforming to DCF Option File (Adobe RGB color space) stipulated by Design rule for Camera File System.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Version" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object records the Interoperability version.</doc:brief>
+            <doc:detail>This metadata object records the Interoperability version. Since the file content is equivalent to ExifR98, the value is the 4-byte ASCII “0100” meaning Version 1.00. This is not terminated by NULL since the Type is UNDEFINED.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MovieT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>MovieT defines the different elements regarding moving images.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Duration" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates the longest track duration in seconds.</doc:brief>
+            <doc:detail>Indicates the longest track duration in seconds.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FrameRate" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object records the number of frames per second.</doc:brief>
+            <doc:detail>This metadata object records the number of frames per second.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FrameCount" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object records the number of frames.</doc:brief>
+            <doc:detail>This metadata object records the number of frames.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SoundSampleRate" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object records the number of sound samples per second.</doc:brief>
+            <doc:detail>This metadata object records the number of sound samples per second.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SpecialHardwareAndSoftwareRequirements" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object records any specialized hardware and software requirements for playback.</doc:brief>
+            <doc:detail>This metadata object records any specialized hardware and software requirements for playback.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TimeScale" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object records the number of time units per second.</doc:brief>
+            <doc:detail>This metadata object records the number of time units per second.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ImageContainerT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>ImageContainerT defines the different elements that describe how the image is stored in a compressed stream.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ActualImageHeight" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>(Deprecated) The compressed image height applies to compressed images and represents the valid height of the meaningful image.</doc:brief>
+            <doc:detail>(Deprecated) The compressed image height applies to compressed images and represents the valid height of the meaningful image. An uncompressed image will have no value for this field.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ActualImageWidth" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>(Deprecated) The compressed image width applies to compressed images and represents the valid width of the meaningful image. </doc:brief>
+            <doc:detail>(Deprecated) The compressed image width applies to compressed images and represents the valid width of the meaningful image.  An uncompressed image will have no value for this field.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="BitsPerSample" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of bits per image component (pixel).</doc:brief>
+            <doc:detail>The number of bits per image component (pixel).</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ColorSpaceInformation" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The color space information records the color space specified.  </doc:brief>
+            <doc:detail>The color space information records the color space specified.  </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ComponentsConfiguration" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The compressed image data channels of each component are arranged in order from the 1st component to the 4th.</doc:brief>
+            <doc:detail>The compressed image data channels of each component are arranged in order from the 1st component to the 4th. For uncompressed data the data arrangement is given in the PhotometricInterpretation.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CompressedBitsPerPixel" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The compressed image compression mode indicated in unit bits per pixel.</doc:brief>
+            <doc:detail>The compressed image compression mode indicated in unit bits per pixel.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Compression" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The compression scheme used for the image data.</doc:brief>
+            <doc:detail>The compression scheme used for the image data.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DisplayResolutionUnit" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The unit for measuring Xresolution and Yresolution.</doc:brief>
+            <doc:detail>
+              The unit for measuring Xresolution and Yresolution. The values are defined as follows:
+              <ol>
+                <li>2 = inches</li>
+                <li>3 = centimeters</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DisplayXResolution" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of pixels per ResolutionUnit in the Width direction.</doc:brief>
+            <doc:detail>The number of pixels per ResolutionUnit in the Width direction.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DisplayYResolution" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of pixels per ResolutionUnit in the Height direction. </doc:brief>
+            <doc:detail>The number of pixels per ResolutionUnit in the Height direction. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ExifVersion" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The version of Exif Standard.</doc:brief>
+            <doc:detail>The version of Exif Standard.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FlashpixVersion" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The version of the Flashpix Specification.</doc:brief>
+            <doc:detail>The version of the Flashpix Specification.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Gamma" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object indicates the value of coefficient gamma.</doc:brief>
+            <doc:detail>This metadata object indicates the value of coefficient gamma. The formula of transfer function used for image reproduction is expressed as follows: (Reproduced value) = (Input value)^gamma  Both reproduced value and input value indicate normalized value, whose minimum value is 0 and maximum value is 1.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Height" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of rows of image data.</doc:brief>
+            <doc:detail>The number of rows of image data.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="IPTC_NAA" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This element encodes relevent information concerning the image that is useful for newspaper photographs.</doc:brief>
+            <doc:detail>This element encodes relevent information concerning the image that is useful for newspaper photographs. The information is defined in Application Record No. 2 of the IPTC-NAA (International Press Telecommunications Council-Newspaper Association of America) Information Interchange Model and Digital NewsphotoParameter Record, Version 2, April 14 1993. (Note: the record contains capture condition, intellectual property, scene content, etc. information)  (See TIFF/EP spec)</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageUniqueID" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field indicates an identifier assigned uniquely to each image.</doc:brief>
+            <doc:detail>This field indicates an identifier assigned uniquely to each image. It is recorded as an ASCII string equivalent to hexadecimal notation and 128-bit fixed length.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Interoperability" type="InteroperabilityT" minOccurs="0" />
+      <xsd:element name="MetadataNumber" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The version of the metadata in the APP3 segment.</doc:brief>
+            <doc:detail>The version of the metadata in the APP3 segment.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Movie" type="MovieT" minOccurs="0" />
+      <xsd:element name="Orientation" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The image orientation viewed in terms of rows and columns.</doc:brief>
+            <doc:detail>The image orientation viewed in terms of rows and columns.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PhotometricInterpretation" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The pixel composition.(SRGB, YcbCr, etc.)</doc:brief>
+            <doc:detail>The pixel composition.(SRGB, YcbCr, etc.)</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PlanarConfiguration" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates whether pixel components are recorded in chunky or planar format.</doc:brief>
+            <doc:detail>Indicates whether pixel components are recorded in chunky or planar format.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PrimaryChromaticities" type="vfloat">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The chromaticity of the three primary colors of the image.  </doc:brief>
+            <doc:detail>The chromaticity of the three primary colors of the image.  </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ReferenceBlackWhite" type="vfloat">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The reference black point value and reference white point value.</doc:brief>
+            <doc:detail>The reference black point value and reference white point value.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RowsPerStrip" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of rows per strip when an image is divided into strips.</doc:brief>
+            <doc:detail>The number of rows per strip when an image is divided into strips.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SamplesPerPixel" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of components per pixel.</doc:brief>
+            <doc:detail>The number of components per pixel.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SoundType" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>0 = WAV</doc:brief>
+            <doc:detail>0 = WAV</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SourceImageDirectory" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field contains a Unicode string which records the Sources Image Directory.</doc:brief>
+            <doc:detail>This field contains a Unicode string which records the Sources Image Directory.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SourceImageFileName" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field contains a Unicode string which records the Sources Image File Name.</doc:brief>
+            <doc:detail>This field contains a Unicode string which records the Sources Image File Name.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SourceImageVolumeName" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field contains a Unicode string which records the Sources Image Volume Name.</doc:brief>
+            <doc:detail>This field contains a Unicode string which records the Sources Image Volume Name.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="StripByteCounts" type="vuint32">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The total number of bytes in each strip.</doc:brief>
+            <doc:detail>The total number of bytes in each strip.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="StripOffsets" type="vuint32">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>For each strip, the byte offset of that strip.</doc:brief>
+            <doc:detail>For each strip, the byte offset of that strip.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SubIfdPointers" type="vuint32">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object encodes the offsets from the beginning of the file to the location of IFDs that are “treeing” from the current IFD.</doc:brief>
+            <doc:detail>This metadata object encodes the offsets from the beginning of the file to the location of IFDs that are “treeing” from the current IFD. This tag-value is used to point from the thumbnail IFD to the IFD containing the full resolution image. For a full description refer to the section entitled “Thumbnail Images using ‘SubIFDs’ Trees”.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Thumbnail" type="ThumbnailT" minOccurs="0" />
+      <xsd:element name="TiffepVersion" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object encodes the version of this TIFF/EP file as a four tier revision number, for example 1.0.0.0.</doc:brief>
+            <doc:detail>This metadata object encodes the version of this TIFF/EP file as a four tier revision number, for example 1.0.0.0. This revision number has the form of w.x.y.z where w=0-255, x=0-255, y=0-255, and z=0-255. The purpose of this tag is to allow a TIFF/EP compliant file to identify itself to a TIFF/EP aware reader.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TransferFunction" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A tabular style transfer function for the image.</doc:brief>
+            <doc:detail>A tabular style transfer function for the image.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TransferRange" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Expands the range of the TransferFunction.</doc:brief>
+            <doc:detail>
+              Expands the range of the TransferFunction. The first value within a pair is associated with TransferBlack and the second is 
+              associated with TransferWhite. The ordering ofpairs is the same as for pixel components of the PhotometricInterpretation type.
+              By default, theTransferFunction is defined over a range from a minimum intensity, 0 or nominal black, to a maximum intensity,
+              (BitsPerSample) - 1 or nominal white. Kodak PhotoYCC uses an extended range TransferFunction in order to describe highlights, 
+              saturated colors and shadow detail beyond this range. The TransferRange expands the TransferFunction to support these values. 
+              It is defined only for RGB and YCbCr PhotometricInterpretations. For more details, see TIFF 6.0 Specification.
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="WhitePoint" type="vfloat">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The chromaticity of the white point of the image.</doc:brief>
+            <doc:detail>The chromaticity of the white point of the image.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Width" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The number of columns of image data, equal to the number of pixels per row. </doc:brief>
+            <doc:detail>The number of columns of image data, equal to the number of pixels per row. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="YCbCrCoefficients" type="vfloat">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The matrix coefficients for transformation from RGB to YCbCr image data.</doc:brief>
+            <doc:detail>The matrix coefficients for transformation from RGB to YCbCr image data.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="YCbCrPositioning" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The position of chrominance components in relation to the luminance component.</doc:brief>
+            <doc:detail>The position of chrominance components in relation to the luminance component.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="YCbCrSubSampling" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The sampling ratio of chrominance components in relation to the luminance component.</doc:brief>
+            <doc:detail>The sampling ratio of chrominance components in relation to the luminance component.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="IntellectualPropertyT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>IntellectualPropertyT defines the different elements that identify the photographer and the editor copyright information. </doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Copyright" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A character string that identifies both the photographer and editor Copyright information.</doc:brief>
+            <doc:detail>A character string that identifies both the photographer and editor Copyright information.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageCreator" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A character string that identifies both the photographer and editor Copyright information.</doc:brief>
+            <doc:detail>A character string that identifies both the photographer and editor Copyright information.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Photographer" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A character string that identifies the name of the photographer.</doc:brief>
+            <doc:detail>A character string that identifies the name of the photographer.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OutputOrderInformationT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>OutputOrderInformationT defines the different elements pertaining to Dealer ID Number, Envelope Number, and Vendor Order Number</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="DealerIDNumber" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The Dealer ID Number data item contents a Dealer ID Number assigned by the industry.</doc:brief>
+            <doc:detail>The Dealer ID Number data item contents a Dealer ID Number assigned by the industry.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="EnvelopeNumber" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The Envelope Number data item contains the 6 least significant digits of the number printed on the order envelope.</doc:brief>
+            <doc:detail>The Envelope Number data item contains the 6 least significant digits of the number printed on the order envelope.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="VendorOrderNumber" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Identification number of an order and unique to a vendor.</doc:brief>
+            <doc:detail>Identification number of an order and unique to a vendor.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OutputOrderSimpleRenderInstT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>OutputOrderSimpleRenderInstT defines the element Frame Number. </doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="FrameNumber" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The Frame Number data item contains the number of the current frame.</doc:brief>
+            <doc:detail>The Frame Number data item contains the number of the current frame. Valid numbers are 01 through 40.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OutputOrderT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>OutputOrderT defines the different elements pertaining to the Output Order information.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Information" type="OutputOrderInformationT" minOccurs="0" />
+      <xsd:element name="SimpleRenderInst" type="OutputOrderSimpleRenderInstT" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GPST">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>GPST defines the different elements pertaining to the Global Positioning System.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Altitude" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Altitude indicates the altitude based on the reference in AltitudeRef.</doc:brief>
+            <doc:detail>Altitude indicates the altitude based on the reference in AltitudeRef. Altitude is expressed as one RATIONAL value. The reference unit is meters.	</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AltitudeRef" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>AltitudeRef indicates the altitude used as the reference altitude.</doc:brief>
+            <doc:detail>
+              AltitudeRef indicates the altitude used as the reference altitude. The reference unit is meters. The defined values are:
+              <ol>
+                <li>0 = Sea level</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AreaInformation" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field contains a character string recording the name of the GPS area. </doc:brief>
+            <doc:detail>This field contains a character string recording the name of the GPS area. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DateStamp" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field contains a character string recording date and time information relative to UTC (Coordinated Universal Time).</doc:brief>
+            <doc:detail>This field contains a character string recording date and time information relative to UTC (Coordinated Universal Time). The format is "YYYY:MM:DD."</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DOP" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>DOP indicates the GPS DOP (data degree of precision).</doc:brief>
+            <doc:detail>DOP indicates the GPS DOP (data degree of precision). An HDOP value is written during two-dimensional measurement and PDOP during three-dimensional measurement.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DestBearing" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>DestBearing indicates the bearing to the destination point.</doc:brief>
+            <doc:detail>DestBearing indicates the bearing to the destination point. The range of values is from 0.00 to 359.99.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DestBearingRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>DestBearingRef indicates the reference used for giving the bearing to the destination point.</doc:brief>
+            <doc:detail>
+              DestBearingRef indicates the reference used for giving the bearing to the destination point. The defined values are:
+              <ol>
+                <li>'T' = True direction</li>
+                <li>'M' = Magnetic direction</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DestDistance" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>DestDistance indicates the distance to the destination point.</doc:brief>
+            <doc:detail>DestDistance indicates the distance to the destination point.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DestDistanceRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>DestDistanceRef indicates the unit used to express the distance to the destination point.</doc:brief>
+            <doc:detail>
+              DestDistanceRef indicates the unit used to express the distance to the destination point. The defined values are:
+              <ol>
+                <li>'K' = Kilometers</li>
+                <li>'M' = Miles</li>
+                <li>'N' = Knots</li>
+                <li>Others = reserved.</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DestLatitude" type="vfloat">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>DestLatitude indicates the latitude of the destination point.</doc:brief>
+            <doc:detail>DestLatitude indicates the latitude of the destination point. The latitude is expressed as three RATIONAL values giving the degrees, minutes, and seconds, respectively. When degrees, minutes and seconds are expressed, the format is dd/1,mm/1,ss/1. When degrees and minutes are used and, for example, fractions of minutes are given up to two decimal places, the format is dd/1,mmmm/100,0/1.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DestLatitudeRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>DestLatitudeRef indicates whether the latitude of the destination point is north or south latitude.</doc:brief>
+            <doc:detail>
+              DestLatitudeRef indicates whether the latitude of the destination point is north or south latitude. The defined values are:
+              <ol>
+                <li>'N' = North latitude</li>
+                <li>'S' = Sourth latitude</li>
+                <li>Others = reserved.</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DestLongitude" type="vfloat">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>DestLongitude indicates the longitude of the destination point.</doc:brief>
+            <doc:detail>DestLongitude indicates the longitude of the destination point. The longitude is expressed as three RATIONAL values giving the degrees, minutes, and seconds, respectively. When degrees, minutes and seconds are expressed, the format is ddd/1,mm/1,ss/1. When degrees and minutes are used and, for example, fractions of minutes are given up to two decimal places, the format is ddd/1,mmmm/100,0/1.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DestLongitudeRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>DestLongitudeRef Indicates whether the longitude of the destination point is east or west longitude.</doc:brief>
+            <doc:detail>
+              DestLongitudeRef Indicates whether the longitude of the destination point is east or west longitude. The defined values are:
+              <ol>
+                <li>'E' = East longitude</li>
+                <li>'W' = West longitude</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Differential" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field Indicates whether differential correction is applied to the GPS receiver.</doc:brief>
+            <doc:detail>
+              This field Indicates whether differential correction is applied to the GPS receiver.
+              <ol>
+                <li>0 = Measurement without differential correction</li>
+                <li>1 = Differential correction applied</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImgDirection" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>ImgDirection indicates the direction of the image when it was captured.</doc:brief>
+            <doc:detail>ImgDirection indicates the direction of the image when it was captured. The range of values is from 0.00 to 359.99. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImgDirectionRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>ImgDirectionRef indicates the reference for giving the direction of the image when it is captured.</doc:brief>
+            <doc:detail>
+              ImgDirectionRef indicates the reference for giving the direction of the image when it is captured. The defined values are:
+              <ol>
+                <li>'T' = True direction</li>
+                <li>'M' = Magnetic direction</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Latitude" type="vfloat">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Latitude indicates the latitude. The latitude is expressed as three RATIONAL values giving the degrees, minutes, and seconds, respectively.</doc:brief>
+            <doc:detail>Latitude indicates the latitude. The latitude is expressed as three RATIONAL values giving the degrees, minutes, and seconds, respectively. When degrees, minutes and seconds are expressed, the format is dd/1,mm/1,ss/1. When degrees and minutes are used and, for example, fractions of minutes are given up to two decimal places, the format is dd/1,mmmm/100,0/1.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="LatitudeRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>LatitudeRef indicates whether the latitude is north or south latitude.</doc:brief>
+            <doc:detail>
+              LatitudeRef indicates whether the latitude is north or south latitude. The defined values are:
+              <ol>
+                <li>'N' = North latitude</li>
+                <li>'S' = South latitude</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Longitude" type="vfloat">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Longitude indicates the longitude.</doc:brief>
+            <doc:detail>Longitude indicates the longitude. The longitude is expressed as three RATIONAL values giving the degrees, minutes, and seconds, respectively. When degrees, minutes and seconds are expressed, the format is dd/1,mm/1,ss/1. When degrees and minutes are used and, for example, fractions of minutes are given up to two decimal places, the format is dd/1,mmmm/100,0/1.  </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="LongitudeRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>LongitudeRef indicates whether the longitude is east or west longitude.</doc:brief>
+            <doc:detail>
+              LongitudeRef indicates whether the longitude is east or west longitude. The defined values are:
+              <ol>
+                <li>'E' = East longitude</li>
+                <li>'W' = West longitude</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MapDatum" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>MapDatum indicates the geodetic survey data used by the GPS receiver.</doc:brief>
+            <doc:detail>MapDatum indicates the geodetic survey data used by the GPS receiver. If the survey data is restricted to Japan, the value of this tag is 'TOKYO' or 'WGS-84'. If a GPS Info is recorded, it is strongly recommended that MapDatum be recorded.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MeasureMode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>MeasureMode Indicates the GPS measurement mode.</doc:brief>
+            <doc:detail>
+              MeasureMode Indicates the GPS measurement mode. The defined values are:
+              <ol>
+                <li>'2' = two-dimensional measurement</li>
+                <li>'3' = three-dimensional measurement is in progress.</li>
+                <li>Others = reserved.</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ProcessingMethod" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This field contains a character string recording the name of the method used for location finding.</doc:brief>
+            <doc:detail>This field contains a character string recording the name of the method used for location finding. </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Satellites" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Satellites indicates the GPS satellites used for measurements.</doc:brief>
+            <doc:detail>Satellites indicates the GPS satellites used for measurements. This metadata object can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information in ASCII notation.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Speed" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Speed indicates the speed of GPS receiver movement.</doc:brief>
+            <doc:detail>Speed indicates the speed of GPS receiver movement.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SpeedRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>SpeedRef indicates the unit used to express the GPS receiver speed of movement.</doc:brief>
+            <doc:detail>
+              SpeedRef indicates the unit used to express the GPS receiver speed of movement. The defined values are:
+              <ol>
+                <li>'K' = Kilometers per hour</li>
+                <li>'M' = Miles per hour</li>
+                <li>'N' = Knots</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Status" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Status indicates the status of the GPS receiver when the image is recorded.</doc:brief>
+            <doc:detail>
+              Status indicates the status of the GPS receiver when the image is recorded. The defined values are:
+              <ol>
+                <li>'A' = measurement is in progress</li>
+                <li>'V' = the measurement is interrupted. </li>
+                <li>Others = reserved.</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TimeStamp" type="vfloat">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>TimeStamp indicates the time as UTC (Coordinated Universal Time).</doc:brief>
+            <doc:detail>TimeStamp indicates the time as UTC (Coordinated Universal Time). TimeStamp is expressed as three RATIONAL values giving the hour, minute, and second.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Track" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates the direction of GPS receiver movement.</doc:brief>
+            <doc:detail>Indicates the direction of GPS receiver movement. The range of values is from 0.00 to 359.99.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TrackRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>TrackRef indicates the reference for giving the direction of GPS receiver movement. </doc:brief>
+            <doc:detail>
+              TrackRef indicates the reference for giving the direction of GPS receiver movement. The defined values are:
+              <ol>
+                <li>'T' = True direction</li>
+                <li>'M' = Magnetic direction</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="VersionID" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>VersionID indicates the version of InfoIFD.</doc:brief>
+            <doc:detail>VersionID indicates the version of InfoIFD. The version is given as a string.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GroupCaptionT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>GroupCaptionT contains various elements which define different titles for a group of images.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="GroupCaption" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is a user selectable title for a group of images.</doc:brief>
+            <doc:detail>This is a user selectable title for a group of images.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UserInputGroupTitle" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A title assigned to a group or collection of images. The group title has been selected from a predefined collection.</doc:brief>
+            <doc:detail>A title assigned to a group or collection of images. The group title has been selected from a predefined collection.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UserSelectGroupTitle" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is a user selectable title for a group of images.</doc:brief>
+            <doc:detail>This is a user selectable title for a group of images.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ImageCaptureDateTimeT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>ImageCaptureDateTimeT defines the elements that describe the date, time, and time zone of the original image capture.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ImageCaptureDateTime" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The date and time of the original Image Scene.</doc:brief>
+            <doc:detail>The date and time of the original Image Scene. The format is "YYYY:MM:DD HH:MM:SS.TH" with time shown in 24-hour format including fractions of a second, and the date and time separated by one blank character [20.H]. When the date and time are unknown, all the character spaces except colons (":") may be filled with blank characters, or else the entire field may be filled with blank characters. The character string length is 20 bytes including NULL for termination. When the field is left blank, it is treated as unknown.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ImageCaptureSubSecondTime" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The recorded fractions of seconds for the date and time when the image was captured.</doc:brief>
+            <doc:detail>The recorded fractions of seconds for the date and time when the image was captured.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TimeZoneOffset" type="vint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This metadata object encodes the time zone of the camera clock (relative to Greenwich Mean Time) used to create the DataTimeOriginal tag-value when the picture was taken.</doc:brief>
+            <doc:detail>This metadata object encodes the time zone of the camera clock (relative to Greenwich Mean Time) used to create the DataTimeOriginal tag-value when the picture was taken. It may also contain the time zone offset of the clock used to create the DateTime tag-value when the image was modified.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MSCommentT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>MSCommentT defines the different elements that MS added to EXIF files. </doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Author" type="vuint8" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The tag value indicates the person or organization primarily responsible for creating the image resource.</doc:brief>
+            <doc:detail>The tag value indicates the person or organization primarily responsible for creating the image resource.  The data for this tag is encoded using Unicode.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Comments" type="vuint8" >
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The tag value indicates composed annotations of the image resource.</doc:brief>
+            <doc:detail>The tag value indicates composed annotations of the image resource. The data for this tag is encoded using Unicode.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Keywords" type="vuint8" minOccurs="0" maxOccurs="unbounded" >
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The tag value indicates a significant or descriptive word(s) or key phrases or classification codes that describe the topic of the image resource.</doc:brief>
+            <doc:detail>The tag value indicates a significant or descriptive word(s) or key phrases or classification codes that describe the topic of the image resource.  Preferably, a semicolon separates keywords.  A comma may be used but is less preferable.  The data for this tag is encoded using Unicode.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PhotoRating" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The tag value indicates the rating of the image.</doc:brief>
+            <doc:detail>The tag value indicates yet another rating of the image. The rating can vary from 0 to 100.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Rating" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The tag value indicates the rating of the image.</doc:brief>
+            <doc:detail>The tag value indicates the rating of the image. The rating can vary from 0 stars unassigned to 5 stars the highest rating.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Subject" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The tag value indicates the topic of the image resource.</doc:brief>
+            <doc:detail>The tag value indicates the topic of the image resource.  The data for this tag is encoded using Unicode.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Title" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The tag indicates the name by which the image resource is formally known.</doc:brief>
+            <doc:detail>The tag indicates the name by which the image resource is formally known. This name will be used to search for this resource. Therefore the name must be as meaningful and descriptive as possible.  The data for this tag is encoded using Unicode.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="UserCommentT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>UserCommentT defines the different elements that describe the title and information about an image. </doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="MS" type="MSCommentT" minOccurs="0" />
+      <xsd:element name="UserComment" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A character string that identifies from a user perspective, any desired information about the image.</doc:brief>
+            <doc:detail>A character string that identifies from a user perspective, any desired information about the image. This is in addition to any comments identified in ImageDescription metadata. The first 8 bytes identify a character code ID field.  Current registered Character Code Ids are ASCI, JIS and Unicode.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UserInputFrameTitle" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is a user input title for an image.</doc:brief>
+            <doc:detail>This is a user input title for an image.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UserSelectFrameTitle" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is a user selectable title for an image.</doc:brief>
+            <doc:detail>This is a user selectable title for an image.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- The Scene Object types -->
+  <xsd:complexType name="SceneObjectFeatureT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>The data defining a feature</doc:brief>
+        <doc:detail>
+          The points and information defining a feature. The name describes the feature (mouth, nose, etc.)  A string value may be used when required by the feature type.  Possible values for the list type are:
+          <ol>
+            <li>'Outline' = A connected outline of the feature</li>
+            <li>'Path' = A connected outline of the feature where the beginning and end points are not connected</li>
+            <li>'List' = A list (1 or more) of points describing the feature</li>
+          </ol>
+        </doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="Data" type="vfloat" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="Value" type="xsd:string" minOccurs="0" maxOccurs="1" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SceneObjectT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>The Scene Object -- a type, an ID, and a list of features</doc:brief>
+        <doc:detail> The Scene Object -- a type (such as 'face'), an ID (usually a GUID), a reference (usually another object's ID) and a list of features.
+        </doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="ID" type="xsd:string" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="Name" type="vuint8" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="Reference" type="xsd:string" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="Feature" type="SceneObjectFeatureT" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SceneObjectsT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>The Scene Object -- a type, an ID, and a list of features</doc:brief>
+        <doc:detail> The Scene Object -- a type (such as 'face'), an ID (usually a GUID), a reference (usually another object's ID) and a list of features.
+        </doc:detail>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="DetectionAlgorithmID" type="xsd:string" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The detection algorithm ID</doc:brief>
+            <doc:detail>A UUID (the four - that separate the five different fields are ignored) or GUID of the detection algorithm used to detect the objects. The unique ID that identifies the algorithm name and version is a 128-bit value where each nibble (4 bits) is represented by an ASCII character.
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RecognitionAlgorithmID" type="xsd:string" minOccurs="0" maxOccurs="1" >
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The recognition algorithm ID</doc:brief>
+            <doc:detail>A UUID (the four - that separate the five different fields are ignored) or GUID of the recognition algorithm used to recognise the objects. The unique ID that identifies the algorithm name and version is a 128-bit value where each nibble (4 bits) is represented by an ASCII character.
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CartesianZeroPoint" type="xsd:unsignedShort" minOccurs="0" maxOccurs="1" >
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Indicates the zero, zero point of the Cartesian coordinate in the image pixel plan.</doc:brief>
+            <doc:detail>Indicates the zero, zero point of the Cartesian coordinate in the image pixel plan.
+                The expected values are enumerated as follows:
+                <ol>
+                    <li>1 Upper Left-hand corner</li>
+                    <li>2 Lower Left-hand corner</li>
+                    <li>3 Upper right-hand corner</li>
+                    <li>4 Center of the image</li>
+                </ol>
+                Values 0 and 5 through 65535 are reserved for future definitions.
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Object" type="SceneObjectT" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SceneContentT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>SceneContentT defines the different elements associated with the Scene Content. Included is GPS information, scene information, and any audio information related to the image.</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Audio" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is the entry to special audio API of the EXIF toolkit.</doc:brief>
+            <doc:detail>This is the entry to special audio API of the EXIF toolkit. Needs to change.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="GPS" type="GPST" minOccurs="0" />
+      <xsd:element name="GroupCaption" type="GroupCaptionT" minOccurs="0" />
+      <xsd:element name="ImageCaptureDateTime" type="ImageCaptureDateTimeT" minOccurs="0" />
+      <xsd:element name="ImageDescription" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A character string giving the title of the image.</doc:brief>
+            <doc:detail>A character string giving the title of the image.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RelatedSoundFile" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>A character string that identifies an audio file that is related to the image data.</doc:brief>
+            <doc:detail>A character string that identifies an audio file that is related to the image data. The only relational information recorded here is the Exif audio file name and extension (an ASCII string consisting of 8 characters plus '.' plus 3 characters). The path is not recorded.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Faces" type="SceneObjectsT" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="SceneType" type="xsd:unsignedByte">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>The SceneType indicates the type of scene.</doc:brief>
+            <doc:detail>
+              The SceneType indicates the type of scene. The values defined are as follows:
+              <ol>
+                <li>1 = A directly photographed image</li>
+                <li>Others = reserved</li>
+              </ol>
+            </doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SoundCaptureDateTime" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Same as the value of DateTime Original Tag. The date and time of the original Image Scene.</doc:brief>
+            <doc:detail>Same as the value of DateTime Original Tag. The date and time of the original Image Scene. The format is "YYYY:MM:DD HH:MM:SS.TH" with time shown in 24-hour format including fractions of a second, and the date and time separated by one blank character [20.H]. When the date and time are unknown, all the character spaces except colons (":") may be filled with blank characters, or else the entire field may be filled with blank characters. The character string length is 20 bytes including NULL for termination. When the field is left blank, it is treated as unknown.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SubjectLocation" type="vuint16">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Subject Location indicates the location of the main subject in the scene.</doc:brief>
+            <doc:detail>Subject Location indicates the location of the main subject in the scene. The value this item represents the pixel at the center of the main subject relative to the left edge, prior to rotation processing as per the Rotation tag. The first value is the X column number and second indicates the Y row number.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UserComment" type="UserCommentT" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SOFT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>SOFT defines the different elements associated with the JPEF SOF marker</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ChrominanceSampling" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is the chrominance sampling of the compressed image.</doc:brief>
+            <doc:detail>This is the chrominance sampling of the compressed image. It is read from the SOF marker.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Components" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is the number of channels in the compressed image.</doc:brief>
+            <doc:detail>This is the number of channels in the compressed image. It is read from the SOF marker.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Height" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is the height of the compressed image.</doc:brief>
+            <doc:detail>This is the height of the compressed image. It is read from the SOF marker.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="HorizontalSampling" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is a vector with the Horizontal Sampling factors.</doc:brief>
+            <doc:detail>This is a vector with the Horizontal Sampling factors for each component in the compressed image. It is read from the SOF marker.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Precision" type="xsd:unsignedShort">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is the data precision in bits of each channel in the compressed image.</doc:brief>
+            <doc:detail>This is the data precision in bits of each channel in the compressed image. It is read from the SOF marker.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="VerticalSampling" type="vuint8">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is a vector with the Vertical Sampling factors.</doc:brief>
+            <doc:detail>This is a vector with the Vertical Sampling factors for each component in the compressed image. It is read from the SOF marker.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Width" type="xsd:unsignedInt">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>This is the width of the compressed image.</doc:brief>
+            <doc:detail>This is the width of the compressed image. It is read from the SOF marker.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="XMPT">
+    <xsd:annotation>
+      <xsd:documentation>
+        <doc:brief>XMPT defines the different elements associated with XMP</doc:brief>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Document" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>
+            <doc:brief>Any embedded XMP information in RDF/XML format.</doc:brief>
+            <doc:detail>A string containing the entire XMP document embedded in the file.</doc:detail>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="PmtRootElementT">
+    <xsd:sequence>
+      <xsd:element name="CaptureConditions" type="CaptureConditionsT" minOccurs="0" />
+      <xsd:element name="CaptureDevice" type="CaptureDeviceT" minOccurs="0" />
+      <xsd:element name="DigitalProcess" type="DigitalProcessT" minOccurs="0" />
+      <xsd:element name="ImageContainer" type="ImageContainerT" minOccurs="0" />
+      <xsd:element name="IntellectualProperty" type="IntellectualPropertyT" minOccurs="0" />
+      <xsd:element name="OutputOrder" type="OutputOrderT" minOccurs="0" />
+      <xsd:element name="SceneContent" type="SceneContentT" minOccurs="0" />
+      <xsd:element name="XMP" type="XMPT" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="PmtRootElement" type="PmtRootElementT" />
+</xsd:schema>

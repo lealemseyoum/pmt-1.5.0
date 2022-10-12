@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE TRANSLATION>
+<TRANSLATION CreatedTime="Tues Jun 12 12:36:00 2001">
+	<ENTRY Key="NewMd">
+		<EXIF Tag="60010" Type="ushort" Location="APP3_IFD0" Translator="builtin2ushort"/>
+		<TIFF Tag="60010" Type="ushort" Location="IFD_EXIF" Translator="builtin2ushort"/>
+	</ENTRY>
+</TRANSLATION>

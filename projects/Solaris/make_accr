@@ -1,0 +1,36 @@
+include Makefile.mac
+
+SRCS = \
+PmtTranslator.cpp \
+PmtBuiltinTranslators.cpp \
+PmtFlashTranslator.cpp \
+PmtAccessor.cpp \
+PmtAllAccessors.cpp \
+PmtExifAccessor.cpp \
+PmtTiffAccessor.cpp \
+PmtXmlAccessor.cpp
+
+INCS = \
+	-I $(EK) \
+	-I $(PMTUTILS) \
+	-I $(PMTCORE) \
+	-I $(PMTINTERP) \
+	-I $(PMTTRAN) \
+	-I $(PMTACCR) \
+	-I $(XERCES_HOME)/include \
+	-I $(TOOLKITS)/Kies/inc \
+	-I $(TOOLKITS)/EkTiff/inc
+
+LIB_TARGET = $(PMTLIB)/libPmtAccessor$(LIB_SUFFIX).a
+
+include Makefile.rul
+
+all:	$(LIB_TARGET)
+
+
+
+
+
+
+
+

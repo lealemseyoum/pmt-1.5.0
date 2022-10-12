@@ -1,0 +1,170 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "AccessorTest"=.\AccessorTest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ek
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtAccessor
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtCore
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "NSTest"=.\NSTest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ek
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtCore
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PmtAccessor"=.\PmtAccessor.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PmtCore
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PmtCore"=.\PmtCore.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ek
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PmtInterpreterTest"=.\PmtInterpreterTest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ek
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtCore
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "VisitorTest"=.\VisitorTest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ek
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtAccessor
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtCore
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "_BuildAllStatic"=.\BuildAllStatic\_BuildAllStatic.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name AccessorTest
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ek
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtAccessor
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtCore
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PmtInterpreterTest
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name NSTest
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name VisitorTest
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ek"=.\Ek.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="SimpleTypeTwo">
+		<xsd:list itemType="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="SimpleTypeThree">
+		<xsd:restriction base="SimpleTypeTwo"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="SimpleTypeFour">
+		<xsd:restriction base="SimpleTypeThree"/>
+	</xsd:simpleType>
+	<xsd:complexType name="PriceT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:float">
+				<xsd:attribute name="currency1" type="xsd:string"/>
+				<xsd:attribute name="currency2" type="xsd:string"/>
+				<xsd:attribute name="currency3" type="xsd:string"/>
+				<xsd:attribute name="currency4" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="DescriptionT">
+		<xsd:simpleContent>
+			<xsd:extension base="SimpleTypeFour">
+				<xsd:attribute name="colour" type="xsd:string"/>
+				<xsd:attribute name="cat_number" type="xsd:int"/>
+				<xsd:attribute name="instock" type="xsd:boolean"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="LocationT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="plant_number" type="xsd:unsignedInt"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="MyTypeT">
+		<xsd:sequence>
+			<xsd:element name="invoiceDescription" type="DescriptionT"/>
+			<xsd:element name="invoicePrice" type="PriceT"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PmtRootElementT">
+		<xsd:sequence>
+			<xsd:element name="item_price" type="PriceT"/>
+			<xsd:element name="item_description" type="DescriptionT"/>
+			<xsd:element name="item_location" type="LocationT"/>
+			<xsd:element name="item_invoice" type="MyTypeT"/>
+			<xsd:element name="simpleTypeThree" type="SimpleTypeThree"/>
+			<xsd:element name="simpleTypeTwo" type="SimpleTypeTwo"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="PmtRootElement" type="PmtRootElementT"/>
+</xsd:schema>

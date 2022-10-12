@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="PmtRootElement">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="CaptureConditions">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="PrintQuantity" type="xsd:unsignedShort"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,6 @@
+add_subdirectory(PmtCore)
+add_subdirectory(Ek)
+add_subdirectory(PmtAccessor)
+add_subdirectory(PmtInterpreter)
+add_subdirectory(PmtTranslator)
+add_subdirectory(PmtUtils)

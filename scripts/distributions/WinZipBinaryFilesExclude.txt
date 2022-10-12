@@ -1,0 +1,18 @@
+; Files and directories to skip over when making zip file for Windows binary distribution
+
+*.keep
+*.exp ; These next two lines are for at least 2 files in Toolkits\EkTiff\lib.
+*.ilk
+Cvs
+CVS
+Pmt\scripts\distributions\*.*
+Pmt\scripts\distributions
+*.obj
+*.idb
+*.pch
+BuildLog.htm
+*.dsw
+*.dsp
+src\Makefile.*
+test\Release*\*.*
+*.ncb

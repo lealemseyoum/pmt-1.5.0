@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns="http://example.org/prod">
+	<xsd:complexType name="ItemsType">
+		<xsd:sequence>
+			<xsd:element name="product" type="xsd:string"/>
+			<xsd:element name="catalogID" type="xsd:int"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+</xsd:schema>

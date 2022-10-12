@@ -1,0 +1,33 @@
+XERCES_HOME = /space/epproject1/mmav2/xerces/xerces-c-src_1_2_0
+XERCES_LIB = xerces-c1_2
+GCC = g++
+PMT = ../..
+EK = $(PMT)/src/Ek
+PMTUTILS = $(PMT)/src/PmtUtils
+PMTCORE = $(PMT)/src/PmtCore
+PMTINTERP = $(PMT)/src/PmtInterpreter
+PMTTRAN = $(PMT)/src/PmtTranslator
+PMTACCR = $(PMT)/src/PmtAccessor
+TOOLKITS =$(PMT)/Toolkits
+PMTOBJ = $(PMT)/obj/Solaris
+PMTLIB = $(PMT)/lib
+
+ifeq ($(CFG), debug)
+	FLAGS = -g
+	LIB_SUFFIX = d
+	OBJ_DIR_NAME = debug
+else
+	ifeq ($(CFG), Wall)
+		FLAGS = -O -Wall
+	else
+		FLAGS = -O
+	endif
+	LIB_SUFFIX =
+	OBJ_DIR_NAME = release
+endif
+
+OBJ_DIR = $(PMTOBJ)/$(OBJ_DIR_NAME)/
+
+CMP = $(GCC) -ansi -D_POSIX_SOURCE $(FLAGS)
+
+VPATH = $(OBJ_DIR):$(EK):$(PMTUTILS):$(PMTCORE):$(PMTINTERP):$(PMTTRAN):$(PMTACCR)

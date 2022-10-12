@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MinMaxOccurs.xsd">
+	<One>7</One>
+	<One>7</One>
+	<One>7</One>
+	<One>7</One>
+	<One>7</One>
+	<One>7</One>
+	<One>7</One>
+	<One>7</One>
+	<One>7</One>
+	<One>7</One>
+	<One>7</One>
+	<One>7</One>
+	<One>7</One>
+	<Two>8</Two>
+	<Three>9</Three>
+	<Three>9</Three>
+	<Three>9</Three>
+	<Four>10</Four>
+	<Four>10</Four>
+</PmtRootElement>

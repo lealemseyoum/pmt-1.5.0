@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetadataDefinitionBindings>
+	<!-- 	This XML file is used by the PmtMetadata Framework code to work with
+		your schema file.  This document allows one or more
+		<MetadataDefinitionBinding>...</MetadataDefinitionBinding>
+		elements (with contents)  to be specified, as follows.
+		
+		For each MetadataDefinitionBinding, a MetadataDefnFileURI must be specified, which
+		 is the URI to the schema file used to define your Metadata.
+		
+		The RootElementName specifies the name attribute value of the element in your
+		schema which is defining the root element of an associated XML instance
+		document.  Note that the concept of this root element specification exists
+		and this information is required, even if you'll never produce or work with
+		an XML instance document.  For example, if your schema looks like this...
+		
+		<?xml version="1.0" encoding="UTF-8"?>
+			<xsd:schema xmlns:xsd="http://www.w3.org/1999/XMLSchema">
+				<xsd:complexType name="MyMetadataDefinitionst">
+					.
+					.	(Your real elements specified here...)
+					.
+				</xsd:complexType>
+
+				<xsd:element name="MyMetadataDefinitions" type="xyz:RootElement"/>
+			</xsd:schema>
+			
+		...then the RootElementName is "MyMetadataDefinitions", and the element in this
+		file would be written as:
+		
+		<RootElementName>MyMetadataDefinitions</RootElementName>
+		
+		A different AssociatedTranslationTableURI may also be specified, if you want
+		to use a different Translation Table with your schema.
+	-->
+	<MetadataDefinitionBinding>
+		<MetadataDefnFileURI>../../DefaultDefinitions/PmtDefaultDefinitions.xsd</MetadataDefnFileURI>
+		<RootElementName>PmtRootElement</RootElementName>
+		<AssociatedTranslationTableURI>default</AssociatedTranslationTableURI>
+	</MetadataDefinitionBinding>
+	<MetadataDefinitionBinding>
+		<MetadataDefnFileURI>AllTypes.xsd</MetadataDefnFileURI>
+		<RootElementName>PmtRootElement</RootElementName>
+		<AssociatedTranslationTableURI>default</AssociatedTranslationTableURI>
+	</MetadataDefinitionBinding>
+</MetadataDefinitionBindings>

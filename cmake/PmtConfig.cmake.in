@@ -1,0 +1,8 @@
+@PACKAGE_INIT@
+include(CMakeFindDependencyMacro)
+include(${CMAKE_CURRENT_LIST_DIR}/PmtTargets.cmake)
+
+find_dependency(Openexif)
+find_dependency(Opentiff)
+find_dependency(XercesC)
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- 8-bit based number types -->
+	<xsd:simpleType name="pmt_vint8">
+		<xsd:list itemType="xsd:byte"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vuint8">
+		<xsd:list itemType="xsd:unsignedByte"/>
+	</xsd:simpleType>
+	<!-- 16-bit based number types -->
+	<xsd:simpleType name="pmt_vint16">
+		<xsd:list itemType="xsd:short"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vuint16">
+		<xsd:list itemType="xsd:unsignedShort"/>
+	</xsd:simpleType>
+	<!-- 32-bit based number types -->
+	<xsd:simpleType name="pmt_vint32">
+		<xsd:list itemType="xsd:int"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vuint32">
+		<xsd:list itemType="xsd:unsignedInt"/>
+	</xsd:simpleType>
+	<!-- boolean types -->
+	<xsd:simpleType name="pmt_vboolean">
+		<xsd:list itemType="xsd:boolean"/>
+	</xsd:simpleType>
+	<!-- floating point types -->
+	<xsd:simpleType name="pmt_vfloat">
+		<xsd:list itemType="xsd:float"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vdouble">
+		<xsd:list itemType="xsd:double"/>
+	</xsd:simpleType>
+	<!-- string types -->
+	<xsd:simpleType name="pmt_vstring">
+		<xsd:list itemType="xsd:string"/>
+	</xsd:simpleType>
+	<!-- What about Unicode? -->
+	<xsd:element name="PmtRootElement">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="One" type="xsd:byte" maxOccurs="unbounded"/>
+				<xsd:element name="Two" type="xsd:int" minOccurs="3" maxOccurs="3"/>
+				<xsd:element name="Three" type="xsd:unsignedInt" maxOccurs="2"/>
+				<xsd:element name="Four" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

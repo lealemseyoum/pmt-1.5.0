@@ -1,0 +1,29 @@
+.SUFFIXES: ${SUFFIXES} .cpp
+
+OBJS = $(SRCS:.cpp=.o)
+OBJS_FULLNAME = $(addprefix $(OBJ_DIR),$(OBJS))
+
+ALL:	makedir all
+
+makedir: 
+	@mkdir -p $(OBJ_DIR); mkdir -p $(PMTLIB)
+
+
+$(LIB_TARGET): $(OBJS)
+	ar -r $@ $(OBJS_FULLNAME)
+	@echo
+
+.cpp.o:
+	${CMP} ${INCS} -c -o $(OBJ_DIR)$@ $<
+	@echo
+
+.C.o:
+	${CMP} ${INCS} -c -o $(addprefix $(OBJ_DIR), $(notdir $@)) $<
+	@echo
+
+clean:
+	rm -f $(OBJS_FULLNAME) $(LIB_TARGET) core
+	@echo
+
+
+.KEEP_STATE:

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:simpleType name="SimpleTypeOne">
+		<xsd:restriction base="xsd:unsignedInt"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="SimpleTypeTwo">
+		<xsd:list itemType="xsd:unsignedByte"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="SimpleTypeThree">
+		<xsd:restriction base="SimpleTypeTwo"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="SimpleTypeFour">
+		<xsd:restriction base="SimpleTypeThree"/>
+	</xsd:simpleType>
+	<xsd:element name="PmtRootElement">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="A" type="SimpleTypeOne"/>
+				<xsd:element name="B" type="xsd:unsignedInt"/>
+				<xsd:element name="C" type="SimpleTypeTwo"/>
+				<xsd:element name="D" type="SimpleTypeFour"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

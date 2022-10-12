@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- 8-bit based number types -->
+	<xsd:simpleType name="pmt_vint8">
+		<xsd:list itemType="xsd:byte"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vuint8">
+		<xsd:list itemType="xsd:unsignedByte"/>
+	</xsd:simpleType>
+	<!-- 16-bit based number types -->
+	<xsd:simpleType name="pmt_vint16">
+		<xsd:list itemType="xsd:short"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vuint16">
+		<xsd:list itemType="xsd:unsignedShort"/>
+	</xsd:simpleType>
+	<!-- 32-bit based number types -->
+	<xsd:simpleType name="pmt_vint32">
+		<xsd:list itemType="xsd:int"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vuint32">
+		<xsd:list itemType="xsd:unsignedInt"/>
+	</xsd:simpleType>
+	<!-- boolean types -->
+	<xsd:simpleType name="pmt_vboolean">
+		<xsd:list itemType="xsd:boolean"/>
+	</xsd:simpleType>
+	<!-- floating point types -->
+	<xsd:simpleType name="pmt_vfloat">
+		<xsd:list itemType="xsd:float"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="pmt_vdouble">
+		<xsd:list itemType="xsd:double"/>
+	</xsd:simpleType>
+	<!-- string types -->
+	<xsd:simpleType name="pmt_vstring">
+		<xsd:list itemType="xsd:string"/>
+	</xsd:simpleType>
+	<!-- What about Unicode? -->
+	<xsd:element name="PmtRootElement">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="test_int8" type="xsd:byte"/>
+				<xsd:element name="test_vint8" type="pmt_vint8"/>
+				<xsd:element name="test_uint8" type="xsd:unsignedByte"/>
+				<xsd:element name="test_vuint8" type="pmt_vuint8"/>
+				<xsd:element name="test_int16" type="xsd:short"/>
+				<xsd:element name="test_vint16" type="pmt_vint16"/>
+				<xsd:element name="test_uint16" type="xsd:unsignedShort"/>
+				<xsd:element name="test_vuint16" type="pmt_vuint16"/>
+				<xsd:element name="test_int32" type="xsd:int"/>
+				<xsd:element name="test_vint32" type="pmt_vint32"/>
+				<xsd:element name="test_uint32" type="xsd:unsignedInt"/>
+				<xsd:element name="test_vuint32" type="pmt_vuint32"/>
+				<xsd:element name="test_boolean" type="xsd:boolean"/>
+				<xsd:element name="test_vboolean" type="pmt_vboolean"/>
+				<xsd:element name="test_float" type="xsd:float"/>
+				<xsd:element name="test_vfloat" type="pmt_vfloat"/>
+				<xsd:element name="test_double" type="xsd:double"/>
+				<xsd:element name="test_vdouble" type="pmt_vdouble"/>
+				<xsd:element name="test_string" type="xsd:string"/>
+				<xsd:element name="test_vstring" type="pmt_vstring"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,26 @@
+include Makefile.mac
+
+SRCS = \
+EkCompiler.cpp \
+EkError.cpp \
+EkMutex.cpp \
+EkNullMutex.cpp \
+EkPathname.cpp \
+EkPrecompiled.cpp \
+EkRefCount.cpp \
+EkStrings.cpp \
+EkTemplate.cpp
+
+
+INCS = \
+	-I $(EK) \
+
+LIB_TARGET = $(PMTLIB)/libEk$(LIB_SUFFIX).a
+
+include Makefile.rul
+
+all: $(LIB_TARGET)
+
+
+
+

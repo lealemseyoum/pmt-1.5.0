@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dxm:schema xmlns:dxm="http://www.w3.org/2000/10/XMLSchema"
+    xmlns="http://www.kodak.com/pmt/test"
+	targetNamespace="http://www.kodak.com/pmt/test"
+	elementFormDefault="qualified">
+	<!-- 8-bit based number types -->
+	<dxm:simpleType name="pmt_vint8">
+		<dxm:list itemType="dxm:byte"/>
+	</dxm:simpleType>
+	<dxm:simpleType name="pmt_vuint8">
+		<dxm:list itemType="dxm:unsignedByte"/>
+	</dxm:simpleType>
+	<!-- 16-bit based number types -->
+	<dxm:simpleType name="pmt_vint16">
+		<dxm:list itemType="dxm:short"/>
+	</dxm:simpleType>
+	<dxm:simpleType name="pmt_vuint16">
+		<dxm:list itemType="dxm:unsignedShort"/>
+	</dxm:simpleType>
+	<!-- 32-bit based number types -->
+	<dxm:simpleType name="pmt_vint32">
+		<dxm:list itemType="dxm:int"/>
+	</dxm:simpleType>
+	<dxm:simpleType name="pmt_vuint32">
+		<dxm:list itemType="dxm:unsignedInt"/>
+	</dxm:simpleType>
+	<!-- boolean types -->
+	<dxm:simpleType name="pmt_vboolean">
+		<dxm:list itemType="dxm:boolean"/>
+	</dxm:simpleType>
+	<!-- floating point types -->
+	<dxm:simpleType name="pmt_vfloat">
+		<dxm:list itemType="dxm:float"/>
+	</dxm:simpleType>
+	<dxm:simpleType name="pmt_vdouble">
+		<dxm:list itemType="dxm:double"/>
+	</dxm:simpleType>
+	<!-- string types -->
+	<dxm:simpleType name="pmt_vstring">
+		<dxm:list itemType="dxm:string"/>
+	</dxm:simpleType>
+	<dxm:simpleType name="pmt_vwstring">
+		<dxm:list itemType="dxm:string"/>
+	</dxm:simpleType>
+	<dxm:simpleType name="uint32_10">
+		<dxm:restriction base="dxm:unsignedInt">
+			<dxm:minInclusive value="10"/>
+		</dxm:restriction>
+	</dxm:simpleType>
+	<dxm:simpleType name="uint32_20-100">
+		<dxm:restriction base="uint32_10">
+			<dxm:minInclusive value="20"/>
+			<dxm:maxInclusive value="100"/>
+		</dxm:restriction>
+	</dxm:simpleType>
+	<dxm:simpleType name="color_rgbc">
+		<dxm:restriction base="dxm:string">
+			<dxm:enumeration value="Red"/>
+			<dxm:enumeration value="Green"/>
+			<dxm:enumeration value="Blue"/>
+			<dxm:enumeration value="Cyan"/>
+		</dxm:restriction>
+	</dxm:simpleType>
+	<dxm:simpleType name="color_rgb">
+		<dxm:annotation>
+			<dxm:documentation xml:lang="en">color_rgb definition</dxm:documentation>
+		</dxm:annotation>
+		<dxm:restriction base="color_rgbc">
+			<dxm:enumeration value="Red"/>
+			<dxm:enumeration value="Green"/>
+			<dxm:enumeration value="Blue"/>
+		</dxm:restriction>
+	</dxm:simpleType>
+	<dxm:attribute name="Ref_Attr" default="Cyan" type="color_rgbc"/>
+	<dxm:element name="Ref_Element">
+		<dxm:complexType>
+			<dxm:sequence>
+				<dxm:element name="Ref_XYZ1" type="dxm:int"/>
+				<dxm:element name="Ref_XYZ2" type="dxm:string"/>
+			</dxm:sequence>
+		</dxm:complexType>
+	</dxm:element>
+	<dxm:complexType name="ComplexType1">
+		<dxm:sequence>
+			<dxm:element name="XYZ3" type="dxm:string"/>
+			<dxm:element name="XYZ4" type="pmt_vint32"/>
+		</dxm:sequence>
+		<dxm:attribute name="Attr4" type="uint32_20-100"/>
+		<dxm:attribute name="Attr5" type="dxm:unsignedShort"/>
+	</dxm:complexType>
+	<dxm:element name="TestRoot">
+		<dxm:complexType>
+			<dxm:sequence>
+				<dxm:element name="ABC1" type="uint32_20-100"/>
+				<dxm:element name="ABC2">
+					<dxm:complexType>
+						<dxm:sequence>
+							<dxm:element name="XYZ1" type="color_rgb"/>
+							<dxm:element name="XYZ2" type="pmt_vfloat"/>
+						</dxm:sequence>
+						<dxm:attribute name="Attr1" type="uint32_10"/>
+						<dxm:attribute name="Attr2" default="168">
+							<dxm:simpleType>
+								<dxm:annotation>
+									<dxm:documentation xml:lang="en">anonymous attribute type definition</dxm:documentation>
+								</dxm:annotation>
+								<dxm:restriction base="dxm:int">
+									<dxm:maxInclusive value="1000" fixed="true"/>
+								</dxm:restriction>
+							</dxm:simpleType>
+						</dxm:attribute>
+						<dxm:attribute ref="Ref_Attr"/>
+						<dxm:attribute name="Attr3" type="dxm:string"/>
+					</dxm:complexType>
+				</dxm:element>
+				<dxm:element name="ABC3">
+					<dxm:simpleType>
+						<dxm:restriction base="dxm:short">
+							<dxm:enumeration value="2"/>
+							<dxm:enumeration value="4"/>
+							<dxm:enumeration value="6"/>
+							<dxm:enumeration value="8"/>
+						</dxm:restriction>
+					</dxm:simpleType>
+				</dxm:element>
+				<dxm:element ref="Ref_Element"/>
+				<dxm:element name="ABC4" type="ComplexType1"/>
+			</dxm:sequence>
+		</dxm:complexType>
+	</dxm:element>
+</dxm:schema>

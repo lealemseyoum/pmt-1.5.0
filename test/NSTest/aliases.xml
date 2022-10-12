@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetadataAliases>
+  <MetadataAlias AliasKey="alias_1">
+   <AliasMember MetadataKey="CaptureDevice.Make"/>
+   <AliasMember MetadataKey="CaptureConditions.Fnumber"/>
+   <AliasMember MetadataKey="CaptureConditions.MeteringMode"/>
+   <AliasMember MetadataKey="ImageContainer.Orientation"/>
+   <AliasMember MetadataKey="ImageContainer.ComponentsConfiguration"/>
+  </MetadataAlias>
+  <MetadataAlias AliasKey="alias_2">
+   <AliasMember MetadataKey="SceneContent.ImageCaptureDateTime.ImageCaptureDateTime"/>
+   <AliasMember MetadataKey="CaptureDevice.Model"/>
+  </MetadataAlias>
+</MetadataAliases>

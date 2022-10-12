@@ -1,0 +1,764 @@
+
+************ Test Definiston Interpreter for NS **********
+
+------ Testing file: TestXmlInfo1.xml------
+
+Now showing Factory contents... 
+Namespace URI: http://www.kodak.com/pmt/test
+-PmtMetadataComposite  TestRoot anonymous
+  ABC1  - optional or singular element - it's pointer is NULL
+  ABC2  - optional or singular element - it's pointer is NULL
+  ABC3  - optional or singular element - it's pointer is NULL
+  Ref_Element  - optional or singular element - it's pointer is NULL
+  ABC4  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  ABC1 {unsigned long,ABC1,0}
+  Facet(xsd:minInclusive, false, [20])
+  Facet(xsd:maxInclusive, false, [100])
+-PmtMetadataComposite  ABC2 anonymous
+  PmtAttribute(Attr1, not instantiated)
+  PmtAttribute(Attr2, not instantiated)
+  PmtAttribute(Attr3, not instantiated)
+  PmtAttribute(Ref_Attr, not instantiated)
+  XYZ1  - optional or singular element - it's pointer is NULL
+  XYZ2  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  XYZ1 {string,XYZ1,}
+  Facet(xsd:enumeration, false, [Red Green Blue])
+-PmtMetadataT  XYZ2 {vector<float>,XYZ2,0}
+-PmtMetadataT  ABC3 {short,ABC3,0}
+  Facet(xsd:enumeration, false, [2 4 6 8])
+-PmtMetadataComposite  ABC4 ComplexType1
+  PmtAttribute(Attr4, not instantiated)
+  PmtAttribute(Attr5, not instantiated)
+  XYZ3  - optional or singular element - it's pointer is NULL
+  XYZ4  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  XYZ3 {string,XYZ3,}
+-PmtMetadataT  XYZ4 {vector<long>,XYZ4,0}
+-PmtMetadataComposite  Ref_Element anonymous
+  Ref_XYZ1  - optional or singular element - it's pointer is NULL
+  Ref_XYZ2  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  Ref_XYZ1 {long,Ref_XYZ1,0}
+-PmtMetadataT  Ref_XYZ2 {string,Ref_XYZ2,}
+... end of Factory contents.
+
+
+Show PmtAttribute Factory...
+Namespace URI: http://www.kodak.com/pmt/test
+PmtAttribute(Attr1, uint32_10, [0])
+  Facet(xsd:minInclusive, false, [10])
+PmtAttribute(Attr2, anonymous, [168])
+  Facet(xsd:maxInclusive, true, [1000])
+PmtAttribute(Attr3, xsd:string, [])
+PmtAttribute(Ref_Attr, color_rgbc, [Cyan])
+  Facet(xsd:enumeration, false, [Red Green Blue Cyan])
+PmtAttribute(Attr4, uint32_20-100, [0])
+  Facet(xsd:minInclusive, false, [20])
+  Facet(xsd:maxInclusive, false, [100])
+PmtAttribute(Attr5, xsd:unsignedShort, [0])
+...End of PmtAttribute Factory
+
+Testing facet validating...
+...End of Testing facet validating
+
+Testing attributes...
+PmtAttribute(Attr1, uint32_10, [0])
+  Facet(xsd:minInclusive, false, [10])
+PmtAttribute(Attr2, anonymous, [168])
+  Facet(xsd:maxInclusive, true, [1000])
+-PmtMetadataComposite  ABC2 anonymous
+  PmtAttribute(Attr1, uint32_10, [0])
+    Facet(xsd:minInclusive, false, [10])
+  PmtAttribute(Attr2, anonymous, [168])
+    Facet(xsd:maxInclusive, true, [1000])
+  PmtAttribute(Attr3, xsd:string, [])
+  PmtAttribute(Ref_Attr, color_rgbc, [Cyan])
+    Facet(xsd:enumeration, false, [Red Green Blue Cyan])
+  XYZ1  - optional or singular element -    it's value is: Cyan
+  XYZ2  - optional or singular element - it's pointer is NULL
+...End of Testing attributes
+
+
+------ Testing file: TestXmlInfo2.xml------
+
+Now showing Factory contents... 
+Namespace URI: http://www.kodak.com/pmt/test
+-PmtMetadataComposite  TestRoot anonymous
+  ABC1  - optional or singular element - it's pointer is NULL
+  ABC2  - optional or singular element - it's pointer is NULL
+  ABC3  - optional or singular element - it's pointer is NULL
+  Ref_Element  - optional or singular element - it's pointer is NULL
+  ABC4  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  ABC1 {unsigned long,ABC1,0}
+  Facet(xsd:minInclusive, false, [20])
+  Facet(xsd:maxInclusive, false, [100])
+-PmtMetadataComposite  ABC2 anonymous
+  PmtAttribute(Attr1, not instantiated)
+  PmtAttribute(Attr2, not instantiated)
+  PmtAttribute(Attr3, not instantiated)
+  PmtAttribute(Ref_Attr, not instantiated)
+  XYZ1  - optional or singular element - it's pointer is NULL
+  XYZ2  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  XYZ1 {string,XYZ1,}
+  Facet(xsd:enumeration, false, [Red Green Blue])
+-PmtMetadataT  XYZ2 {vector<float>,XYZ2,0}
+-PmtMetadataT  ABC3 {short,ABC3,0}
+  Facet(xsd:enumeration, false, [2 4 6 8])
+-PmtMetadataComposite  ABC4 ComplexType1
+  PmtAttribute(Attr4, not instantiated)
+  PmtAttribute(Attr5, not instantiated)
+  XYZ3  - optional or singular element - it's pointer is NULL
+  XYZ4  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  XYZ3 {string,XYZ3,}
+-PmtMetadataT  XYZ4 {vector<long>,XYZ4,0}
+-PmtMetadataComposite  Ref_Element anonymous
+  Ref_XYZ1  - optional or singular element - it's pointer is NULL
+  Ref_XYZ2  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  Ref_XYZ1 {long,Ref_XYZ1,0}
+-PmtMetadataT  Ref_XYZ2 {string,Ref_XYZ2,}
+... end of Factory contents.
+
+
+Show PmtAttribute Factory...
+Namespace URI: http://www.kodak.com/pmt/test
+PmtAttribute(Attr1, uint32_10, [0])
+  Facet(xsd:minInclusive, false, [10])
+PmtAttribute(Attr2, anonymous, [168])
+  Facet(xsd:maxInclusive, true, [1000])
+PmtAttribute(Attr3, dxm:string, [])
+PmtAttribute(Ref_Attr, color_rgbc, [Cyan])
+  Facet(xsd:enumeration, false, [Red Green Blue Cyan])
+PmtAttribute(Attr4, uint32_20-100, [0])
+  Facet(xsd:minInclusive, false, [20])
+  Facet(xsd:maxInclusive, false, [100])
+PmtAttribute(Attr5, dxm:unsignedShort, [0])
+...End of PmtAttribute Factory
+
+Testing facet validating...
+...End of Testing facet validating
+
+Testing attributes...
+PmtAttribute(Attr1, uint32_10, [0])
+  Facet(xsd:minInclusive, false, [10])
+PmtAttribute(Attr2, anonymous, [168])
+  Facet(xsd:maxInclusive, true, [1000])
+-PmtMetadataComposite  ABC2 anonymous
+  PmtAttribute(Attr1, uint32_10, [0])
+    Facet(xsd:minInclusive, false, [10])
+  PmtAttribute(Attr2, anonymous, [168])
+    Facet(xsd:maxInclusive, true, [1000])
+  PmtAttribute(Attr3, dxm:string, [])
+  PmtAttribute(Ref_Attr, color_rgbc, [Cyan])
+    Facet(xsd:enumeration, false, [Red Green Blue Cyan])
+  XYZ1  - optional or singular element -    it's value is: Cyan
+  XYZ2  - optional or singular element - it's pointer is NULL
+...End of Testing attributes
+
+
+------ Testing file: TestXmlInfo3.xml------
+
+Now showing Factory contents... 
+Namespace URI: http://www.kodak.com/pmt/test
+-PmtMetadataComposite  TestRoot anonymous
+  ABC1  - optional or singular element - it's pointer is NULL
+  ABC2  - optional or singular element - it's pointer is NULL
+  ABC3  - optional or singular element - it's pointer is NULL
+  Ref_Element  - optional or singular element - it's pointer is NULL
+  ABC4  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  ABC1 {unsigned long,ABC1,0}
+  Facet(xsd:minInclusive, false, [20])
+  Facet(xsd:maxInclusive, false, [100])
+-PmtMetadataComposite  ABC2 anonymous
+  PmtAttribute(Attr1, not instantiated)
+  PmtAttribute(Attr2, not instantiated)
+  PmtAttribute(Attr3, not instantiated)
+  PmtAttribute(Ref_Attr, not instantiated)
+  XYZ1  - optional or singular element - it's pointer is NULL
+  XYZ2  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  XYZ1 {string,XYZ1,}
+  Facet(xsd:enumeration, false, [Red Green Blue])
+-PmtMetadataT  XYZ2 {vector<float>,XYZ2,0}
+-PmtMetadataT  ABC3 {short,ABC3,0}
+  Facet(xsd:enumeration, false, [2 4 6 8])
+-PmtMetadataComposite  ABC4 ComplexType1
+  PmtAttribute(Attr4, not instantiated)
+  PmtAttribute(Attr5, not instantiated)
+  XYZ3  - optional or singular element - it's pointer is NULL
+  XYZ4  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  XYZ3 {string,XYZ3,}
+-PmtMetadataT  XYZ4 {vector<long>,XYZ4,0}
+-PmtMetadataComposite  Ref_Element anonymous
+  Ref_XYZ1  - optional or singular element - it's pointer is NULL
+  Ref_XYZ2  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  Ref_XYZ1 {long,Ref_XYZ1,0}
+-PmtMetadataT  Ref_XYZ2 {string,Ref_XYZ2,}
+... end of Factory contents.
+
+
+Show PmtAttribute Factory...
+Namespace URI: http://www.kodak.com/pmt/test
+PmtAttribute(Attr1, ptt:uint32_10, [0])
+  Facet(xsd:minInclusive, false, [10])
+PmtAttribute(Attr2, anonymous, [168])
+  Facet(xsd:maxInclusive, true, [1000])
+PmtAttribute(Attr3, xsd:string, [])
+PmtAttribute(Ref_Attr, ptt:color_rgbc, [Cyan])
+  Facet(xsd:enumeration, false, [Red Green Blue Cyan])
+PmtAttribute(Attr4, ptt:uint32_20-100, [0])
+  Facet(xsd:minInclusive, false, [20])
+  Facet(xsd:maxInclusive, false, [100])
+PmtAttribute(Attr5, xsd:unsignedShort, [0])
+...End of PmtAttribute Factory
+
+Testing facet validating...
+...End of Testing facet validating
+
+Testing attributes...
+PmtAttribute(Attr1, ptt:uint32_10, [0])
+  Facet(xsd:minInclusive, false, [10])
+PmtAttribute(Attr2, anonymous, [168])
+  Facet(xsd:maxInclusive, true, [1000])
+-PmtMetadataComposite  ABC2 anonymous
+  PmtAttribute(Attr1, ptt:uint32_10, [0])
+    Facet(xsd:minInclusive, false, [10])
+  PmtAttribute(Attr2, anonymous, [168])
+    Facet(xsd:maxInclusive, true, [1000])
+  PmtAttribute(Attr3, xsd:string, [])
+  PmtAttribute(Ref_Attr, ptt:color_rgbc, [Cyan])
+    Facet(xsd:enumeration, false, [Red Green Blue Cyan])
+  XYZ1  - optional or singular element -    it's value is: Cyan
+  XYZ2  - optional or singular element - it's pointer is NULL
+...End of Testing attributes
+
+
+------ Testing file: TestXmlInfo4.xml------
+
+Now showing Factory contents... 
+Namespace URI: http://www.kodak.com/pmt/test
+-PmtMetadataComposite  TestRoot anonymous
+  ABC1  - optional or singular element - it's pointer is NULL
+  ABC2  - optional or singular element - it's pointer is NULL
+  ABC3  - optional or singular element - it's pointer is NULL
+  Ref_Element  - optional or singular element - it's pointer is NULL
+  ABC4  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  ABC1 {unsigned long,ABC1,0}
+  Facet(xsd:minInclusive, false, [20])
+  Facet(xsd:maxInclusive, false, [100])
+-PmtMetadataComposite  ABC2 anonymous
+  PmtAttribute(Attr1, not instantiated)
+  PmtAttribute(Attr2, not instantiated)
+  PmtAttribute(Attr3, not instantiated)
+  PmtAttribute(Ref_Attr, not instantiated)
+  XYZ1  - optional or singular element - it's pointer is NULL
+  XYZ2  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  XYZ1 {string,XYZ1,}
+  Facet(xsd:enumeration, false, [Red Green Blue])
+-PmtMetadataT  XYZ2 {vector<float>,XYZ2,0}
+-PmtMetadataT  ABC3 {short,ABC3,0}
+  Facet(xsd:enumeration, false, [2 4 6 8])
+-PmtMetadataComposite  ABC4 ComplexType1
+  PmtAttribute(Attr4, not instantiated)
+  PmtAttribute(Attr5, not instantiated)
+  XYZ3  - optional or singular element - it's pointer is NULL
+  XYZ4  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  XYZ3 {string,XYZ3,}
+-PmtMetadataT  XYZ4 {vector<long>,XYZ4,0}
+-PmtMetadataComposite  Ref_Element anonymous
+  Ref_XYZ1  - optional or singular element - it's pointer is NULL
+  Ref_XYZ2  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  Ref_XYZ1 {long,Ref_XYZ1,0}
+-PmtMetadataT  Ref_XYZ2 {string,Ref_XYZ2,}
+... end of Factory contents.
+
+
+Show PmtAttribute Factory...
+Namespace URI: http://www.kodak.com/pmt/test
+PmtAttribute(Attr1, ptt:uint32_10, [0])
+  Facet(xsd:minInclusive, false, [10])
+PmtAttribute(Attr2, anonymous, [168])
+  Facet(xsd:maxInclusive, true, [1000])
+PmtAttribute(Attr3, string, [])
+PmtAttribute(Ref_Attr, ptt:color_rgbc, [Cyan])
+  Facet(xsd:enumeration, false, [Red Green Blue Cyan])
+PmtAttribute(Attr4, ptt:uint32_20-100, [0])
+  Facet(xsd:minInclusive, false, [20])
+  Facet(xsd:maxInclusive, false, [100])
+PmtAttribute(Attr5, unsignedShort, [0])
+...End of PmtAttribute Factory
+
+Testing facet validating...
+...End of Testing facet validating
+
+Testing attributes...
+PmtAttribute(Attr1, ptt:uint32_10, [0])
+  Facet(xsd:minInclusive, false, [10])
+PmtAttribute(Attr2, anonymous, [168])
+  Facet(xsd:maxInclusive, true, [1000])
+-PmtMetadataComposite  ABC2 anonymous
+  PmtAttribute(Attr1, ptt:uint32_10, [0])
+    Facet(xsd:minInclusive, false, [10])
+  PmtAttribute(Attr2, anonymous, [168])
+    Facet(xsd:maxInclusive, true, [1000])
+  PmtAttribute(Attr3, string, [])
+  PmtAttribute(Ref_Attr, ptt:color_rgbc, [Cyan])
+    Facet(xsd:enumeration, false, [Red Green Blue Cyan])
+  XYZ1  - optional or singular element -    it's value is: Cyan
+  XYZ2  - optional or singular element - it's pointer is NULL
+...End of Testing attributes
+
+
+------ Testing file: TestXmlInfo5.xml------
+
+Now showing Factory contents... 
+Namespace URI: http://www.kodak.com/pmt/test
+-PmtMetadataComposite  TestRoot anonymous
+  ABC1  - optional or singular element - it's pointer is NULL
+  ABC2  - optional or singular element - it's pointer is NULL
+  ABC3  - optional or singular element - it's pointer is NULL
+  Ref_Element  - optional or singular element - it's pointer is NULL
+  ABC4  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  ABC1 {unsigned long,ABC1,0}
+  Facet(xsd:minInclusive, false, [20])
+  Facet(xsd:maxInclusive, false, [100])
+-PmtMetadataComposite  ABC2 anonymous
+  PmtAttribute(Attr1, not instantiated)
+  PmtAttribute(Attr2, not instantiated)
+  PmtAttribute(Attr3, not instantiated)
+  PmtAttribute(Ref_Attr, not instantiated)
+  XYZ1  - optional or singular element - it's pointer is NULL
+  XYZ2  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  XYZ1 {string,XYZ1,}
+  Facet(xsd:enumeration, false, [Red Green Blue])
+-PmtMetadataT  XYZ2 {vector<float>,XYZ2,0}
+-PmtMetadataT  ABC3 {short,ABC3,0}
+  Facet(xsd:enumeration, false, [2 4 6 8])
+-PmtMetadataComposite  ABC4 ComplexType1
+  PmtAttribute(Attr4, not instantiated)
+  PmtAttribute(Attr5, not instantiated)
+  XYZ3  - optional or singular element - it's pointer is NULL
+  XYZ4  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  XYZ3 {string,XYZ3,}
+-PmtMetadataT  XYZ4 {vector<long>,XYZ4,0}
+-PmtMetadataComposite  Ref_Element anonymous
+  Ref_XYZ1  - optional or singular element - it's pointer is NULL
+  Ref_XYZ2  - optional or singular element - it's pointer is NULL
+-PmtMetadataT  Ref_XYZ1 {long,Ref_XYZ1,0}
+-PmtMetadataT  Ref_XYZ2 {string,Ref_XYZ2,}
+... end of Factory contents.
+
+
+Show PmtAttribute Factory...
+Namespace URI: http://www.kodak.com/pmt/test
+PmtAttribute(Attr1, ptt:uint32_10, [0])
+  Facet(xsd:minInclusive, false, [10])
+PmtAttribute(Attr2, anonymous, [168])
+  Facet(xsd:maxInclusive, true, [1000])
+PmtAttribute(Attr3, xsd:string, [])
+PmtAttribute(Ref_Attr, ptt:color_rgbc, [Cyan])
+  Facet(xsd:enumeration, false, [Red Green Blue Cyan])
+PmtAttribute(Attr4, ptt:uint32_20-100, [0])
+  Facet(xsd:minInclusive, false, [20])
+  Facet(xsd:maxInclusive, false, [100])
+PmtAttribute(Attr5, xsd:unsignedShort, [0])
+...End of PmtAttribute Factory
+
+Testing facet validating...
+...End of Testing facet validating
+
+Testing attributes...
+PmtAttribute(Attr1, ptt:uint32_10, [0])
+  Facet(xsd:minInclusive, false, [10])
+PmtAttribute(Attr2, anonymous, [168])
+  Facet(xsd:maxInclusive, true, [1000])
+-PmtMetadataComposite  ABC2 anonymous
+  PmtAttribute(Attr1, ptt:uint32_10, [0])
+    Facet(xsd:minInclusive, false, [10])
+  PmtAttribute(Attr2, anonymous, [168])
+    Facet(xsd:maxInclusive, true, [1000])
+  PmtAttribute(Attr3, xsd:string, [])
+  PmtAttribute(Ref_Attr, ptt:color_rgbc, [Cyan])
+    Facet(xsd:enumeration, false, [Red Green Blue Cyan])
+  XYZ1  - optional or singular element -    it's value is: Cyan
+  XYZ2  - optional or singular element - it's pointer is NULL
+...End of Testing attributes
+
+
+************ Test Instance Interpreter ************
+
+------- Test Reading: TestInput.xml, MdXmlInfo.xml-------
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns="http://www.kodak.com/pmt/MetadataDefinition">
+  <CaptureConditions>
+    <Aperture>4</Aperture>
+    <ExposureBias>0</ExposureBias>
+    <ExposureTime>0.00486</ExposureTime>
+    <Fnumber>4.66</Fnumber>
+    <FocalLength>10.4</FocalLength>
+    <LightSource>0</LightSource>
+    <MaxAperture>3</MaxAperture>
+    <MeteringMode>2</MeteringMode>
+    <ShutterSpeed>8</ShutterSpeed>
+    <SubjectDistance>5</SubjectDistance>
+  </CaptureConditions>
+  <CaptureDevice>
+    <Make>Eastman Kodak Company</Make>
+    <MakerNotes>1 0 0 0 0 0 4 0 69 97 115 116 109 97 110 32 75 111 100 97 107 32 67 111 109 112 97 110 121 0 0 0 0 0 0 0 0 0 0 0 75 79 68 65 75 32 68 73 71 73 84 65 76 32 83 67 73 69 78 67 69 32 68 67 50 54 48 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 4 0 0 0 6 0 0 0 4 0 0 0 0 1 74 80 69 71 0 0 0 4 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 8 152 0 8 40 84 0 0 0 0 0 0 4 176 0 0 18 252 0 0 1 210 0 0 1 244 0 0 0 0 0 0 3 232 0 0 0 130 0 0 0 1 0 0 0 3 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 19 160 0 1 42 192 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 3 44 0 1 17 76 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 163 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</MakerNotes>
+    <Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</Model>
+  </CaptureDevice>
+  <ImageContainer>
+    <ActualImageHeight>1024</ActualImageHeight>
+    <ActualImageWidth>1536</ActualImageWidth>
+    <ColorSpaceInformation>1</ColorSpaceInformation>
+    <ComponentsConfiguration>1 2 3 0</ComponentsConfiguration>
+    <CompressedBitsPerPixel>2.4</CompressedBitsPerPixel>
+    <DisplayResolutionUnit>2</DisplayResolutionUnit>
+    <DisplayXResolution>72</DisplayXResolution>
+    <DisplayYResolution>72</DisplayYResolution>
+    <ExifVersion>48 50 48 48</ExifVersion>
+    <FlashpixVersion>48 49 48 48</FlashpixVersion>
+    <Orientation>1</Orientation>
+    <Thumbnail>
+      <BitsPerSample>8</BitsPerSample>
+      <Compression>1</Compression>
+      <DisplayResolutionUnit>2</DisplayResolutionUnit>
+      <DisplayXResolution>72</DisplayXResolution>
+      <DisplayYResolution>72</DisplayYResolution>
+      <Height>64</Height>
+      <Orientation>1</Orientation>
+      <PhotometricInterpretation>2</PhotometricInterpretation>
+      <PlanarConfiguration>1</PlanarConfiguration>
+      <RowsPerStrip>64</RowsPerStrip>
+      <SamplesPerPixel>3</SamplesPerPixel>
+      <StripByteCounts>18432</StripByteCounts>
+      <StripOffsets>1732</StripOffsets>
+      <Width>96</Width>
+    </Thumbnail>
+    <YCbCrPositioning>1</YCbCrPositioning>
+  </ImageContainer>
+  <SceneContent>
+    <Audio>84 104 105 115 32 105 115 32 116 101 115 116 32 65 117 100 105 111</Audio>
+    <ImageCaptureDateTime>
+      <ImageCaptureDateTime>1998:01:08 08:28:54</ImageCaptureDateTime>
+    </ImageCaptureDateTime>
+  </SceneContent>
+</PmtRootElement>
+------- Test Reading: TestInput1.xml, MdXmlInfo.xml-------
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns="http://www.kodak.com/pmt/MetadataDefinition">
+  <CaptureConditions>
+    <Aperture>4</Aperture>
+    <ExposureBias>0</ExposureBias>
+    <ExposureTime>0.00486</ExposureTime>
+    <Fnumber>4.66</Fnumber>
+    <FocalLength>10.4</FocalLength>
+    <LightSource>0</LightSource>
+    <MaxAperture>3</MaxAperture>
+    <MeteringMode>2</MeteringMode>
+    <ShutterSpeed>8</ShutterSpeed>
+    <SubjectDistance>5</SubjectDistance>
+  </CaptureConditions>
+  <CaptureDevice>
+    <Make>Eastman Kodak Company</Make>
+    <MakerNotes>1 0 0 0 0 0 4 0 69 97 115 116 109 97 110 32 75 111 100 97 107 32 67 111 109 112 97 110 121 0 0 0 0 0 0 0 0 0 0 0 75 79 68 65 75 32 68 73 71 73 84 65 76 32 83 67 73 69 78 67 69 32 68 67 50 54 48 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 4 0 0 0 6 0 0 0 4 0 0 0 0 1 74 80 69 71 0 0 0 4 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 8 152 0 8 40 84 0 0 0 0 0 0 4 176 0 0 18 252 0 0 1 210 0 0 1 244 0 0 0 0 0 0 3 232 0 0 0 130 0 0 0 1 0 0 0 3 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 19 160 0 1 42 192 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 3 44 0 1 17 76 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 163 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</MakerNotes>
+    <Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</Model>
+  </CaptureDevice>
+  <ImageContainer>
+    <ActualImageHeight>1024</ActualImageHeight>
+    <ActualImageWidth>1536</ActualImageWidth>
+    <ColorSpaceInformation>1</ColorSpaceInformation>
+    <ComponentsConfiguration>1 2 3 0</ComponentsConfiguration>
+    <CompressedBitsPerPixel>2.4</CompressedBitsPerPixel>
+    <DisplayResolutionUnit>2</DisplayResolutionUnit>
+    <DisplayXResolution>72</DisplayXResolution>
+    <DisplayYResolution>72</DisplayYResolution>
+    <ExifVersion>48 50 48 48</ExifVersion>
+    <FlashpixVersion>48 49 48 48</FlashpixVersion>
+    <Orientation>1</Orientation>
+    <Thumbnail>
+      <BitsPerSample>8</BitsPerSample>
+      <Compression>1</Compression>
+      <DisplayResolutionUnit>2</DisplayResolutionUnit>
+      <DisplayXResolution>72</DisplayXResolution>
+      <DisplayYResolution>72</DisplayYResolution>
+      <Height>64</Height>
+      <Orientation>1</Orientation>
+      <PhotometricInterpretation>2</PhotometricInterpretation>
+      <PlanarConfiguration>1</PlanarConfiguration>
+      <RowsPerStrip>64</RowsPerStrip>
+      <SamplesPerPixel>3</SamplesPerPixel>
+      <StripByteCounts>18432</StripByteCounts>
+      <StripOffsets>1732</StripOffsets>
+      <Width>96</Width>
+    </Thumbnail>
+    <YCbCrPositioning>1</YCbCrPositioning>
+  </ImageContainer>
+  <SceneContent>
+    <Audio>84 104 105 115 32 105 115 32 116 101 115 116 32 65 117 100 105 111</Audio>
+    <ImageCaptureDateTime>
+      <ImageCaptureDateTime>1998:01:08 08:28:54</ImageCaptureDateTime>
+    </ImageCaptureDateTime>
+  </SceneContent>
+</PmtRootElement>
+------- Test Reading: TestInput2.xml, MdXmlInfo.xml-------
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns="http://www.kodak.com/pmt/MetadataDefinition">
+  <CaptureConditions>
+    <Fnumber>4.66</Fnumber>
+    <SubjectDistance>5</SubjectDistance>
+  </CaptureConditions>
+  <ImageContainer>
+    <ExifVersion>48 50 48 48</ExifVersion>
+  </ImageContainer>
+</PmtRootElement>
+------- Test Reading: TestInput2.xml, MdXmlInfo1.xml-------
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns="http://www.kodak.com/pmt/MetadataDefinition">
+  <CaptureDevice>
+    <Make>Eastman Kodak Company</Make>
+    <MakerNotes>1 0 0 0 0 0 4 0 69 97 115 116 109 97 110 32 75 111 100 97 107 32 67 111 109 112 97 110 121 0 0 0 0 0 0 0 0 0 0 0 75 79 68 65 75 32 68 73 71 73 84 65 76 32 83 67 73 69 78 67 69 32 68 67 50 54 48 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 4 0 0 0 6 0 0 0 4 0 0 0 0 1 74 80 69 71 0 0 0 4 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 8 152 0 8 40 84 0 0 0 0 0 0 4 176 0 0 18 252 0 0 1 210 0 0 1 244 0 0 0 0 0 0 3 232 0 0 0 130 0 0 0 1 0 0 0 3 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 19 160 0 1 42 192 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 3 44 0 1 17 76 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 163 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</MakerNotes>
+    <Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</Model>
+  </CaptureDevice>
+  <SceneContent>
+    <Audio>84 104 105 115 32 105 115 32 116 101 115 116 32 65 117 100 105 111</Audio>
+    <ImageCaptureDateTime>
+      <ImageCaptureDateTime>1998:01:08 08:28:54</ImageCaptureDateTime>
+    </ImageCaptureDateTime>
+  </SceneContent>
+</PmtRootElement>
+
+------- Test Writing: TestInput.xml, MdXmlInfo.xml--------
+<?xml version="1.0" encoding="UTF-8"?>
+<xyz:PmtRootElement xmlns:xyz="http://www.kodak.com/pmt/MetadataDefinition">
+  <xyz:CaptureConditions>
+    <xyz:Fnumber>4.66</xyz:Fnumber>
+    <xyz:MeteringMode>2</xyz:MeteringMode>
+  </xyz:CaptureConditions>
+  <xyz:CaptureDevice>
+    <xyz:Make>Eastman Kodak Company</xyz:Make>
+  </xyz:CaptureDevice>
+  <xyz:ImageContainer>
+    <xyz:ComponentsConfiguration>1 2 3 0</xyz:ComponentsConfiguration>
+    <xyz:Orientation>1</xyz:Orientation>
+  </xyz:ImageContainer>
+</xyz:PmtRootElement>
+
+------- Test Writing: TestInput.xml, MdXmlInfo1.xml--------
+<?xml version="1.0" encoding="UTF-8"?>
+<myns:PmtRootElement xmlns:myns="http://www.kodak.com/pmt/MetadataDefinition">
+  <CaptureConditions>
+    <Fnumber>4.66</Fnumber>
+    <MeteringMode>2</MeteringMode>
+  </CaptureConditions>
+  <CaptureDevice>
+    <Make>Eastman Kodak Company</Make>
+  </CaptureDevice>
+  <ImageContainer>
+    <ComponentsConfiguration>1 2 3 0</ComponentsConfiguration>
+    <Orientation>1</Orientation>
+  </ImageContainer>
+</myns:PmtRootElement>
+********Test Xml accessor********
+
+--- Testing read all metadata from an Exif file and write to an xml file
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns="http://www.kodak.com/pmt/MetadataDefinition">
+  <CaptureConditions>
+    <Aperture>4</Aperture>
+    <ExposureBias>0</ExposureBias>
+    <ExposureTime>0.00486</ExposureTime>
+    <Fnumber>4.66</Fnumber>
+    <FocalLength>10.4</FocalLength>
+    <LightSource>0</LightSource>
+    <MaxAperture>3</MaxAperture>
+    <MeteringMode>2</MeteringMode>
+    <ShutterSpeed>8</ShutterSpeed>
+    <SubjectDistance>5</SubjectDistance>
+  </CaptureConditions>
+  <CaptureDevice>
+    <Make>Eastman Kodak Company</Make>
+    <MakerNotes>1 0 0 0 0 0 4 0 69 97 115 116 109 97 110 32 75 111 100 97 107 32 67 111 109 112 97 110 121 0 0 0 0 0 0 0 0 0 0 0 75 79 68 65 75 32 68 73 71 73 84 65 76 32 83 67 73 69 78 67 69 32 68 67 50 54 48 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 4 0 0 0 6 0 0 0 4 0 0 0 0 1 74 80 69 71 0 0 0 4 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 8 152 0 8 40 84 0 0 0 0 0 0 4 176 0 0 18 252 0 0 1 210 0 0 1 244 0 0 0 0 0 0 3 232 0 0 0 130 0 0 0 1 0 0 0 3 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 19 160 0 1 42 192 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 3 44 0 1 17 76 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 163 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</MakerNotes>
+    <Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</Model>
+  </CaptureDevice>
+  <ImageContainer>
+    <ActualImageHeight>1024</ActualImageHeight>
+    <ActualImageWidth>1536</ActualImageWidth>
+    <ColorSpaceInformation>1</ColorSpaceInformation>
+    <ComponentsConfiguration>1 2 3 0</ComponentsConfiguration>
+    <CompressedBitsPerPixel>2.4</CompressedBitsPerPixel>
+    <DisplayResolutionUnit>2</DisplayResolutionUnit>
+    <DisplayXResolution>72</DisplayXResolution>
+    <DisplayYResolution>72</DisplayYResolution>
+    <ExifVersion>48 50 48 48</ExifVersion>
+    <FlashpixVersion>48 49 48 48</FlashpixVersion>
+    <Orientation>1</Orientation>
+    <Thumbnail>
+      <BitsPerSample>8</BitsPerSample>
+      <Compression>1</Compression>
+      <DisplayResolutionUnit>2</DisplayResolutionUnit>
+      <DisplayXResolution>72</DisplayXResolution>
+      <DisplayYResolution>72</DisplayYResolution>
+      <Height>64</Height>
+      <Orientation>1</Orientation>
+      <PhotometricInterpretation>2</PhotometricInterpretation>
+      <PlanarConfiguration>1</PlanarConfiguration>
+      <RowsPerStrip>64</RowsPerStrip>
+      <SamplesPerPixel>3</SamplesPerPixel>
+      <StripByteCounts>18432</StripByteCounts>
+      <StripOffsets>1732</StripOffsets>
+      <Width>96</Width>
+    </Thumbnail>
+    <YCbCrPositioning>1</YCbCrPositioning>
+  </ImageContainer>
+  <SceneContent>
+    <Audio>84 104 105 115 32 105 115 32 116 101 115 116 32 65 117 100 105 111</Audio>
+    <ImageCaptureDateTime>
+      <ImageCaptureDateTime>1998:01:08 08:28:54</ImageCaptureDateTime>
+    </ImageCaptureDateTime>
+  </SceneContent>
+</PmtRootElement>
+--- Testing read from an xml file and write to another xml file
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns="http://www.kodak.com/pmt/MetadataDefinition">
+  <CaptureConditions>
+    <Fnumber>4.66</Fnumber>
+    <MeteringMode>2</MeteringMode>
+  </CaptureConditions>
+  <CaptureDevice>
+    <Make>Eastman Kodak Company</Make>
+  </CaptureDevice>
+  <ImageContainer>
+    <ComponentsConfiguration>1 2 3 0</ComponentsConfiguration>
+    <Orientation>1</Orientation>
+  </ImageContainer>
+</PmtRootElement>
+--- Testing read/write from the same xml file
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns="http://www.kodak.com/pmt/MetadataDefinition">
+  <CaptureConditions>
+    <Fnumber>4.66</Fnumber>
+    <MeteringMode>2</MeteringMode>
+  </CaptureConditions>
+  <CaptureDevice>
+    <Make>EKC</Make>
+    <Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</Model>
+  </CaptureDevice>
+  <ImageContainer>
+    <ComponentsConfiguration>1 2 3 0</ComponentsConfiguration>
+    <Orientation>1</Orientation>
+  </ImageContainer>
+  <SceneContent>
+    <ImageCaptureDateTime>
+      <ImageCaptureDateTime>1998:01:08 08:28:54</ImageCaptureDateTime>
+    </ImageCaptureDateTime>
+  </SceneContent>
+</PmtRootElement>
+--- Testing PmtLogicalInstanceInterpreter read/write from stream
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns="http://www.kodak.com/pmt/MetadataDefinition">
+  <CaptureConditions>
+    <Fnumber>4.66</Fnumber>
+    <MeteringMode>2</MeteringMode>
+  </CaptureConditions>
+  <CaptureDevice>
+    <Make>EKC</Make>
+    <Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</Model>
+  </CaptureDevice>
+  <ImageContainer>
+    <ComponentsConfiguration>1 2 3 0</ComponentsConfiguration>
+    <Orientation>1</Orientation>
+  </ImageContainer>
+  <SceneContent>
+    <ImageCaptureDateTime>
+      <ImageCaptureDateTime>1998:01:08 08:28:54</ImageCaptureDateTime>
+    </ImageCaptureDateTime>
+  </SceneContent>
+</PmtRootElement>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns="http://www.kodak.com/pmt/MetadataDefinition">
+  <CaptureDevice>
+    <Make>EKC</Make>
+    <Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</Model>
+  </CaptureDevice>
+</PmtRootElement>
+********Test Tiff accessor********
+
+Writing metadata to test.tif:
+{string,Model,Camera Model here}
+{unsigned char,Orientation,2}
+{string,ImageCaptureDateTime,Datetime original here}
+{unsigned char,FilmSize,1}
+{float,Fnumber,0.08}
+{unsigned char,SceneType,1}
+{string,Interoperability,Interoperability here}
+{vector<unsigned char>,Audio,88 87 86 85 84 83 82 81 80 79 78 77 76 75 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1}
+
+Reading metadata from test.tif:
+{string,Model,Camera Model here}
+{unsigned char,Orientation,2}
+{string,ImageCaptureDateTime,Datetime original here}
+{unsigned char,FilmSize,1}
+{float,Fnumber,0.08}
+{unsigned char,SceneType,1}
+{string,Interoperability,Interoperability here}
+{vector<unsigned char>,Audio,88 87 86 85 84 83 82 81 80 79 78 77 76 75 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1}
+
+
+*********************** Testing reading/writing instance doc with prefix *********
+
+
+--- Testing read from an xml file and write to another xml file
+<?xml version="1.0" encoding="UTF-8"?>
+<pmt2:PmtRootElement xmlns:pmt2="http://www.kodak.com/pmt/MetadataDefinition">
+  <pmt2:CaptureConditions>
+    <pmt2:Fnumber>4.66</pmt2:Fnumber>
+    <pmt2:MeteringMode>2</pmt2:MeteringMode>
+  </pmt2:CaptureConditions>
+  <pmt2:CaptureDevice>
+    <pmt2:Make>Eastman Kodak Company</pmt2:Make>
+  </pmt2:CaptureDevice>
+  <pmt2:ImageContainer>
+    <pmt2:ComponentsConfiguration>1 2 3 0</pmt2:ComponentsConfiguration>
+    <pmt2:Orientation>1</pmt2:Orientation>
+  </pmt2:ImageContainer>
+</pmt2:PmtRootElement>
+--- Testing read/write from the same xml file
+<?xml version="1.0" encoding="UTF-8"?>
+<pmt2:PmtRootElement xmlns:pmt2="http://www.kodak.com/pmt/MetadataDefinition">
+  <pmt2:CaptureConditions>
+    <pmt2:Fnumber>4.66</pmt2:Fnumber>
+    <pmt2:MeteringMode>2</pmt2:MeteringMode>
+  </pmt2:CaptureConditions>
+  <pmt2:CaptureDevice>
+    <pmt2:Make>EKC</pmt2:Make>
+    <pmt2:Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</pmt2:Model>
+  </pmt2:CaptureDevice>
+  <pmt2:ImageContainer>
+    <pmt2:ComponentsConfiguration>1 2 3 0</pmt2:ComponentsConfiguration>
+    <pmt2:Orientation>1</pmt2:Orientation>
+  </pmt2:ImageContainer>
+  <pmt2:SceneContent>
+    <pmt2:ImageCaptureDateTime>
+      <pmt2:ImageCaptureDateTime>1998:01:08 08:28:54</pmt2:ImageCaptureDateTime>
+    </pmt2:ImageCaptureDateTime>
+  </pmt2:SceneContent>
+</pmt2:PmtRootElement>
+--- Testing PmtLogicalInstanceInterpreter read/write from stream
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns="http://www.kodak.com/pmt/MetadataDefinition">
+  <CaptureConditions>
+    <Fnumber>4.66</Fnumber>
+    <MeteringMode>2</MeteringMode>
+  </CaptureConditions>
+  <CaptureDevice>
+    <Make>EKC</Make>
+    <Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</Model>
+  </CaptureDevice>
+  <ImageContainer>
+    <ComponentsConfiguration>1 2 3 0</ComponentsConfiguration>
+    <Orientation>1</Orientation>
+  </ImageContainer>
+  <SceneContent>
+    <ImageCaptureDateTime>
+      <ImageCaptureDateTime>1998:01:08 08:28:54</ImageCaptureDateTime>
+    </ImageCaptureDateTime>
+  </SceneContent>
+</PmtRootElement>

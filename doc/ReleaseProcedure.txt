@@ -1,0 +1,418 @@
+1.)  Freeze code development and make sure everyone has the appropriate
+     files checked-in.
+
+2.)  Create the release notes for this release, add them to the 
+     ReleaseNote.txt file in the root directory of PMT.
+
+3.)  Update the version information for the release:
+
+     * edit src/PmtUtils/PmtVersionNumber.h
+
+     * edit doc/doxygen_html.cfg, the version number for the
+       release is in the PROJECT_NUMBER field.
+
+     * edit doc/doxygen.cfg, the version number for the
+       release is in the PROJECT_NUMBER field.
+
+     * edit configure.in, the version number of the release is an
+       argument to the AM_INIT_AUTOMAKE(pmt, 1.0.3) macro.
+
+     * run "bootstrap" on Linux and do a cvs commit of all changed files,
+       to update configure files with new version information.
+
+4.)  Test all the platforms. This step ensures the PMT libraries and test
+     programs are operating correctly, before applying the CVS tag below.
+     Clean up any compilation or other errors. As a means for testing,
+     most of the procedures outlined in step #7 below can be followed,
+     especially for the Windows and Linux/Unix platforms.
+     That is, for Windows and Linux/Unix, running the perl scripts performs
+     adaquate testing. For the MacIntosh, only the steps to build and
+     test PMT need to be followed. Creating the distribution
+     file for the MacIntosh is not necessary at this point.
+
+
+5.)  Do a test run of creating the documentation. This step ensures the
+     documentation can be correctly created, before applying the CVS tag
+     below.  If there are any errors, rectify them now.
+     For this test run, follow the steps in step #8 below.
+     
+
+6.)  If you have been able to successfully create and test PMT's code
+     and documentation distributions, then the CVS repository is ready
+     to be labeled with a release tag. Note that the official
+     distribution files should only be created below from a freshly
+     checked out working copy of PMT. The working copy should be checked
+     out by using the appropriate release tag (which you are about to
+     create).
+
+     Apply a label to the CVS repository with a release tag having 
+     the following format: release-versionNumber (e.g, release-1_0_4).
+     
+     For example:
+     cvs tag release-1_0_4
+     
+     Also, create a bugfixes branch:
+     cvs tag -b release-1_0_4-bugfixes-branch
+
+7.)  Create distributions for each platform
+     Make sure you use the new CVS tag, the official release tag,
+     for checking out the code to build each distribution release!
+
+   i) Win32 - PMT consists of several build configurations for Windows:
+      debug/release, static/DLL, and non-Unicode/Unicode.
+      There are two PMT distributions for Windows: source and binary.
+      Testing all the configurations and creating the two distribution
+      files for SourceForge is done in one step, with the use of
+      the perl script Pmt\scripts\distributions\MakeWinZip.pl.
+
+      Before running the perl script, you must ensure your system is
+      setup with the proper environment variables, etc. as discussed
+      in PmtUserGuide.doc.
+
+      Check out the appropriate version of PMT from CVS.
+
+      To run the perl script, to test PMT and make the distibution files,
+      at a DOS prompt type:
+
+        -> cd LOCATION_OF_PMT\Pmt\scripts\distributions
+        -> perl MakeWinzip.pl -both PATH_TO_SWIO_FW_TOOLKITS_DIR
+      
+      replace the PATH_TO_SWIO_FW_TOOLKITS_DIR with the absolute path
+      to the location of the Fw\Toolkits directory of SWIO.
+
+      The -both options means that both the binary and source
+      distributions will be made.  Instead of -both, either -binary or
+      -source can be provided instead. For Releases the -both argument
+      is to be used.
+
+      Upon successful completion of the script with the -both option,
+      two distribution .zip files will be left in the
+      Pmt\scripts\distributions directory.  They are named
+      "pmt-1_0-win32.zip" and "pmt-src-1_0.zip", for the binary and
+      source distributions, respectively.
+
+      Rename the binary and source distributions to
+      pmt-versionNumber-bin-win32.zip and
+      pmt-versionNumber-src-vc6.zip, respectively.
+
+
+   ii) Linux / Solaris Unix - We only provide a source code distribution
+       file (no binary). First, create a distribution file, then test
+       that single distribution file on both the Linux and Sun platforms.
+       Make sure you have the correct versions of the GNU auto configuration
+       tools on the machine you create the distribution file with. The
+       correct versions of those tools are listed in PmtUserGuide.doc.
+
+       a) Create the distribution
+
+          First, check out the appropriate version of PMT from CVS.
+          The directory this version of PMT is checked out to is
+          referred to below as "/original/checked-out/pmt".
+
+          Perform the following steps in the
+          root directory of the working copy of Pmt:
+
+          -> ./configure
+          === a lot of output from configure ===
+          -> make dist
+
+          This will create a gzip'ed tar file with the following filename:
+          pmt-versionNumber.tar.gz, where versionNumber is the argument of
+          AM_INIT_AUTOMAKE (see step 3).
+
+       b) Now test the distribution, on Linux and Sun.
+
+          Although the distribution file is created with the GNU auto
+          configure tools, the testing of the distribution is done with
+          a perl script on Linux/Unix.
+
+
+          1) Unzip the distribution
+
+          -> cp pmt-versionNumber.tar.gz /to/some/tmp/directory
+          -> cd /to/some/tmp/directory
+          -> gunzip -c pmt-versionNumber.tar.gz | tar -xvf -
+
+
+          2) And run the perl script
+
+          Since the scripts directory is not included in the distribution,
+          it must be copied over into your test directory. Make the current
+          directory the root PMT directory of your test directory. Then
+          copy over the scripts directory from your checked out copy of PMT.
+          -> cd /to/some/tmp/directory/pmt-versionNumber
+          -> cp -R /original/checked-out/pmt/scripts .
+
+          Then run the perl script:
+
+          On Linux, for example,
+          -> cd scripts/distributions
+          -> perl MakeUnixZip.pl -withektiff /pmttools/ima/fw/toolkits/ektiff
+                 -dir /pmttools/UnixZipTemp
+
+          On Sun, for example:
+          -> cd scripts/distributions
+          -> perl MakeUnixZip.pl
+                 -withektiff /projects/pmt/ima/fw/toolkits/ektiff
+                 -dir /projects/pmt/UnixZipTemp
+	
+       c) Rename the distribution
+
+          If everything checks out OK, rename the
+          distribution file to pmt-versionNumber-src-linux-solaris.tar.gz.
+
+
+  iii) MacIntosh OS X - We provide source distribution only (no binary).
+       The testing and creation of the MacIntosh distribution file
+       is currently done manually. There's no perl script to automate
+       the process.
+
+        1) Create a shared folder on your PC
+            a. Create a new folder (right mouse-click -> New -> Folder)
+               and name it (Pmt-share, for example).
+            b. Right mouse-click on this new folder and select Sharing...
+            c. In the Sharing tab, select the Share As radio button.
+               (Enter a share name if you don't like the default)
+            d. Set the Permissions (who can access this folder over
+               the network).
+
+        2) Download Pmt from the CVS repository
+            a. Open a Command-line Prompt.
+            b. cd to the shared folder created in the previous step.
+            c. On the command-line type: cvs checkout Pmt. This will
+               download the main branch. If you want to download from
+               a different branch, use the -r option
+               (for example -r release-1_0_3c-bugfixes-branch).
+
+        3) Copy source code from PC to the Mac
+            a. In the Finder menu, go to Go->Connect to Server...
+            b. Type in the address (machine name) of the PC where the
+               source code is and press Connect.
+            c. Enter you username and password.
+            d. The shared folders will be listed. Select the one where the
+               Pmt source code is located and press Mount.
+            e. The mounted volume will appear on the desktop. Double-click
+               on it. Look for the root directory of the Pmt source tree and
+               drag it to the desktop (or wherever you prefer).
+            f. Now there is a local copy of Pmt on the Mac.
+
+        4) Clean up the Pmt source tree for Mac source distribution
+
+            a. Every folder (directory) in the source tree contains a folder
+               named CVS. Delete all these folders (To delete a folder, you
+               can drag it to the trash can, or click on it while pressing
+               control and then select Move to Trash, or from using
+               rm -r <path/folder name> from the Command-Line. For this
+               specific task, you can also type
+               find . -name CVS -exec rm -r '{}' ';' on the command-line).
+
+            b. Delete the following files and/or folders:
+                * aclocal.m4
+                * bootstrap
+                * configure
+                * configure.in
+                * INSTALL
+                * Makefile.* (Makefile.am and Makefile.in)
+                * README.config
+                * config-scripts/
+                * scripts/distributions/
+                * scripts/GetToolkits.pl
+                * test/VisitorTest/
+                * doc/Makefile.*
+                * projects/Solaris/
+                * projects/Win32/
+                * src/Makefile.*
+                * test/Makefile.*
+                * test/AccessorTest/Makefile.*
+                * test/PmtInterpreterTest/Makefile.*
+                * test/AccessorTest/*.dsp
+                * test/AccessorTest/*.dsw
+                * test/AccessorTest/*.sln
+                * test/AccessorTest/*.vcproj
+                * test/PmtInterpreterTest/*.dsp
+                * test/PmtInterpreterTest/*.dsw
+                * test/PmtInterpreterTest/*.sln
+                * test/PmtInterpreterTest/*.vcproj
+
+        5) Create the source distribution
+            a. Activate Stuffit Deluxe (TinIronCurse X/Applications/
+               Utilities/Stuffit Deluxe 6.5.1/Stuffit Deluxe).
+            b. Click on the New Archive icon.
+            c. Enter the name for the distribution file
+               (for example, pmt-1_0_3d-src.sit).
+            d. Drag the (cleaned up) Pmt root folder into the new window
+               that just appeared when creating the archive. This adds the
+               whole source tree to the archive.
+            e. Close the window.
+            f. In the Stuffit Deluxe menu, go to Translate->Encode BinHex...
+            g. Select the .sit archive that was just created and press
+               Choose. This will encode the distribution as BinHex (.hqx).
+            h. Now you can delete the original source code tree and
+               the .sit file.
+
+        6) Build the source distribution
+            a. Make a copy of the .hqx file that was just created
+               (To copy, mouse-click while pressing the control key
+               and select Duplicate)
+            b. Double-click on the copy. This will decode the distribution
+               to a .sit file and then unstuff this to the source code tree.
+            c. In the source code tree, with the Finder go to
+               projects/MacOS/CodeWarrior/ and double-click on Pmt.mcp.
+               This will activate CodeWarrior and open the project.
+            d. In the CodeWarrior window select "Pmt all" in the drop down
+               menu located on the upper left corner).
+            e. Go to Project->Make or press the Build icon. The build
+               process will begin. Several warning will appear, but
+               these can be ignored.
+
+        7) Test the source distribution
+            a. Now select AccessorTest as the active project.
+            b. Go to Project->Run or press the Run (green arrow) icon.
+            c. Now go to Search->Compare Files...
+            d. For Source, Choose test/AccessorTest/GroundTrue.txt
+            e. For Destination, Choose test/AccessorTest/TestResults.txt
+            f. Make sure the files match.
+            g. Repeat these steps for:
+                * AccessorTest Debug
+                * PmtInterpreterTest
+                * PmtInterpreterTest Debug
+            h. If all the test results files match the corresponding
+               GroundTrue.txt files, then the source distribution
+               file(.hqx) is ready for release
+
+8.)  Create the documentation.
+     There are two distribution files for the documentation:
+     one for Windows, and one for Linux/Unix. (MacIntosh users
+     can download and use either one of the two documentation
+     distributions.)
+
+     You must have doxygen correctly installed on Windows and Unix
+     before running it.  Also, 'dot' must be installed.
+
+     When you are creating the documentation after the CVS repository
+     has been labeled with the release tag, make sure you are working
+     with the appropriate freshly checked out working copy of PMT.
+
+     1. For Windows
+        * Run the following command from a DOS prompt
+          in the doc directory:  doxygen doxygen_html.cfg
+
+        * Winzip the doc\html directory, using the naming convention
+          for the api-doc distribution files below.
+
+
+     2. For Linux/Unix
+        * Run the following command from a shell prompt
+          in the doc directory:  doxygen doxygen_html.cfg
+
+        Note that although there is a doxygen.cfg file, which allows
+        the generation of other documentation besides html, we do
+        not distribute documentation other than html.
+
+        * Tarball the doc/html directory, using the naming convention
+          for the api-doc distribution files below.
+
+     3. Test both platform's documentation distribution files by
+        unzipping them and trying out some links in a web browser.
+
+
+9.)  Change any of the distribution filenames that need to be changed
+     to follow this convention:
+
+     FILENAME := pmt-VERSION-TYPE-DIST
+     VERSION := X_X_X  (e.g. 1_0_4, 1_1_0, etc.)
+     TYPE := bin | src | api-doc
+     DIST := UNIX | WIN32 | MAC
+     UNIX := linux_solaris.tar.gz
+     WIN32 := win32.zip
+     MAC := maccw.hqx
+
+     For example, for release 1.0.4, we will have:
+
+     pmt-1_0_4-src-linux-solaris.tar.gz
+     pmt-1_0_4-api-doc-linux-solaris.tar.gz
+     pmt-1_0_4-src-win32.zip
+     pmt-1_0_4-bin-win32.zip
+     pmt-1_0_4-api-doc-win32.zip
+     pmt-1_0_4-src-maccw.hqx
+
+
+10.)  Making the files available on SourceForge
+
+   1. Logon to the SourceForge web site
+   2. Go to the Pmt project page
+   3. Click on the Admin link to go to the project admin page
+   4. At the bottom of the page select Edit/Add File Releases
+   5. For the pmt package, select Add Release
+   6. Enter the name of the release, the convention is to use the version
+      number of the release. Click on "Create this release".
+   7. Paste in the Release note for this release from the ReleaseNote.txt
+      file. Turn on "Preserve my pre-formatted text" (below the release note
+      scroll box).
+   8. Click on submit/refresh
+   9. Upload the release files, we do not have ftp access to SourceForge,
+      so you must first copy the files to your SourceForge linux accout,
+      login to your linux account and ftp from there:
+
+	  -> scp 'release files' "sf_account_name@shell1.sourceforge.net:/path_to_sf_account_name/."
+	  -> ssh -l sf_account_name shell1.sourceforge.net
+
+      Note, that the path_to_sf_account_name takes into account that your
+      Unix home directory on SourceForge starts with "/home/users/", followed by
+      a couple of alphabetized directories, followed by your name.  For example,
+      "/home/users/r/ru/rupe" is the path_to_sf_account_name for the user "rupe".
+
+	  -> ftp upload.sourceforge.net
+
+	  use "ftp" as account name and sf_account_name@users.sourceforge.net
+      as password
+
+	  ftp-> binary
+	  ftp-> cd incoming
+	  ftp-> put 'release files'
+	  ftp-> quit
+	    
+	  -> logout
+
+  10. Back at the Relase page on the browser, click on the Submit/Refresh
+      button, the 'release files' should appear under step 2. Select each
+      file of the release by clicking on the box to the left of the 
+      filename. Be careful, there will likely also be other peoples files 
+      listed also. Click on "Add Files and/or Refresh View".
+
+  11. Update the required information for each file: processor type and
+      file type.
+
+  12. Click "Send Notice" to any one monitoring the project.
+
+
+11.)  Submit a News article:
+
+      * From the PMT projects Summary page, click on [Submit News]. Provide a
+        meaningful title and a short summary.
+    
+12.)  Send out an announcement to the picturemetadata-announce mail list.
+      The email address is picturemetadata-announce@lists.sourceforge.net.
+      Just send this out from Notes email. See last email sent out for format.
+
+13.)  Backup distribution files (releases) on your machine.
+      On my machine (Dan Rupe's), they're at D:\SourceForgeBackups\Releases.
+
+14.)  If needed, create a new branch on CVS, so bugfixes and other development
+      can continue with the released version of PMT. It is suggested to follow
+      the naming conventions for creating branches that have been previously
+      used for PMT. Particularly, this includes appending "-bugfixes-branch"
+      to the tag name.
+
+      For example, to create a new branch for the version of PMT that was
+      just tagged "release-1_0_4", do the following from a shell:
+
+      * cvs co -d Pmt104 -r release-1_0_4 Pmt
+      * cd Pmt104
+      * cvs tag -b release-1_0_4-bugfixes-branch
+
+      Then, to subsequently work on the new branch, you should do another
+      fresh CVS checkout with the "release-1_0_4-bugfixes-branch" tag.
+
+15.)  Enjoy your favorite beverage - you're all done!!!
+

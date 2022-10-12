@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PmtRootElement xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Facet.xsd">
+	<MyElement>2</MyElement>
+	<MyElement2>NY</MyElement2>
+</PmtRootElement>

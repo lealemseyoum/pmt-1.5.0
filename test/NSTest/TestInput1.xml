@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdd:PmtRootElement xmlns:mdd="http://www.kodak.com/pmt/MetadataDefinition">
+  <mdd:CaptureConditions>
+    <mdd:Aperture>4</mdd:Aperture>
+    <mdd:ExposureBias>0</mdd:ExposureBias>
+    <mdd:ExposureTime>0.00486</mdd:ExposureTime>
+    <mdd:Fnumber>4.66</mdd:Fnumber>
+    <mdd:FocalLength>10.4</mdd:FocalLength>
+    <mdd:LightSource>0</mdd:LightSource>
+    <mdd:MaxAperture>3</mdd:MaxAperture>
+    <mdd:MeteringMode>2</mdd:MeteringMode>
+    <mdd:ShutterSpeed>8</mdd:ShutterSpeed>
+    <mdd:SubjectDistance>5</mdd:SubjectDistance>
+  </mdd:CaptureConditions>
+  <mdd:CaptureDevice>
+    <mdd:Make>Eastman Kodak Company</mdd:Make>
+    <mdd:MakerNotes>
+1 0 0 0 0 0 4 0 69 97 115 116 109 97 110 32 75 111 100 97 107 32 67 111 109 112 97 110 121 0 0 0 0 0 0 0 0 0 0 0 75 79 68 65 75 32 68 73 71 73 84 65 76 32 83 67 73 69 78 67 69 32 68 67 50 54 48 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 4 0 0 0 6 0 0 0 4 0 0 0 0 1 74 80 69 71 0 0 0 4 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 8 152 0 8 40 84 0 0 0 0 0 0 4 176 0 0 18 252 0 0 1 210 0 0 1 244 0 0 0 0 0 0 3 232 0 0 0 130 0 0 0 1 0 0 0 3 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 19 160 0 1 42 192 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 3 44 0 1 17 76 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 163 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </mdd:MakerNotes>
+    <mdd:Model>KODAK DIGITAL SCIENCE DC260 (V01.00)</mdd:Model>
+  </mdd:CaptureDevice>
+  <mdd:ImageContainer>
+    <mdd:ActualImageHeight>1024</mdd:ActualImageHeight>
+    <mdd:ActualImageWidth>1536</mdd:ActualImageWidth>
+    <mdd:ColorSpaceInformation>1</mdd:ColorSpaceInformation>
+    <mdd:ComponentsConfiguration> 1 2 3 0 </mdd:ComponentsConfiguration>
+    <mdd:CompressedBitsPerPixel>2.4</mdd:CompressedBitsPerPixel>
+    <mdd:DisplayResolutionUnit>2</mdd:DisplayResolutionUnit>
+    <mdd:DisplayXResolution>72</mdd:DisplayXResolution>
+    <mdd:DisplayYResolution>72</mdd:DisplayYResolution>
+    <mdd:ExifVersion> 48 50 48 48 </mdd:ExifVersion>
+    <mdd:FlashpixVersion> 48 49 48 48 </mdd:FlashpixVersion>
+    <mdd:Orientation>1</mdd:Orientation>
+    <mdd:Thumbnail>
+      <mdd:BitsPerSample>8</mdd:BitsPerSample>
+      <mdd:Compression>1</mdd:Compression>
+      <mdd:DisplayResolutionUnit>2</mdd:DisplayResolutionUnit>
+      <mdd:DisplayXResolution>72</mdd:DisplayXResolution>
+      <mdd:DisplayYResolution>72</mdd:DisplayYResolution>
+      <mdd:Height>64</mdd:Height>
+      <mdd:Orientation>1</mdd:Orientation>
+      <mdd:PhotometricInterpretation>2</mdd:PhotometricInterpretation>
+      <mdd:PlanarConfiguration>1</mdd:PlanarConfiguration>
+      <mdd:RowsPerStrip>64</mdd:RowsPerStrip>
+      <mdd:SamplesPerPixel>3</mdd:SamplesPerPixel>
+      <mdd:StripByteCounts>18432</mdd:StripByteCounts>
+      <mdd:StripOffsets>1732</mdd:StripOffsets>
+      <mdd:Width>96</mdd:Width>
+    </mdd:Thumbnail>
+    <mdd:YCbCrPositioning>1</mdd:YCbCrPositioning>
+  </mdd:ImageContainer>
+  <mdd:SceneContent>
+    <mdd:Audio> 84 104 105 115 32 105 115 32 116 101 115 116 32 65 117 100 105 111 </mdd:Audio>
+    <mdd:ImageCaptureDateTime>
+      <mdd:ImageCaptureDateTime>1998:01:08 08:28:54</mdd:ImageCaptureDateTime>
+    </mdd:ImageCaptureDateTime>
+  </mdd:SceneContent>
+</mdd:PmtRootElement>

@@ -1,0 +1,670 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (X11; U; Linux 2.2.16-3 i586) [Netscape]">
+   <title>ReadMe for Picture Metadata Toolkit</title>
+</head>
+<body lang="en-US">
+
+<hr>
+<h2><a NAME="Top"></a>
+ReadMe: Picture Metadata Toolkit</h2>
+
+<hr>
+<br>&nbsp;
+<h3>
+<u>Contents</u></h3>
+
+<ul type="disc">
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo3;tab-stops:list .5in">
+<a href="#introduction">Introduction</a></li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo3;tab-stops:list .5in">
+<a href="#Join">Open Source PMT Project Web Site</a></li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo3;tab-stops:list .5in">
+<a href="#Download">Download</a></li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo3;tab-stops:list .5in">
+<a href="#dir struct">Distribution Directory Structure</a></li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo3;tab-stops:list .5in">
+<a href="#API">API overview</a></li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo3;tab-stops:list .5in">
+<a href="#Installation Notes">Installation Notes</a></li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo3;tab-stops:list .5in">
+<a href="#install winnt">Build / Install on Win32</a></li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo3;tab-stops:list .5in">
+<a href="#install unix">Build / Install on Unix / Linux</a></li>
+</ul>
+<br><br><br>
+<h3>
+<a NAME="introduction"></a><u>Introduction</u></h3>
+
+<h4>
+Why is picture metadata important for imaging?</h4>
+Picture metadata are used to convey additional information about the picture-the
+scene, the camera, the people in the picture, or other related data. More
+powerful imaging systems are created through understanding and using this
+additional information, rather than simply passing around pixels. For example,
+picture metadata describing the scene content are used to provide easier
+and more useful image organization tools for consumers-allowing consumers
+to capture more of their memories. Picture metadata describing the image
+creation and image processing history are used to optimize display and
+printing.
+<h4>
+What is the Picture Metadata Toolkit?</h4>
+For the full benefits of picture metadata to be realized across the open
+system, imaging applications first need a universal means to define metadata,
+and a means to create, access, update and save metadata associated with
+pictures. The Picture Metadata Toolkit addresses this need.
+<p>Initially available for C++ developers on the Windows and Unix platforms,
+this toolkit provides software developers uniform access for to a variety
+of metadata storage formats, including TIFF (several variants), Exif
+2.0 and XML encoding. 
+<h4>
+Toolkit features</h4>
+<ul>
+<li>
+Source code available under <a href="license.html">Open Source License</a> 
+enables users to contribute to the toolkit</li>
+
+<li>
+<a href="license.html">Open Source License</a> 
+ allows for toolkit usage in commercial applications</li>
+
+<li>
+Foundation for the native support of the <a href="http://www.digitalimaging.org/i_dig35.html">DIG 35</a> picture metadata standard</li>
+
+<li>
+Common interface to metadata in different file formats (Exif 2.0, TIFF, and XML encoding
+currently supported)</li>
+
+<li>
+Enables copying standard metadata from input source to output destination</li>
+
+<li>
+Full-featured metadata definition language, with local metadata definition
+capability</li>
+
+<li>
+Easy exchange of metadata between heterogeneous systems via XML encoding </li>
+
+<li>
+Uses <a href="http://sourceforge.net/projects/opentiff">OpenTiff</a>, an Open Source object oriented toolkit for accessing TIFF image
+files</li>
+
+<li>
+Includes a toolkit for accessing Exif images (binary distribution only). In the very near future, Exif support will be provided
+through <a href="http://sourceforge.net/projects/openexif">OpenExif</a>, an Open Source object oriented toolkit for accessing Exif Image files.</li>
+</ul>
+<b><u>IMPORTANT</u>: Please make sure you understand the <a href="KODAK%20PUBLIC%20LICENSE%20VERSION%201.html">Copyright
+and License information</a>.</b>
+<br>&nbsp;
+<br>&nbsp;
+
+<p><br>
+<a href="#Top">Back to Top</a> <br>
+</p>
+
+
+
+<hr align="left">
+<h3><a name="Join"></a><u>Open Source PMT Project Web Site</u></h3>
+
+<p><strong>General Web Site</strong>:&nbsp;&nbsp; <a href="http://sourceforge.net">sourceforge.net</a>
+</p>
+
+<ul>
+    <li><a href="http://sourceforge.net/docman/?group_id=1">Click
+        here for site documentation</a></li>
+</ul>
+
+<p><strong>Picture Metadata Toolkit <a href="http://sourceforge.net/projects/picturemetadata">Project Page</a> and 
+<a href="http://picturemetadata.sourceforge.net"> Home Page</a> </strong></p>
+
+<ul>
+    <li>In general, all the information pertaining to the project
+        is public, i.e., you do not need to be a registered user
+        of source forge nor a registered developer for the PMT.</li>
+    <li>The Project Page provides:<ul>
+            <li>access to <a
+                href="http://sourceforge.net/forum/?group_id=15073"
+                target="discussion forums">discussion forums</a></li>
+            <li>browse / submit <a
+                href="http://sourceforge.net/bugs/?group_id=15073"
+                target="bug reports">bug reports</a></li>
+            <li>browse / submit <a
+                href="http://sourceforge.net/tracker/?atid=365073&amp;group_id=15073&amp;func=browse"
+                target="feature requests">feature requests</a></li>
+            <li>subscribe / access to <a
+                href="http://sourceforge.net/mail/?group_id=15073"
+                target="mailing lists">mailing lists</a>
+                (picturemetadata-announce is currently the only
+                one).</li>
+            <li>Browse the <a
+                href="http://sourceforge.net/pm/?group_id=15073">tasks</a>
+                being or scheduled to be worked on</li>
+            <li>Browse the <a
+                href="http://sourceforge.net/cvs/?group_id=15073">code</a>
+                in the CVS repository (no updates unless a
+                registered developer)</li>
+            <li>View the online PMT <a
+                href="http://sourceforge.net/docman/?group_id=15073">documentation</a></li>
+            <li>and of course, <a
+                href="http://sourceforge.net/project/showfiles.php?group_id=15073">download</a>
+                of PMT releases</li>
+        </ul>
+    </li>
+    <li>The Home Page provides an overview of the PMT and links to the present release and
+    past releases. </li>
+</ul>
+
+<p><br>
+<strong>Becoming a PMT Developer:</strong> </p>
+
+<ul>
+    <li>First <a
+        href="http://sourceforge.net/account/register.php">register</a>
+        as a user at <a href="http://sourceforge.net">source
+        forge</a> and enter all the required information.</li>
+    <li>To be added as a developer of the PMT, send email to
+        gesj@users.sourceforge.net with your source forge account
+        name</li>
+    <li>Get permission to do ssh access through your firewall to
+        the following sites at source forge:</li>
+    <ul>
+            <li>&nbsp; shell1.sourceforge.net</li>
+            <li>&nbsp; cvs.picturemetadata.sourceforge.net</li>
+            <li>&nbsp; picturemetadata.sourceforge.net</li>
+        </ul>
+</ul>
+
+<ul>
+    <li>Read through the source forge site <a
+        href="http://sourceforge.net/docman/?group_id=1">documentation,</a>
+        in particular the information regarding the setup and use
+        of ssh and CVS.</li>
+    <li>Study the <a
+        href="http://cvs.sourceforge.net/cgi-bin/cvsweb.cgi/Pmt/doc/PmtUserGuide.doc?cvsroot=picturemetadata">PmtC++StyleGuide.doc</a>
+        in the doc directory of the PMT CVS tree. All code
+        submitted to the CVS repository must conform to this
+        style guide. The consistency of the appearance of the
+        source code is very important; therefore, developers that
+        consistently submit non-conforming code will be removed
+        from the project.</li>
+</ul>
+
+<p><br>
+Mailing List: <a
+href="http://www.geocrawler.com/redir-sf.php3?list=picturemetadata-announce">picturemetadata-announce@lists.sourceforge.net</a>
+</p>
+
+<ul>
+    <li>&nbsp;To Subscribe: (Note: you do not need to be a
+        registered user on source forge)<ul>
+            <li><a
+                href="http://lists.sourceforge.net/lists/listinfo/picturemetadata-announce">Click
+                here to subscribe to the mailing list</a>.<ul>
+                    <li>Enter email address and a password</li>
+                    <li>Click on the subscribe button</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p><br>
+<a href="#Top">Back to Top</a> <br>
+</p>
+
+
+<hr align="left">
+
+<h3>
+<a NAME="Download"></a><u>Download</u></h3>
+The PMT distribution is available in both binary and source forms on the 
+<a href="http://sourceforge.net/project/showfiles.php?group_id=15073">PMT Project page on Source Forge</a>.
+The <em>XXXX</em> is a place holder for the version number.
+<br><br><br>
+<b>Binary Distribution:</b></li>
+<br clear="all">
+<br>The following binary distributions are currently available:
+<br>
+<ul type="disc">
+<li>
+Zip file for Windows -&nbsp;
+pmt-XXXX-bin-win32.zip</li>
+</ul>
+
+<br>
+<b>Source Distribution:</b></li>
+<br clear="all">
+<br>The following source code distributions are currently available:
+<br>
+<ul type="disc">
+<li>
+Zip file for Windows -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pmt-XXXX-src-win32.zip</li>
+<li>
+GZip'ed tar file for Unix / Linux -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pmt-XXXX-src-linux-solaris.tar.gz</li>
+<li>
+BinHex Stuffit file for MacIntosh OS X -&nbsp;&nbsp;pmt-XXXX-src-maccw.hqx
+</li>
+</ul>
+</ul>
+<br>
+
+<p><br>
+<a href="#Top">Back to Top</a> <br>
+</p>
+
+
+<hr align="left">
+<br>
+<h3>
+<a NAME="dir struct"></a><u>Distribution Directory Structure</u></h3>
+In the description below, <b>$PMTROOT</b> is the placement of the "Pmt" directory
+in your file system, e.g., <em>C:\Pmt</em>.
+<br><br>
+
+<b>The following directories and files reside in $PMTROOT:</b>
+
+<table BORDER >
+<tr>
+<td>DefaultDefinition</td>
+
+<td>Directory holding the file containing the default metadata definitions</td>
+</tr>
+
+<tr>
+<td>config-scripts/</td>
+
+<td>Directory of files containing M4 Macros needed by the GNU auto configuration facility</td>
+</tr>
+
+<tr>
+<td>doc/</td>
+
+<td>Directory holding the documentation</td>
+</tr>
+<tr>
+<td>doc/html/</td>
+
+<td>Directory holding the API documentation in HTML format</td>
+</tr>
+<tr>
+<td>lib</td>
+
+<td>Directory contains the libraries for static/dynamic linking&nbsp;</td>
+</tr>
+
+<tr>
+<td>projects/</td>
+
+<td>Directory holding the build files for platforms other than Unix / Linux</td>
+</tr>
+
+<tr>
+<td>scripts/</td>
+
+<td>Directory holding script files for automatic documentation generation and building releases</td>
+</tr>
+
+<tr>
+<td>src/</td>
+
+<td>Directory holding the source code files</td>
+</tr>
+
+<tr>
+<td>test/</td>
+
+<td>Directory holding the standard tests</td>
+</tr>
+
+<tr>
+<td>Makefile.in, Makefile.am</td>
+
+<td>Makefiles used by the auto configuration facility to generate the final Makefile. <strong>WARNING</strong>:
+<strong>Makefile.in's</strong> are automatically generated by 'automake' from the corresponding
+Makefile.am's. Do not edit Makefile.in's. </td>
+</tr>
+
+
+<tr>
+<td>README.config</td>
+
+<td>A readme file for PMT's developers providing some background on how the auto configuration
+facility is setup for PMT.</td>
+</tr>
+
+
+<tr>
+<td>ReleaseNote.txt</td>
+
+<td> A compilation of release notes for the current and all previous releases..</td>
+</tr>
+
+
+<tr>
+<td>aclocal.m4</td>
+
+<td>Contains the M4 macros that are run by the 'configure' script.</td>
+</tr>
+
+
+<tr>
+<td>bootstrap</td>
+
+<td>Convience shell script for PMT's developers. Run this after a change to one of the Makefile.am's.</td>
+</tr>
+
+
+<tr>
+<td>configure</td>
+
+<td>The main configuration script. <strong>WARNING</strong>:
+<strong>configure</strong> is automatically generated by 'autoconf' from configure.in, do not edit.</td>
+</tr>
+
+
+<tr>
+<td>libtool</td>
+
+<td>Used by the Makefiles to build libraries. <strong>WARNING</strong>:
+<strong>libtool</strong> is automatically generated by 'configure', do not edit.</td>
+</tr>
+
+<tr>
+<td>license.html</td>
+
+<td>File containing the Kodak Public License</td>
+</tr>
+
+<tr>
+<td>readme.html</td>
+
+<td>this file</td>
+</tr>
+
+</table>
+
+<br>
+<b>The $PMTROOT/src directory contains the source code and has the <br clear="all">following subdirectory
+structure (source code distribution only):</b>
+
+<table BORDER CELLPADDING=0 WIDTH="623" style="width:467.25pt;mso-cellspacing:
+ 1.5pt;mso-padding-alt:0in 0in 0in 0in" >
+<tr>
+<td WIDTH="20%" style="width:20.0%;padding:.75pt .75pt .75pt .75pt">Ek&nbsp;</td>
+
+<td WIDTH="80%" style="width:80.0%;padding:.75pt .75pt .75pt .75pt">Generic
+utility classes. Compiler and platform dependencies control.&nbsp;</td>
+</tr>
+
+<tr>
+<td WIDTH="20%" style="width:20.0%;padding:.75pt .75pt .75pt .75pt">PmtCore&nbsp;</td>
+
+<td WIDTH="80%" style="width:80.0%;padding:.75pt .75pt .75pt .75pt">The
+"core" classes of the toolkit. The PmtMetadata class hierarchy is defined
+here.</td>
+</tr>
+
+<tr>
+<td WIDTH="20%" style="width:20.0%;padding:.75pt .75pt .75pt .75pt">PmtInterpreter&nbsp;</td>
+
+<td WIDTH="80%" style="width:80.0%;padding:.75pt .75pt .75pt .75pt">Logical
+Definition and Logical Instance interpreters and support classes.&nbsp;</td>
+</tr>
+
+<tr>
+<td WIDTH="20%" style="width:20.0%;padding:.75pt .75pt .75pt .75pt">PmtAccessor&nbsp;</td>
+
+<td WIDTH="80%" style="width:80.0%;padding:.75pt .75pt .75pt .75pt">PmtAccessor
+and its implementation classes: PmtTiffAccessor, PmtExifAccessor and PmtXmlAccessor.&nbsp;</td>
+</tr>
+
+<tr>
+<td WIDTH="20%" style="width:20.0%;padding:.75pt .75pt .75pt .75pt">PmtTranslator&nbsp;</td>
+
+<td WIDTH="80%" style="width:80.0%;padding:.75pt .75pt .75pt .75pt">PmtTranslator
+and its implementation classes.&nbsp;</td>
+</tr>
+
+<tr>
+<td WIDTH="20%" style="width:20.0%;padding:.75pt .75pt .75pt .75pt">PmtUtils&nbsp;</td>
+
+<td WIDTH="80%" style="width:80.0%;padding:.75pt .75pt .75pt .75pt">Utility
+classes specific to PMT.&nbsp;</td>
+</tr>
+</table>
+<br>
+
+<p><br>
+<a href="#Top">Back to Top</a> <br>
+</p>
+
+
+<hr align="left">
+
+<h3>
+<a NAME="API"></a><u>API Documentation</u></h3>
+See <a href="doc/html/index.html">doc/html/index.html</a> for an alphabetical
+index of the classes in the PMT.
+<br>&nbsp;
+
+<p><br>
+<a href="#Top">Back to Top</a> <br>
+</p>
+
+
+<hr align="left">
+
+<h3>
+<a NAME="Installation Notes"></a><u>Installation Notes</u></h3>
+
+<b>Win32 Platform</b>
+<p>If you are building on the Win32 platform, it is important that you
+understand a few build details:
+<br>
+(In the description below, <b>$PMTROOT</b> is the placement of the "Pmt" directory
+in your file system, e.g., <em>C:\Pmt</em>).
+<br><br>
+
+<p><u>DLL directories and the PATH setting:</u> These DLLs are placed in
+the "<b>$PMTROOT</b>\lib" directory.&nbsp; You must either add this directory to
+the PATH environment variable in your system, or copy the DLL files into
+a directory already in your PATH, but we do not recommend this -- you can
+wind up with multiple copies of the DLL, and wind up using the wrong one.
+<p><u>To change your PATH:</u>&nbsp; Do this under NT by using the System
+control panel. Pick the "Environment" tab, select the variable "Path" in
+the "System Variables" list.&nbsp; In the "Value" control, append the <b>$PMTROOT</b>\lib
+path". Click the Set button, then the Ok button.
+<p><u>Link with Runtime libraries:</u> All the DLLs link with the C runtime
+library "Debug Multithreaded DLL" or "Multithreaded DLL." (This is changed
+through the Project Settings dialog, on the C/C++ tab, under Code Generation.)
+It is important that any executable or other DLL you build which uses the
+PMT DLLs links with these runtime libraries as well. If you do not do this,
+you will likely get memory errors when you run the executable.
+<br>
+
+<p><br>
+<a href="#Top">Back to Top</a> <br>
+</p>
+
+
+<hr align="left">
+<br>
+<h3>
+<a NAME="install winnt"></a><u>Build / Install on Win32</u></h3>
+In the description below, <b>$PMTROOT</b> is the placement of the "Pmt" directory
+in your file system, e.g., <em>C:\Pmt</em>.
+<br><br>
+<h3>
+For full instructions on building PMT, please refer to the <em>PmtUserGuide.doc</em>
+file in the <em>$PMTROOT/doc</em> directory.
+</h3>
+The steps are:
+<ul>
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l11 level1 lfo34;tab-stops:list .5in">
+Unzip the pmt-src-XXX.zip file</li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l11 level1 lfo34;tab-stops:list .5in">
+Setup the following environment variables to their corresponsing paths as shown below:
+<table BORDER >
+<tr>
+<td>PMT_XERCES_INC_PATH</td>
+<td>This points to the Xerces include directory.  Example setting: C:\Xerces\xerces-c\include</td>
+</tr>
+
+<tr>
+<td>PMT_XERCES_LIB_PATH</td>
+<td>This points to the Xerces library directory.  Example setting: C:\Xerces\xerces-c\win32\lib</td>
+</tr>
+
+<tr>
+<td>KIESEXIFROOT</td>
+<td>This points to the Kies toolkit directory.  Example setting: C:\Pmt\Toolkits\Kies
+</td>
+</tr>
+
+<tr>
+<td>IJLROOT</td>
+<td>This points to the IJL toolkit directory.  Example setting: C:\Pmt\Toolkits\ijl</td>
+</tr>
+
+<tr>
+<td>JPEGROOT</td>
+<td>This points to the JPEG toolkit directory.  Example setting: C:\Pmt\Toolkits\Jpeg</td>
+</tr>
+
+<tr>
+<td>TIFFROOT</td>
+<td>This points to the TIFF toolkit directory.  Example setting: C:\OpenTiff\opentiff-1_0_1-src</td>
+</tr>
+
+</table></li>
+
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l11 level1 lfo34;tab-stops:list .5in">
+Start Microsoft Visual C++ 6.0.</li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l11 level1 lfo34;tab-stops:list .5in">
+Choose "File" menu and select "Open WorkSpace".</li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l11 level1 lfo34;tab-stops:list .5in">
+In the file chooser, choose either <b>$PMTROOT</b>\projects\Win32\Vc6.0\BuildAllStatic.dsw
+or <b>$PMTROOT</b>\projects\Win32\Vc6.0\BuildAllDynamic.dsw. Open this workspace.</li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l11 level1 lfo34;tab-stops:list .5in">
+These workspaces include all the PMT component libraries. The BuildAllStatic.dsw
+workspace will build all the static libraries associated with PMT. The
+BuildAllDynamic.dsw workspace will build all the dynamic libraries associated
+with PMT.</li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l11 level1 lfo34;tab-stops:list .5in">
+Set the active Project. Choose "Project" menu and select "Set active project".
+In the submenu, select either the "_BuildAllStatic" or "_BuildAllDynamic"
+project.</li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l11 level1 lfo34;tab-stops:list .5in">
+Set the active configuration ("Win32 Debug" or "Win32 Release") and make
+sure this matches your PATH setting as described in the previous chapter.
+(See note below.)</li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l11 level1 lfo34;tab-stops:list .5in">
+Choose "Build" menu and select "Rebuild All". If you want to build the
+Debug and Release configurations at the same time, choose "Build" menu
+and select "Batch Build..." instead (and mark all configurations as checked),
+then click the button named "Rebuild All".</li>
+</ul>
+<b>Note: </b>To set the active configuration, two different possibilities
+are:
+<ul type="disc">
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l4 level1 lfo37;tab-stops:list .5in">
+Choose "Build" menu, select "Set Active Configuration", and select "Win32
+Release" or "Win32 Debug".</li>
+
+<li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l4 level1 lfo37;tab-stops:list .5in">
+Another way is to select "Customize" in the "Tools" menu, select the "Toolbars"
+tab, enable "Build" instead of "Build Minibar", and click on "Close". This
+will bring up a toolbar which you can move aside the other permanent toolbars
+at the top of the MSVC window. The advantage is that you now have an easy-to-reach
+pop-up menu that will always show the currently selected active configuration.&nbsp;
+Or, you can drag the project and configuration selections and drop them
+on the menu bar for later selection.</li>
+</ul>
+
+<p><br>
+<a href="#Top">Back to Top</a> <br>
+</p>
+<hr align="left">
+
+<h3>
+<a NAME="install unix"></a><u>Build / Install on Unix / Linux</u></h3>
+<h3>
+For full instructions on building PMT, please refer to the <em>PmtUserGuide.doc</em>
+file in the <em>$PMTROOT/doc</em> directory.
+</h3>
+The Unix / Linux build enviornment uses the GNU auto configuration facility. 
+The `configure' shell script attempts to guess correct values for
+various system-dependent variables used during compilation.  It uses
+those values to create a `Makefile' in each directory of the package that
+contains a Makefile.in (and Makefile.am). It also creates a shell script `config.status' that
+you can run in the future to recreate the current configuration, a file
+`config.cache' that saves the results of its tests to speed up
+reconfiguring, and a file `config.log' containing compiler output
+(useful mainly for debugging `configure').
+<br><br>
+<strong>Note:</strong> 
+<ul>
+<li>The default is to build both the <strong>static</strong> and <strong>shared</strong> libraries. 
+The building of the <strong>shared</strong> libraries
+can be disabled by supplying '<strong>configure</strong>' with the '<strong>--disable-shared</strong>' option. 
+Similarly, the building of <strong>static</strong> libraries can be disabled by supplying the 
+'<strong>--disable-static</strong>' option. </li>
+<li> The <strong>default installation root directory</strong> is '<strong>/usr/local</strong>'. The libraries are placed in $root/lib and header files 
+in $root/include. This can be changes by passing '<strong>configure</strong>' the '<strong>--prefix=/path/to/new/root</strong>' option with the right
+hand side of the assignment being the full path to the new root directory, e.g., /usr/local/pmt/pmt-1.0.2beta. </li>
+<li>You can remove the program binaries and object files from the source code directory by typing
+`make clean'.  To also remove the files that `configure' created (so you can compile the package for a different kind of computer), type `make distclean'.</li>
+</ul>
+
+
+<p><br>
+<a href="#Top">Back to Top</a> <br>
+</p>
+
+<p>
+<hr>
+<center>
+<p>Copyright &copy; Eastman Kodak Company, 1999-2002. All Rights Reserved.</center>
+
+<p>
+<hr>
+</body>
+</html>

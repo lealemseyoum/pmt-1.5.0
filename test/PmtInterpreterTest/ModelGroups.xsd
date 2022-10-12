@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="PmtRootElement">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="First">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element name="A" type="xsd:string"/>
+							<xsd:element name="B" type="xsd:string"/>
+							<xsd:choice>
+								<xsd:element name="I" type="xsd:string"/>
+								<xsd:element name="II" type="xsd:string"/>
+								<xsd:sequence>
+									<xsd:element name="a" type="xsd:string"/>
+									<xsd:element name="b" type="xsd:string"/>
+									<xsd:sequence>
+										<xsd:element name="AIn" type="xsd:string"/>
+										<xsd:element name="BIn" type="xsd:string"/>
+										<xsd:choice>
+											<xsd:element name="CIn" type="xsd:string"/>
+											<xsd:element name="DIn" type="xsd:string"/>
+											<xsd:choice>
+												<xsd:element name="EIn" type="xsd:string"/>
+												<xsd:element name="FIn" type="xsd:string"/>
+											</xsd:choice>
+										</xsd:choice>
+									</xsd:sequence>
+								</xsd:sequence>
+								<xsd:element name="III" type="xsd:string"/>
+							</xsd:choice>
+							<xsd:element name="C" type="xsd:string"/>
+							<xsd:element name="D" type="xsd:string"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Second">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element name="A" type="xsd:unsignedInt"/>
+							<xsd:element name="B" type="xsd:boolean"/>
+							<xsd:sequence>
+								<xsd:choice>
+									<xsd:element name="One" type="xsd:float"/>
+									<xsd:sequence>
+										<xsd:element name="Two" type="xsd:float"/>
+									</xsd:sequence>
+								</xsd:choice>
+								<xsd:element name="C" type="xsd:float"/>
+								<xsd:element name="D" type="xsd:string"/>
+							</xsd:sequence>
+							<xsd:choice>
+								<xsd:element name="Three" type="xsd:float"/>
+								<xsd:element name="Four" type="xsd:float"/>
+							</xsd:choice>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Third">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element name="A" type="xsd:string"/>
+							<xsd:choice>
+								<xsd:element name="I" type="xsd:string"/>
+								<xsd:element name="II" type="xsd:string"/>
+								<xsd:choice>
+									<xsd:element name="a" type="xsd:string"/>
+									<xsd:element name="b" type="xsd:string"/>
+									<xsd:sequence>
+										<xsd:element name="AIn" type="xsd:string"/>
+										<xsd:element name="BIn" type="xsd:string"/>
+										<xsd:sequence>
+											<xsd:element name="CIn" type="xsd:string"/>
+											<xsd:element name="DIn" type="xsd:string"/>
+											<xsd:sequence>
+												<xsd:element name="EIn" type="xsd:string"/>
+												<xsd:element name="FIn" type="xsd:string"/>
+											</xsd:sequence>
+										</xsd:sequence>
+									</xsd:sequence>
+								</xsd:choice>
+							</xsd:choice>
+							<xsd:element name="B" type="xsd:string"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Fourth">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:sequence>
+								<xsd:sequence>
+									<xsd:sequence>
+										<xsd:element name="A" type="xsd:string"/>
+										<xsd:sequence>
+											<xsd:sequence>
+												<xsd:sequence>
+													<xsd:element name="B" type="xsd:string"/>
+													<xsd:sequence>
+														<xsd:sequence>
+															<xsd:element name="C" type="xsd:string"/>
+															<xsd:choice>
+																<xsd:element name="D" type="xsd:string"/>
+																<xsd:element name="E" type="xsd:string"/>
+															</xsd:choice>
+														</xsd:sequence>
+													</xsd:sequence>
+												</xsd:sequence>
+											</xsd:sequence>
+										</xsd:sequence>
+									</xsd:sequence>
+								</xsd:sequence>
+								<xsd:choice>
+									<xsd:choice>
+										<xsd:choice>
+											<xsd:choice>
+												<xsd:choice>
+													<xsd:element name="F" type="xsd:string"/>
+												</xsd:choice>
+											</xsd:choice>
+											<xsd:element name="G" type="xsd:string"/>
+										</xsd:choice>
+									</xsd:choice>
+									<xsd:element name="H" type="xsd:string"/>
+									<xsd:element name="I" type="xsd:string"/>
+								</xsd:choice>
+							</xsd:sequence>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Fifth">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="A" type="xsd:string" maxOccurs="10"/>
+							<xsd:element name="B" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+							<xsd:choice>
+								<xsd:element name="C" type="xsd:string" minOccurs="0" maxOccurs="3"/>
+								<xsd:element name="D" type="xsd:string" maxOccurs="2"/>
+								<xsd:sequence>
+									<xsd:element name="E" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+									<xsd:element name="F" type="xsd:string" minOccurs="2" maxOccurs="2"/>
+								</xsd:sequence>
+							</xsd:choice>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

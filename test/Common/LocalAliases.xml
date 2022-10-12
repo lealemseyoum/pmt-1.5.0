@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetadataAliases>
+	<MetadataAlias AliasKey="MyAlias">
+		<AliasMember MetadataKey="CaptureDevice.Model"/>
+		<AliasMember MetadataKey="ImageContainer.Orientation"/>
+	</MetadataAlias>
+	<MetadataAlias AliasKey="exif_persist2">
+		<AliasMember MetadataKey="NewMd"/>
+	</MetadataAlias>
+</MetadataAliases>

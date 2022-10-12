@@ -1,0 +1,36 @@
+include Makefile.mac
+
+SRCS = \
+PmtError.cpp \
+PmtMessages.cpp \
+PmtMisc.cpp \
+PmtVersion.cpp \
+PmtAliases.cpp \
+PmtCompositeMetadata.cpp \
+PmtMetadata.cpp \
+PmtAliasesParser.cpp \
+PmtDomElement.cpp \
+PmtDomNode.cpp \
+PmtDomParser.cpp \
+PmtDomString.cpp \
+PmtDomText.cpp \
+PmtIString.cpp \
+PmtItemInterpreter.cpp \
+PmtLogicalDefinitionInterpreter.cpp \
+PmtLogicalInstanceInterpreter.cpp \
+PmtSchemaElement.cpp \
+PmtSchemaInfoParser.cpp \
+PmtSchemaParser.cpp
+
+INCS = \
+	-I $(EK) \
+	-I $(PMTUTILS) \
+	-I $(PMTCORE) \
+	-I $(PMTINTERP) \
+	-I $(XERCES_HOME)/include
+
+LIB_TARGET = $(PMTLIB)/libPmtCore$(LIB_SUFFIX).a
+
+include Makefile.rul
+
+all:	$(LIB_TARGET)

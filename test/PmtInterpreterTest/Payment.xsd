@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="PaymentInfo">
+		<xsd:sequence>
+			<xsd:element name="currency" type="xsd:string"/>
+			<xsd:element name="amount" type="xsd:float"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

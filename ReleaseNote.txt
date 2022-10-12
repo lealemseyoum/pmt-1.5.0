@@ -1,0 +1,323 @@
+                        PMT Release Notes (version 1.5.0)
+                                    02/02/2010
+
+
+I. Bugs Fixed in this release
+
+II. New Features
+
+        * XMP accessor added -- Thanks Philip!
+        * Many schema changes
+          
+III. Changes to Existing Features
+
+	* Xerces-c is required for the XMP accessor, even on Windows
+
+IV. Other
+
+        * This release has only been tested with the following open toolkits:
+            * OpenExif v2.1.4
+            * OpenTiff v1.3.3
+            * Xerces-c v3.1 
+            
+V. Known Bugs
+
+        * None known
+          
+
+Email your comments to: smfryer@users.sourceforge.net
+
+
+================================================================================
+                        PMT Release Notes (version 1.4.6)
+                                    10/07/2009
+
+
+I. Bugs Fixed in this release
+        * VC9 build fixes.
+
+II. New Features
+
+        * Face metadata support for Kodak cameras
+        * more quicktime updates.  
+          
+III. Changes to Existing Features
+
+IV. Other
+
+        * This release has only been tested with the following open toolkits:
+            * OpenExif v2.1.2
+            * OpenTiff v1.3.3
+            * Xerces-c v2.8 (On non-Windows platforms)
+            
+V. Known Bugs
+
+        * None known
+          
+
+Email your comments to: smfryer@users.sourceforge.net
+
+
+================================================================================
+                        PMT Release Notes (version 1.4.5)
+                                    9/21/2007
+
+
+I. Bugs Fixed in this release
+        * Some DLL fixes.
+
+II. New Features
+
+        * Better 64-bit support
+        * Added QuickTime .MOV read-only accessor
+          
+III. Changes to Existing Features
+
+        * Exif accessor pulls out XMP documents (without parsing them).
+
+IV. Other
+
+        * This release has only been tested with the following open toolkits:
+            * OpenExif v2.0.2
+            * OpenTiff v1.3.2
+            * Xerces-c v2.6 (On non-Windows platforms)
+            
+V. Known Bugs
+
+        * None known
+          
+
+Email your comments to: smfryer@users.sourceforge.net
+
+
+================================================================================
+                        PMT Release Notes (version 1.4.4)
+                                    4/17/2006
+
+
+I. Bugs Fixed in this release
+        * Some potential buffer overruns were removed.
+
+II. New Features
+
+        * Updated ptstring to be a more complete std::string class.
+        * Added GCC 4.1 compatibility
+          
+III. Changes to Existing Features
+
+        * DataList has many new features, including writing data back into
+          the image file.
+
+IV. Other
+
+        * This release has only been tested with the following open toolkits:
+            * OpenExif v2.0.1
+            * OpenTiff v1.3.1
+            * Xerces-c v2.6 (On non-Windows platforms)
+            
+V. Known Bugs
+
+        * None known
+          
+
+Email your comments to: smfryer@users.sourceforge.net
+
+
+================================================================================
+                        PMT Release Notes (version 1.4.3)
+                                    6/25/2004
+
+
+I. Bugs Fixed in this release
+
+        * Fixed VC6.0 project files  
+
+II. New Features
+
+        * Updated ptstring to be a more complete std::string class.
+        * Added GCC 3.4.0 compatibility
+          
+III. Changes to Existing Features
+
+        * DataList now exports data in XML format with the "-x" option.
+
+IV. Other
+
+        * This release has only been tested with the following open toolkits:
+            * OpenExif v1.8
+            * OpenTiff v1.3
+            * Xerces-c v2.2 (On Linux, v2.3 and v2.4 as well)
+        * VC6 Users will need the Microsoft XML SDK if you are building
+          the default configuration.  This can be downloaded from 
+          http://msdn.microsoft.com/downloads/.  You can, of course, still
+          change the configurations and build with Xerces.
+        * This release has also been tested on a Linux x86-64 platform.
+            
+V. Known Bugs
+
+        * None known
+          
+
+Email your comments to: smfryer@users.sourceforge.net
+
+
+================================================================================
+                        PMT Release Notes (version 1.4.2)
+                                    2/25/2004
+
+With this release, PMT now reads Exif 2.2.1 files correctly.  The ability
+to remove tags without copying an image, which was mysteriously missing,
+has been added.  Also, a new sample program to dump the tags from an IFD
+stored in the MakerNote field.  Note that this program is dependent on 
+several highly variable parameters, so your milage may vary. 
+
+I. Bugs Fixed in this release
+
+        * Ordering of Q-Tables.
+
+II. New Features
+
+        * The ability to directly remove metadata from an image.
+        * 3 new metadata tags:
+                * EnhancementPathUtilizied -- to help specify what has been
+                  done to an image.
+                * EnhancementPathVersion -- the version of the path used.
+                * Gamma -- a new tag introduced in Exif 2.2.1
+        * A new example program to try to read and dump IFD segments in the 
+          MakerNote field.
+          
+          
+III. Changes to Existing Features
+
+        None.
+
+IV. Other
+
+        * This release has only been tested with the following open toolkits:
+            * OpenExif v1.7
+            * OpenTiff v1.3
+            * Xerces-c v2.2 (On Linux, v2.3 and v2.4 as well)
+            
+V. Known Bugs
+
+        * None known
+          
+
+Email your comments to: smfryer@users.sourceforge.net
+
+
+================================================================================
+                        PMT Release Notes (version 1.4.1)
+                                   12/15/2003
+
+
+
+I. Bugs Fixed in this release
+
+        * Problem reading EXIF Q-Tables directly.
+
+II. New Features
+
+        * The SOF marker has been added to our schema and is populated by
+          the EXIF accessor.
+        * PMT and it's related toolkits can now be compiled new platforms:
+            * 64-bit Linux
+            * Mac OS X 10.3 (and should work on 10.2 machines.) 
+        * A new conversion example program converts TIFF and JFIF images to 
+          the EXIF 2.2 spec (or, more specifically, the Kodak PCD spec).
+          
+          
+III. Changes to Existing Features
+
+        * The DIG35 Accessor can now work with either MSXML or Xerces, which
+          was the last holdover.  (Now the entire PMT can be used with MSXML.)
+        * The DataView example program now includes tooltips if built in a 
+          Motif 2.2+ environment.  These tips describe each piece of metadata 
+          and give acceptable values.
+        * The example.sln file has been expanded to include all examples that
+          can be built in a Windows environment.
+
+
+IV. Other
+
+        * This release has only been tested with the following open toolkits:
+            * OpenExif v1.6
+            * OpenTiff v1.2.1
+            * Xerces-c v2.2 (On Linux, v2.3 and v2.4 as well)
+            
+V. Known Bugs
+
+        * None known
+          
+
+Email your comments to: smfryer@users.sourceforge.net
+
+
+================================================================================
+
+                        PMT Release Notes (version 1.4)
+                                   11/21/2003
+
+
+Most applications simply use the default schema and translation table provided
+with the distribution of PMT.  If you are not reading in JPEG2000 files nor XML
+metadata files, there should be no need for an XML parser.  Thus, this release
+does not require one.  By using a "preparsed" default schema, the toolkit
+initialization time improves by a factor of 30.
+
+I. Bugs Fixed in this release
+
+        * Multi-Threading support is improved.
+        * All known memory leaks have been patched.
+        * Various VC 7.1 support issues.
+        * Various GCC 3.3.x support issues.
+        
+II. New Features
+
+        * Switch of all XML parsers to be SAX2 compliant 
+          (except DIG35 Accessor).
+        * An XML parser is not required (can be compiled out) for limited 
+          functionality.
+        * Metadata items now contain documentation about what they contain
+          (such as md->briefDocumentation() or md->fullDocumentation() ).
+        * Thumbnail accessors have been added to the image accessors.
+
+III. Changes to Existing Features
+
+        * MSXML is set as the default for Windows compiles (and thus
+          Xerces is no longer required).  If you are using VC 6.0, you will
+          need to download the MSXML SDK from Microsoft.  VC 7.0 and 7.1 
+          provide it for you.
+        * A new default schema, which for the end user is almost identical 
+          to the old one with a few type changes and new elements.
+        * Instead of storing the trueType in a string, it is now stored as
+          an enumerated type for performance and memory improvements.  The
+          string can be re-created by calling md->trueType().
+        * InstanceInterpreter now opens files in read/write mode by default.
+        * XML output is now formatted for easy viewing.
+        * PmtVersion class has been removed.
+        * Updated documentation.
+        * For EXIF files, ActualImageWidth and ActualImageHeight have been 
+          deprecated.  Width and Height are now filled in based on the following
+          formula:
+          1) If Tags 40962/40963 exist, those are used;
+          2) else if 256/257 exist, those are used;
+          3) else use Start Of Frame information.
+        * Image Accessors and metadata documentation have been added to the
+          default configuration.
+          
+
+IV. Other
+
+        * This release has only been tested with the following open toolkits:
+            * OpenExif v1.5
+            * OpenTiff v1.2
+            * Xerces-c v2.2
+            
+V. Known Bugs
+
+        * None
+          
+
+Email your comments to: smfryer@users.sourceforge.net
+

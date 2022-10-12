@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetadataAliases>
+	<MetadataAlias AliasKey="FirstAliasKey">
+		<AliasMember MetadataKey="CaptureConditions.Aperture"/>
+		<AliasMember MetadataKey="CaptureConditions.Flash.Fired"/>
+		<AliasMember MetadataKey="SceneContent.GPS.DOP"/>
+		<AliasMember MetadataKey="OutputOrder.SimpleRenderInst.FrameNumber"/>
+		<AliasMember MetadataKey="DigitalProcess.Jpeg.*"/>
+	</MetadataAlias>
+	<MetadataAlias AliasKey="SecondAliasKey">
+		<AliasMember MetadataKey="SceneContent.Audio"/>
+	</MetadataAlias>
+	<MetadataAlias AliasKey="CaptureFirstAlias">
+		<AliasMember MetadataKey="OutputOrder.Information.DealerIDNumber"/>
+		<AliasMember MetadataKey="OutputOrder.Information.VendorOrderNumber"/>
+		<AliasMember MetadataKey="OutputOrder.SimpleRenderInst"/>
+	</MetadataAlias>
+	<MetadataAlias AliasKey="CaptureSecondAlias">
+		<AliasMember MetadataKey="SceneContent.GPS.Altitude"/>
+		<AliasMember MetadataKey="SceneContent.GPS.DOP"/>
+		<AliasMember MetadataKey="SceneContent.GPS.DestDistance"/>
+		<AliasMember MetadataKey="SceneContent.GroupCaption.GroupCaption"/>
+		<AliasMember MetadataKey="SceneContent.GroupCaption.UserSelectGroupTitle"/>
+	</MetadataAlias>
+	<MetadataAlias AliasKey="DigitalAlias">
+		<AliasMember MetadataKey="ImageContainer.ActualImageHeight"/>
+		<AliasMember MetadataKey="ImageContainer.ActualImageWidth"/>
+	</MetadataAlias>
+	<MetadataAlias AliasKey="FirstDeleteAlias">
+		<AliasMember MetadataKey="CaptureDevice.CFAPattern"/>
+		<AliasMember MetadataKey="CaptureDevice.SerialNumber"/>
+	</MetadataAlias>
+	<MetadataAlias AliasKey="SecondDeleteAlias">
+		<!-- These aliases are relative to CaptureDevice. -->
+		<AliasMember MetadataKey="CFAPattern"/>
+		<AliasMember MetadataKey="CameraOwner"/>
+	</MetadataAlias>
+</MetadataAliases>

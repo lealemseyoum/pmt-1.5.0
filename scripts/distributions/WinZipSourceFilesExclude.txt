@@ -1,0 +1,11 @@
+; Files and directories to skip over when making zip file for Windows source distribution
+
+*.keep
+Cvs
+CVS
+Pmt\scripts\distributions\*.*
+Pmt\scripts\distributions
+
+*.exp ; These next two lines are for at least 2 files in Toolkits\EkTiff\lib.
+*.ilk
+*_BinaryDistribution.*
