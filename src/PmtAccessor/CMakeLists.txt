@@ -57,7 +57,7 @@ target_link_libraries( PmtAccessor  PmtCore
                                     Ek
                                     Openexif::Openexif 
                                     Opentiff::Opentiff
-                                    XercesC::XercesC)
+                                    ${XercesC_LIBRARIES})
 
 target_include_directories(
     PmtAccessor PUBLIC  

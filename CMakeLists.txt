@@ -3,17 +3,15 @@ project(pmt VERSION 1.5.0)
 
 # where to find dependencies
 #list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules")
-
-list(APPEND CMAKE_PREFIX_PATH "/opt/")
-set(CMAKE_INSTALL_PREFIX "/opt/pmt")
+list(APPEND CMAKE_PREFIX_PATH "/opt")
+set(CMAKE_INSTALL_PREFIX "/opt/pmt" CACHE PATH "" FORCE)
 
 add_compile_options(-Wno-write-strings -Wno-deprecated)
 
 
-find_package(Openexif)
-find_package(Opentiff)
-find_package(XercesC)
-#find_package(ICU COMPONENTS uc data)
+find_package(Openexif 2.1.4 REQUIRED)
+find_package(Opentiff 1.3.3 REQUIRED)
+find_package(XercesC 3.1.3 REQUIRED)
 find_package(Threads)
 
 
@@ -109,3 +107,23 @@ export(
     NAMESPACE Pmt::
 )
 
+#[[
+find_package(XercesC) is only useful if Xerces is built with cmake
+find_package(XercesC)
+
+PkgConfig helps access pkg-config tool, and exposes some macros and functions
+helpful for searching non-cmake libraries and executables. 
+
+Add the .pc file location to the PKG_CONFIG_PATH enviironment variable
+
+set(ENV{PKG_CONFIG_PATH} $ENV{PKG_CONFIG_PATH}:/opt/xerces-3.1.4/lib/pkgconfig/)
+message($ENV{PKG_CONFIG_PATH})
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(Xercesc REQUIRED IMPORTED_TARGET xerces-c>=3.1.4)
+if(Xercesc_FOUND)
+    message("Xercesc IS FOUND")
+    message(STATUS "Xerces includes found: ${Xercesc_INCLUDE_DIRS}")
+endif()
+
+find_package(ICU COMPONENTS uc data)
+]]
